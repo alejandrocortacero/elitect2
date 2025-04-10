@@ -1,0 +1,175 @@
+<?php defined( 'ABSPATH' ) or die('Wrong Access!');
+
+if( !is_super_admin() && !EliteTrainerSiteTheme::is_site_trainer() )
+{
+	wp_redirect( get_site_url() );
+	exit;
+}
+
+$member_id = isset( $_GET['member'] ) ? (int)$_GET['member'] : null;
+
+$objectives = EpointPersonalTrainerMapper::get_trainer_objectives( get_current_user_id() );
+$environments = EpointPersonalTrainerMapper::get_trainer_environments( get_current_user_id() );
+
+ ?><?php get_header( 'noopen' ); ?>
+<div class="container">
+	<?php if( have_posts() ) : the_post(); ?>
+		<div class="row">
+			<div class="col-xxs-12 col-xs-12">
+				<div class="row">
+					<div class="col-xs-12 page-content">
+						<h1><?php if( $member_id ) : ?>Editar miembro<?php else : ?>Añadir miembro<?php endif; ?></h1>
+						<p><a class="btn btn-primary" href="<?php echo EliteTrainerSiteTheme::get_members_list_url(); ?>">Volver a la lista</a></p>
+<?php if( class_exists( 'EpointPersonalTrainer', false ) ) : ?>
+<div class="panel-group" id="user-accordion" role="tablist" aria-multiselectable="true">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="user-personal-data-heading">
+      <h4 class="panel-title">
+        <a role="button" data-toggle="collapse" data-parent="#user-accordion" href="#user-personal-data" aria-expanded="true" aria-controls="user-personal-data">
+          Información de usuario
+        </a>
+      </h4>
+    </div>
+    <div id="user-personal-data" class="panel-collapse collapse <?php if( !$member_id ) : ?>in<?php endif; ?>" role="tabpanel" aria-labelledby="user-personal-data-heading">
+      <div class="panel-body">
+			<?php echo EpointPersonalTrainerPublic::get_edit_member_form( $member_id ); ?>
+      </div>
+    </div>
+  </div>
+<?php if( $member_id ) : ?>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="user-trainings-heading">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#user-accordion" href="#user-trainings" aria-expanded="false" aria-controls="user-trainings">
+          Entrenamientos
+        </a>
+      </h4>
+    </div>
+    <div id="user-trainings" class="panel-collapse collapse" role="tabpanel" aria-labelledby="user-trainings-heading">
+      <div class="panel-body">
+		<p><a class="btn btn-primary assign-training" href="#" rel="nofollow" data-toggle="modal" data-target="#assign-training-modal">Asignar entrenamiento</a></p>
+		<?php //add_action( 'wp_footer', function(){ include( implode( DIRECTORY_SEPARATOR, array( __DIR__, 'templates', 'assign-training-modal.php' ) ) ); } ); ?>
+	<?php $training_items = EpointPersonalTrainerMapper::get_user_training_items( $member_id, null, null, 'start', 'ASC' ); ?>
+	<div class="table-responsive"><table class="table table-striped assigned-training-table items-table">
+		<thead><tr>
+			<th>Nombre</th>
+			<th>Desde</th>
+			<th>Hasta</th>
+			<?php if( false ) : ?><th>Descripción</th><?php endif; ?>
+<?php foreach( $objectives as $objective ) : ?>
+<th class="text-center"><?php echo esc_html( $objective->name ); ?></th>
+<?php endforeach; ?>
+<?php foreach( $environments as $environment ) : ?>
+<th class="text-center"><?php echo esc_html( $environment->name ); ?></th>
+<?php endforeach; ?>
+			<th></th>
+		</tr></thead>
+		<tbody>
+		<?php foreach( $training_items as $tt ) : ?>
+			<tr>
+				<td class="small-full-width"><a href="<?php echo EliteTrainerSiteTheme::get_edit_training_url( $tt->ID ); ?>"><?php echo $tt->name; ?></a></td>
+				<td class="small-medium-width"><?php echo esc_html( $tt->start ); ?></td>
+				<td class="small-medium-width"><?php echo esc_html( $tt->end ); ?></td>
+				<?php if( false ) : ?><td><?php echo esc_html( $tt->description ); ?></td><?php endif; ?>
+<?php foreach( $objectives as $objective ) : ?>
+<td class="text-center"><?php if( EpointPersonalTrainerMapper::is_training_objective( $tt->ID, $objective->ID ) ) : ?><span class="glyphicon glyphicon-ok"></span><span class="cell-label"><?php echo esc_html( $objective->name ); ?></span><?php endif; ?></td>
+<?php endforeach; ?>
+<?php foreach( $environments as $environment ) : ?>
+<td class="text-center"><?php if( EpointPersonalTrainerMapper::is_training_environment( $tt->ID, $environment->ID ) ) : ?><span class="glyphicon glyphicon-ok"></span><span class="cell-label"><?php echo esc_html( $environment->name ); ?></span><?php endif; ?></td>
+<?php endforeach; ?>
+				<td class="actions">
+				<?php if( EliteTrainerSiteTheme::is_site_trainer() ) : ?>
+					<?php if( false ) : ?><a href="<?php echo admin_url( 'admin-post.php' ); ?>?action=<?php echo EliteTrainerSiteTheme::DUPLICATE_TRAINING_ACTION; ?>&training=<?php echo $tt->ID; ?>" class="duplicate-training" data-training="<?php echo $tt->ID; ?>"><span class="glyphicon glyphicon-duplicate"></span></a><?php endif; ?>
+					<a href="<?php echo admin_url( 'admin-post.php' ); ?>?action=<?php echo EliteTrainerSiteTheme::DELETE_TRAINING_ACTION; ?>&training=<?php echo $tt->ID; ?>"><span class="glyphicon glyphicon-trash"></span></a>
+				<?php endif; ?>
+				</td>
+
+			</tr>
+		<?php endforeach; ?>
+		</tbody>
+	</table></div>
+
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#user-accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Cuestionario personal
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="panel-body">
+		<?php $personal_info = EpointPersonalTrainer::get_member_personal_questionnaire_data( $member_id ); ?>
+		<p><strong>Objetivos</strong></p>
+		<p>
+			<?php $objectives = array(
+				'health' => 'Salud',
+				'lose_fat' => 'Perder grasa corporal',
+				'remove_tension' => 'Eliminar tensiones',
+				'postural_improvement' => 'Mejoramiento postural',
+				'gain_muscle' => 'Aumentar masa muscular',
+				'strength_or_power' => 'Fuerzo o potencia',
+				'lose_volume' => 'Reducir volumen',
+				'injury_recovery' => 'Recuperación de lesión',
+				'physical_resistance' => 'Resistencia física',
+				'oppositions' => 'Oposiciones',
+				'other' => 'Otro'
+			); ?>
+			<?php $selected = array(); ?>
+			<?php foreach( $objectives as $o => $label ) if( in_array( $o, $personal_info['objectives'] ) ) $selected[] = $label; ?>
+			<?php echo implode( ', ', $selected ); ?>
+		</p>
+		<p><strong></strong></p>
+		<p></p>
+		<p><strong></strong></p>
+		<p></p>
+		<p><strong></strong></p>
+		<p></p>
+		<p><strong></strong></p>
+		<p></p>
+		<p><strong></strong></p>
+		<p></p>
+		<p><strong></strong></p>
+		<p></p>
+		<p><strong></strong></p>
+		<p></p>
+		<p><strong></strong></p>
+		<p></p>
+		<p><strong></strong></p>
+		<p></p>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingFour">
+      <h4 class="panel-title">
+        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#user-accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          Más cosas
+        </a>
+      </h4>
+    </div>
+    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+      <div class="panel-body">
+		Habrá otras pestañas con el resto de opciones para usuarios
+      </div>
+    </div>
+  </div>
+<?php endif; //member_id ?>
+</div>
+<?php endif; ?>
+					</div>
+				</div>
+			</div>
+		</div>
+	<?php else : ?>
+		<h1><?php echo esc_html( __( 'Not found.', EliteTrainerSiteTheme::TEXT_DOMAIN ) ); ?></h1>
+	<?php endif; ?>
+</div>
+<?php //get_template_part( 'templates/contact', 'container' ); ?>
+
+<?php include( implode( DIRECTORY_SEPARATOR, array( __DIR__, 'templates', 'assign-training-modal.php' ) ) ); ?>
+
+<?php get_footer( 'noclose' ); ?>

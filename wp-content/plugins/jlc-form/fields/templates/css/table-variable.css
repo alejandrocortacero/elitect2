@@ -1,0 +1,90 @@
+.jlc-custom-form-table-variable-field-wrapper
+{
+	max-width:100%;
+	overflow:auto;
+}
+
+.jlc-custom-form-table-variable-field-add-row-wrapper
+{
+}
+.jlc-custom-form-table-variable-field-add-row-wrapper-top
+{
+	margin-bottom:5px;
+}
+.jlc-custom-form-table-variable-field-add-row-wrapper-bottom
+{
+	margin-top:5px;
+}
+.jlc-custom-form-table-variable-field-add-row-wrapper .jlc-custom-form-table-variable-field-add-row-button
+{
+}
+
+
+.jlc-custom-form-table-variable-field
+{
+	max-width:100%;
+}
+.jlc-custom-form-table-variable-field .regular-text
+{
+	width:auto;
+}
+
+.jlc-custom-form-table-variable-field-sheet
+{
+	width:auto;
+}
+.jlc-custom-form-table-variable-field-sheet .sheet-thead
+{
+}
+.jlc-custom-form-table-variable-field-sheet .sheet-thead 
+{
+}
+.jlc-custom-form-table-variable-field-sheet .sheet-tr
+{
+	display:flex;
+}
+.jlc-custom-form-table-variable-field-sheet .sheet-tr .sheet-td,
+.jlc-custom-form-table-variable-field-sheet .sheet-tr .sheet-th
+{
+	width:140px;
+	border:1px dotted #666;
+	display:flex;
+}
+.jlc-custom-form-table-variable-field-sheet .sheet-tr .sheet-td.td-mark,
+.jlc-custom-form-table-variable-field-sheet .sheet-tr .sheet-th.th-mark
+{
+	width:24px;
+	justify-content:center;
+}
+.jlc-custom-form-table-variable-field-sheet .sheet-tr .sheet-td.remove-td,
+.jlc-custom-form-table-variable-field-sheet .sheet-tr .sheet-th.remove-th
+{
+	width:50px;
+}
+.jlc-custom-form-table-variable-field-sheet .sheet-tr .sheet-td.remove-td > button
+{
+	width:100%;
+}
+.jlc-custom-form-table-variable-field-sheet .sheet-tr .sheet-th .sheet-th-text
+{
+	font-weight:500;
+	padding-left:3px;
+	
+}
+.jlc-custom-form-table-variable-field-sheet .sheet-tr .sheet-td .form-group
+{
+	margin:0;
+}
+.jlc-custom-form-table-variable-field-sheet .sheet-tr .sheet-td > .checkbox
+{
+	margin:6px 0 0 3px;
+}
+.jlc-custom-form-table-variable-field-sheet .sheet-tr .sheet-td > .checkbox input[type="checkbox"]
+{
+	margin:0;
+}
+.jlc-custom-form-table-variable-field-sheet .sheet-tr .sheet-td > .form-group > .radio
+{
+	margin:6px 0 0 3px;
+	display:inline-block;
+}

@@ -1,0 +1,590 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: JLC Specialists\n"
+"POT-Creation-Date: 2020-06-04 02:29+0100\n"
+"PO-Revision-Date: 2020-06-04 02:29+0100\n"
+"Last-Translator: José Luis Contreras <joseluisc6m6@gmail.com>\n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_x;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../jlc-we-call-you.php:207
+msgid "We call you"
+msgstr "Te llamamos"
+
+#: ../jlc-we-call-you.php:222 ../templates/admin/settings.php:3
+msgid "Settings"
+msgstr "Ajustes"
+
+#: ../jlc-we-call-you.php:251
+msgid "Call requests"
+msgstr "Peticiones de llamada"
+
+#: ../jlc-we-call-you.php:293 ../jlc-we-call-you.php:311
+msgid "Reinstall the plugin"
+msgstr "Reinstale el plugin"
+
+#: ../jlc-we-call-you.php:392
+msgid "New contact"
+msgstr "Nuevo contacto"
+
+#: ../jlc-we-call-you.php:402 ../jlc-we-call-you.php:410
+msgid "Unknown"
+msgstr "Desconocido"
+
+#: ../jlc-we-call-you.php:414
+#, php-format
+msgid ""
+"The user %s has requested a phone call.\\nFrom: %s\\nYou can manage it at %s."
+msgstr ""
+"El usuario %s ha requerido ser llamado.\n"
+"Desde: %s\n"
+"\n"
+"Puede administrarlo en %s."
+
+#: ../jlc-we-call-you.php:426
+msgid "New Call Request"
+msgstr "Nueva Petición de Llamada"
+
+#: ../jlc-we-call-you.php:456
+msgid "Y/m/d H:i:s"
+msgstr "d/m/Y H:i:s"
+
+#: ../include/contact-table.php:13
+msgid "Call Request"
+msgstr "Petición de Llamada"
+
+#: ../include/contact-table.php:14 ../templates/admin/main.php:4
+msgid "Call Requests"
+msgstr "Peticiones de Llamada"
+
+#: ../include/contact-table.php:23 ../include/forms/JLCWeCallYouContact.php:67
+msgid "Phone"
+msgstr "Teléfono"
+
+#: ../include/contact-table.php:24
+msgid "Answered"
+msgstr "Respondido"
+
+#: ../include/contact-table.php:25
+msgid "Date"
+msgstr "Fecha"
+
+#: ../include/contact-table.php:66
+msgid "Mark as answered"
+msgstr "Marcar como respondido"
+
+#: ../include/contact-table.php:76
+msgid "Unmark as answered"
+msgstr "Desmarcar como respondido"
+
+#: ../include/contact-table.php:86 ../include/contact-table.php:167
+msgid "Delete"
+msgstr "Borrar"
+
+#: ../include/contact-table.php:151
+msgid "No call requests found."
+msgstr "No se encontraron peticiones de llamada."
+
+#: ../include/forms/JLCWeCallYouSettings.php:27
+msgid "Notification addresses"
+msgstr "Direcciones de notificación"
+
+#: ../include/forms/JLCWeCallYouSettings.php:37
+msgid "Privacy policy short"
+msgstr "Política de privacidad resumida"
+
+#: ../include/forms/JLCWeCallYouSettings.php:39
+msgid "This text will appear below the contact form."
+msgstr "Este texto aparecerá bajo el formulario de contacto."
+
+#: ../include/forms/JLCWeCallYouSettings.php:47
+msgid "Use AJAX form"
+msgstr "Usar formulario AJAX"
+
+#: ../include/forms/JLCWeCallYouSettings.php:61
+msgid "Thanks page"
+msgstr "Página de gracias."
+
+#: ../include/forms/JLCWeCallYouSettings.php:70
+msgid "GTAG event conversion"
+msgstr "gtag del Evento de conversión"
+
+#: ../include/forms/JLCWeCallYouSettings.php:79
+msgid "Save"
+msgstr "Guardar"
+
+#: ../include/forms/JLCWeCallYouContact.php:81
+#, php-format
+msgid ""
+"I have read and accept the <a href=\"%s\" rel=\"bookmark\" target=\"_blank"
+"\">Privacy Policy</a>"
+msgstr ""
+"He leído y acepto la <a href=\"%s\" rel=\"bookmark\" target=\"_blank"
+"\">Política de Privacidad</a>"
+
+#: ../include/forms/JLCWeCallYouContact.php:85
+msgid "I have read and accept the Privacy Policy"
+msgstr "He leído y acepto la Política de Privacidad"
+
+#: ../include/forms/JLCWeCallYouContact.php:97
+msgid "Send"
+msgstr "Enviar"
+
+#: ../include/forms/JLCWeCallYouContact.php:111
+#: ../include/forms/JLCWeCallYouContact.php:121
+msgid ""
+"Your call request has been sent successfully. We will call you as soon as "
+"possible."
+msgstr ""
+"Su petición ha sido enviado satisfactoriamente. Le llamaremos lo antes "
+"posible."
+
+#: ../templates/admin/edit-contact.php:5
+#, php-format
+msgid "Contact from %s (%s - %s) at %s"
+msgstr "Contacto de %s (%s - %s) el %s"
+
+#: ../templates/admin/edit-contact.php:19
+msgid "Subject"
+msgstr "Asunto"
+
+#: ../templates/admin/edit-contact.php:37
+msgid "Message"
+msgstr "Mensaje"
+
+#~ msgid "Contact"
+#~ msgstr "Contacto"
+
+#~ msgid ""
+#~ "The user %s (%s - %s) has contact us in %s:\\nSubject:\\n%s\\nMessage:\\n"
+#~ "%s\\n\\n\\n\\nYou can manage it at %s."
+#~ msgstr ""
+#~ "El usuario %s (%s - %s) ha contactado con nosotros en %s:\n"
+#~ "\n"
+#~ "Asunto: %s\n"
+#~ "\n"
+#~ "Mensaje:\n"
+#~ "\n"
+#~ "%s\n"
+#~ "\n"
+#~ "Puede administrarlo en %s."
+
+#~ msgid "Contacts"
+#~ msgstr "Contactos"
+
+#~ msgid "Email"
+#~ msgstr "Correo"
+
+#~ msgid "Edit"
+#~ msgstr "Editar"
+
+#~ msgid "No contacts found."
+#~ msgstr "No se encontraron contactos."
+
+#~ msgid "Name"
+#~ msgstr "Nombre"
+
+#~ msgid "Contact address"
+#~ msgstr "Dirección de contacto"
+
+#~ msgid "Main contact page"
+#~ msgstr "Página principal de contacto"
+
+#~ msgid "Contact phone"
+#~ msgstr "Teléfono de contacto"
+
+#~ msgid "Contact Addresses"
+#~ msgstr "Dirección de contacto"
+
+#~ msgid "Post code"
+#~ msgstr "Código postal"
+
+#~ msgid "JLC Custom Forms"
+#~ msgstr "JLC Formulario personalizables"
+
+#~ msgid "Forms"
+#~ msgstr "Formularios"
+
+#~ msgid "Form sent successfully."
+#~ msgstr "Formulario enviado satisfactoriamente."
+
+#~ msgid "Personal data sent successfully."
+#~ msgstr "Información personal enviada satisfactoriamente."
+
+#~ msgid "Invalid form data"
+#~ msgstr "Datos de formulario inválidos"
+
+#~ msgid "There was an error. Try again later please."
+#~ msgstr "Hubo un error. Por favor, inténtelo más tarde."
+
+#~ msgid "Upload file size limit exceeded."
+#~ msgstr "Tamaño límite de subida de archivo excedido."
+
+#~ msgid "Upload file format is invalid."
+#~ msgstr "El formato del archivo subido es inválido."
+
+#~ msgid ""
+#~ "There was an error while processing the form. Try again later please."
+#~ msgstr ""
+#~ "Hubo un error mientras se procesaba el formulario. Por favor, inténtelo "
+#~ "más tarde."
+
+#~ msgid "Form"
+#~ msgstr "Formulario"
+
+#~ msgid "Internal ID"
+#~ msgstr "ID interno"
+
+#~ msgid "Directory"
+#~ msgstr "Directorio"
+
+#~ msgid "File"
+#~ msgstr "Archivo"
+
+#~ msgid "From"
+#~ msgstr "Desde"
+
+#~ msgid "Arguments"
+#~ msgstr "Argumentos"
+
+#~ msgid "No forms found."
+#~ msgstr "No se encontraron formularios."
+
+#~ msgid "JLC Custom Form Help"
+#~ msgstr "Ayuda de Formularios Personalizables JLC"
+
+#~ msgid "Remove"
+#~ msgstr "Quitar"
+
+#~ msgid "Field %s contains invalid data."
+#~ msgstr "El campo %s contiene datos inválidos."
+
+#~ msgid "None"
+#~ msgstr "Ninguno"
+
+#~ msgid "Selection in %s is not valid."
+#~ msgstr "La selección en %s no es válida."
+
+#~ msgid "The field %s must contain a valid selection."
+#~ msgstr "El campo %s debe contener una selección válida."
+
+#~ msgid "You must check the checkbox %s."
+#~ msgstr "Debe marcar la casilla %s."
+
+#~ msgid "An option in %s must be selected."
+#~ msgstr "Debe seleccionar una opción en %s."
+
+#~ msgid "Field %s is required."
+#~ msgstr "El campo %s es obligatorio."
+
+#~ msgid "Separate email addresses with %s"
+#~ msgstr "Separe las direcciones de correo electrónico con %s"
+
+#~ msgid "Invalid email provied in field %s."
+#~ msgstr "Correo electrónico inválido en el campo %s."
+
+#~ msgid "Invalid number provied in field %s."
+#~ msgstr "Número inválido en el campo %s."
+
+#~ msgid "Field %s must not be greater than %s."
+#~ msgstr "El campo %s no debe ser mayor que %s."
+
+#~ msgid "Field %s must not be smaller than %s."
+#~ msgstr "El campo %s no debe ser mayor que %s."
+
+#~ msgid "Field %s must be not greater than %d characters"
+#~ msgstr "El campo %s no debe tener más de %d caracteres"
+
+#~ msgid "Save and add new"
+#~ msgstr "Guardar y añadir nuevo"
+
+#~ msgid "City"
+#~ msgstr "Ciudad"
+
+#~ msgid "State / Province"
+#~ msgstr "Estado / Provincia"
+
+#~ msgid "Country"
+#~ msgstr "País"
+
+#~ msgid "Address"
+#~ msgstr "Dirección"
+
+#~ msgid "Longitude"
+#~ msgstr "Longitud"
+
+#~ msgid "Latidude"
+#~ msgstr "Latitud"
+
+#~ msgid "New address"
+#~ msgstr "Nueva dirección"
+
+#~ msgid "New city"
+#~ msgstr "Nueva ciudad"
+
+#~ msgid "New postcode"
+#~ msgstr "Nuevo código postal"
+
+#~ msgid "New state"
+#~ msgstr "Nuevo estado"
+
+#~ msgid "New country"
+#~ msgstr "Nuevo país"
+
+#~ msgid "In º (e.g. 4.567531)"
+#~ msgstr "En º (ej: 4.567531)"
+
+#~ msgid "In º (e.g. 10.23145"
+#~ msgstr "En º (ej: 10.23145)"
+
+#~ msgid "New email"
+#~ msgstr "Nuevo correo electrónico"
+
+#~ msgid "New phone"
+#~ msgstr "Nuevo teléfono"
+
+#~ msgid "Add"
+#~ msgstr "Añadir"
+
+#~ msgid "Registered forms"
+#~ msgstr "Formularios registrados"
+
+#~ msgid "Help"
+#~ msgstr "Ayuda"
+
+#~ msgid "There was an error. Reinstall the plugin please."
+#~ msgstr "Hubo un error. Por favor, reinstale el plugin."
+
+#~ msgid "Answer has been stored, but user mail has not been sent."
+#~ msgstr ""
+#~ "La respuesta ha sido almacenada, pero no se envió un email al usuario."
+
+#~ msgid "Consultation"
+#~ msgstr "Consulta"
+
+#~ msgid "Consultations"
+#~ msgstr "Consultas"
+
+#~ msgid "User"
+#~ msgstr "Usuario"
+
+#~ msgid "Question"
+#~ msgstr "Pregunta"
+
+#~ msgid "Answer"
+#~ msgstr "Respuesta"
+
+#~ msgid "Specialist"
+#~ msgstr "Especialista"
+
+#~ msgid "Asked"
+#~ msgstr "Preguntado"
+
+#~ msgid "View consultation"
+#~ msgstr "Ver consulta"
+
+#~ msgid "No registerd"
+#~ msgstr "Sin registrar"
+
+#~ msgid "View user"
+#~ msgstr "Ver usuario"
+
+#~ msgid "No consultations found."
+#~ msgstr "No se encontraron consultas."
+
+#~ msgid "Sending"
+#~ msgstr "Enviando"
+
+#~ msgid "Introduce a valid email address please."
+#~ msgstr "Introduzca una dirección de correo válida."
+
+#~ msgid "Your email"
+#~ msgstr "Su dirección de correo"
+
+#~ msgid "Your message"
+#~ msgstr "Su mensaje"
+
+#~ msgid "Close"
+#~ msgstr "Cerrar"
+
+#~ msgid "Consultation by <strong>%s</strong> for <strong>%s</strong>"
+#~ msgstr "Consulta por <strong>%s</strong> para <strong>%s</strong>"
+
+#~ msgid "Consultation at %s"
+#~ msgstr "Consultado el %s"
+
+#~ msgid "Answered at %s"
+#~ msgstr "Respondido el %s"
+
+#~ msgid "Administrators"
+#~ msgstr "Administradores"
+
+#~ msgid "Creating the first specialist"
+#~ msgstr "Crear el primer especialista"
+
+#~ msgid "To create an specialist, you just need to do two things:"
+#~ msgstr "Para crear un especialista solo necesita hacer dos cosas:"
+
+#~ msgid "Create a new user and assign the \"Specialist\" role to it."
+#~ msgstr "Crear un nuevo usuario y asignarle el rol \"Especialista\"."
+
+#~ msgid "Fill the \"Speciality\" field and save."
+#~ msgstr "Rellenar el campo \"Especialidad\" y guardar."
+
+#~ msgid ""
+#~ "This new user is ready to start answering questions from site users. He "
+#~ "can access the admin panel to answer questions and will be notified when "
+#~ "an user has made a consultation to him."
+#~ msgstr ""
+#~ "Este nuevo usuario está preparado para empezar a responder preguntas de "
+#~ "los usuario del sitio. Puede acceder al panel de administración para "
+#~ "responder preguntas y será notificado cuando un usuario haya hecho una "
+#~ "consulta para él."
+
+#~ msgid "Specialists"
+#~ msgstr "Especialistas"
+
+#~ msgid "Answering questions"
+#~ msgstr "Respondiendo preguntas"
+
+#~ msgid ""
+#~ "You can answer all the questions asked to you in &quot;Questions&quote; "
+#~ "section. After answer the question, a mail will be automatically sent to "
+#~ "the user."
+#~ msgstr ""
+#~ "Puede responder todas las preguntas hechas para usted en la sección &quot;"
+#~ "Preguntas&quot;. Tras contestar la pregunta, se enviará un correo al "
+#~ "usuario automáticamente."
+
+#~ msgid "Developers"
+#~ msgstr "Desarrolladores"
+
+#~ msgid "Including contact form in your theme"
+#~ msgstr "Incluir el formulario de contacto en su tema."
+
+#~ msgid ""
+#~ "To include the contact form in your theme code, you only have to include:"
+#~ msgstr ""
+#~ "Para incluir el formulario de contacto en el código de su tema, solo "
+#~ "tiene que incluir:"
+
+#~ msgid "Overriding form appearence"
+#~ msgstr "Sobrescribir la apariencia del formulario"
+
+#~ msgid ""
+#~ "You can change the form appearence in your theme using your own "
+#~ "templates. Available templates to override are:"
+#~ msgstr ""
+#~ "Puede cambiar la apariencia del formulario en su tema usando sus propias "
+#~ "plantillas. Las plantillas sobrescribibles son:"
+
+#~ msgid ""
+#~ "Put the new templates in <code><i>your_theme_dir</i>/jlc-specialists/</"
+#~ "code>."
+#~ msgstr ""
+#~ "Ponga las nuevas plantillas en <code><i>directorio_del_tema</i>/jlc-"
+#~ "specialists/</code>"
+
+#~ msgid "Specialist information"
+#~ msgstr "Información del especialista"
+
+#~ msgid "Speciality"
+#~ msgstr "Especialidad"
+
+#~ msgid "Questions"
+#~ msgstr "Preguntas"
+
+#~ msgid "Separate with commas"
+#~ msgstr "Separar con comas"
+
+#~ msgid "Contact email"
+#~ msgstr "Email de contacto"
+
+#~ msgid "If checked, form response will be shown in form page as a message."
+#~ msgstr ""
+#~ "Si marca esta casilla, la respuesta se mostrará en la misma página del "
+#~ "formulario sin necesidad de recarga."
+
+#~ msgid ""
+#~ "For non ajax method: If a page is selected, user will be redirected after "
+#~ "form submission. On the contraty, response will be shown in form page."
+#~ msgstr ""
+#~ "Para el método sin AJAX, si hay ninguna página seleccionada, el usuarios "
+#~ "será redirigida a esta tras enviar el formulario. Si no, la respuesta se "
+#~ "mostrará en la misma página del formulario."
+
+#~ msgid "Info text"
+#~ msgstr "Texto de información"
+
+#~ msgid "The string {privacy_policy} will be replaced by Privacy Page URL."
+#~ msgstr ""
+#~ "La cadena {privacy_policy} será sustituida por la URL de la página de "
+#~ "Política de Privacidad"
+
+#~ msgid "Consultation by <strong>%s</strong>"
+#~ msgstr "Consulta por <strong>%s</strong>"
+
+#~ msgid "Answer here:"
+#~ msgstr "Responda aquí:"
+
+#~ msgid "Send answer"
+#~ msgstr "Enviar respuesta"
+
+#~ msgid "My speciality: %s"
+#~ msgstr "Mi especialidad: %s"
+
+#~ msgid "You have answered %d of %d questions"
+#~ msgstr "Ha respondido %d de %d preguntas."
+
+#~ msgid "Answer from our specialist"
+#~ msgstr "Respuesta de nuestro especialista"
+
+#~ msgid ""
+#~ "<b>Hi %s\n"
+#~ "\n"
+#~ "Our specialist has answered your question:</b>\n"
+#~ "\n"
+#~ "%s\n"
+#~ "\n"
+#~ "<b>Specialist answer:</b>\n"
+#~ "\n"
+#~ "%s\n"
+#~ "\n"
+#~ "<b>Thanks for use our services.</b>\n"
+#~ "%s"
+#~ msgstr ""
+#~ "<b>Hola %s\n"
+#~ "\n"
+#~ "Nuestro especialista ha respondido su pregunta:</b>\n"
+#~ "\n"
+#~ "%s\n"
+#~ "\n"
+#~ "<b>Respuesta del especialista:</b>\n"
+#~ "\n"
+#~ "%s\n"
+#~ "\n"
+#~ "<b>Gracias por usar nuestros servicios.</b>\n"
+#~ "%s"
+
+#~ msgid "Specialists service"
+#~ msgstr "Servicio de especialistas"
+
+#~ msgid "Unassigned"
+#~ msgstr "Sin asignar"
+
+#~ msgid "User name"
+#~ msgstr "Nombre de usuario"
+
+#~ msgid "New user consultation"
+#~ msgstr "Nueva consulta de usuario"
+
+#~ msgid "New consultation for you"
+#~ msgstr "Nueva consulta para usted"

@@ -1,0 +1,44 @@
+.jlc-custom-form-stars-control
+{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: start;
+	-webkit-justify-content: flex-start;
+	-ms-flex-pack: start;
+	justify-content: flex-start;
+}
+
+.jlc-custom-form-stars-control .star
+{
+	width: 18px;
+	height: 18px;
+	margin-right: 7px;
+	cursor: pointer;
+}
+
+.jlc-custom-form-stars-control .star svg
+{
+	width:100%;
+	height:auto;
+}
+
+.jlc-custom-form-stars-control .star svg .jlc-star-draw
+{
+	fill:#e0e0e0;
+	fill-opacity:1;
+	stroke:#505050;
+	stroke-opacity:1;
+}
+.jlc-custom-form-stars-control .star.active svg .jlc-star-draw,
+.jlc-custom-form-stars-control .star.highlight svg .jlc-star-draw
+{
+	fill:yellow;
+	stroke:yellow;
+}
+.jlc-custom-form-stars-control .star.dark svg .jlc-star-draw
+{
+	fill:#e0e0e0;
+	stroke:#505050;
+}

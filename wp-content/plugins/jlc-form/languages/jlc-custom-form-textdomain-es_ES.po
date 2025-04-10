@@ -1,0 +1,2317 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: JLC Custom Form\n"
+"POT-Creation-Date: 2023-03-19 15:07+0100\n"
+"PO-Revision-Date: 2023-03-19 15:08+0100\n"
+"Last-Translator: José Luis Contreras <joseluisc6m6@gmail.com>\n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_e;_x\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../SelfSettings.php:67
+msgid "Google Captchas Site Key"
+msgstr "Clave Google Captchas del sitio"
+
+#: ../SelfSettings.php:76
+msgid "Google Captchas Secret Key"
+msgstr "Clave Google Captchas secreta"
+
+#: ../SelfSettings.php:85
+msgid "Another source is inserting Google recaptcha api.js"
+msgstr "Otra fuente está insertando Google recaptcha api.js"
+
+#: ../SelfSettings.php:94
+msgid "Honeypot redirect url"
+msgstr "URL de redirección del bote de miel"
+
+#: ../SelfSettings.php:95
+msgid "If blank, shows a default error message."
+msgstr "En blanco muestra un mensaje de error por defecto."
+
+#: ../SelfSettings.php:96
+msgid "http://127.0.0.1 recommended"
+msgstr "http://127.0.0.1 recomendado"
+
+#: ../SelfSettings.php:105
+msgid "Another source is inserting TinyMCE script."
+msgstr "Otra fuente está insertando TinyMCE script."
+
+#: ../SelfSettings.php:114
+msgid "Install cities on DDBB."
+msgstr "Instalar ciudades en BBDD."
+
+#: ../SelfSettings.php:127
+msgid "Enqueue all admin scripts"
+msgstr "Encolar todos los scripts de administración"
+
+#: ../SelfSettings.php:135 ../fields/templates/save-and-add-buttons.php:12
+#: ../fields/templates/admin/save-and-add-buttons.php:16
+msgid "Save"
+msgstr "Guardar"
+
+#: ../jlc-form.php:538
+msgid "JLC Custom Forms"
+msgstr "JLC - Formularios personalizados"
+
+#: ../jlc-form.php:551
+msgid "Registered JLC Forms"
+msgstr "Formularios JLC registrados"
+
+#: ../jlc-form.php:583 ../jlc-form.php:617 ../jlc-form.php:640
+msgid "Reinstall the plugin"
+msgstr "Reinstale el plugin"
+
+#: ../jlc-form.php:596 ../registered-forms-table.php:17
+msgid "Forms"
+msgstr "Formularios"
+
+#: ../jlc-form.php:655 ../jlc-form.php:1865 ../jlc-form.php:1977
+msgid "Form sent successfully."
+msgstr "Formulario enviado satisfactoriamente"
+
+#: ../jlc-form.php:657
+msgid "Personal data sent successfully."
+msgstr "Información personal enviada satisfactoriamente."
+
+#: ../jlc-form.php:668
+msgid "Invalid form data"
+msgstr "Datos del formulario inválidos"
+
+#: ../jlc-form.php:670 ../fields/honeypot.php:37
+msgid "There was an error. Try again later please."
+msgstr "Hubo un error. Inténtelo de nuevo más tarde, por favor."
+
+#: ../jlc-form.php:672
+msgid "Upload file size limit exceeded."
+msgstr "Límite de tamaño de subida de archivos excedido."
+
+#: ../jlc-form.php:674
+msgid "Upload file format is invalid."
+msgstr "El formato de archivo subido es inválido."
+
+#: ../jlc-form.php:676
+msgid "There was an error. Refresh the page and try again please."
+msgstr "Hubo un error. Actualice la página e inténtelo de nuevo, por favor."
+
+#: ../jlc-form.php:1869 ../jlc-form.php:1979
+msgid "There was an error while processing the form. Try again later please."
+msgstr "Hubo un error al procesar el formulario. Inténtelo de nuevo más tarde."
+
+#: ../DownloadFiles.php:29 ../registered-forms-table.php:31
+msgid "File"
+msgstr "Archivo"
+
+#: ../registered-forms-table.php:16
+msgid "Form"
+msgstr "Formulario"
+
+#: ../registered-forms-table.php:28
+msgid "Internal ID"
+msgstr "ID interno"
+
+#: ../registered-forms-table.php:29
+msgid "Action"
+msgstr "Acción"
+
+#: ../registered-forms-table.php:30
+msgid "Directory"
+msgstr "Directorio"
+
+#: ../registered-forms-table.php:32
+msgid "From"
+msgstr "Desde"
+
+#: ../registered-forms-table.php:33
+msgid "Arguments"
+msgstr "Argumentos"
+
+#: ../registered-forms-table.php:88 ../registered-forms-table.php:264
+msgid "Unregister"
+msgstr "Suprimir"
+
+#: ../registered-forms-table.php:97
+msgid "Undefined"
+msgstr "Indefinido"
+
+#: ../registered-forms-table.php:211
+msgid "File not found"
+msgstr "Archivo no encontrado"
+
+#: ../registered-forms-table.php:233
+msgid "No forms found."
+msgstr "No se encontraron formularios."
+
+#: ../help.php:3
+msgid "JLC Custom Form Help"
+msgstr "Ayuda de JLC - Formularios personalizados"
+
+#: ../FieldLoader.php:334
+msgid "Yes"
+msgstr "Sí"
+
+#: ../FieldLoader.php:340
+msgid "No"
+msgstr "No"
+
+#: ../abstract/search-form.php:51
+msgid "Search"
+msgstr "Buscar"
+
+#: ../fields/country-select.php:43 ../fields/city-select.php:47
+#: ../fields/post-select.php:54 ../fields/spanish-city-select.php:43
+#: ../fields/user-select.php:58 ../fields/spanish-province-select.php:43
+#: ../fields/term-select.php:58
+msgid "None"
+msgstr "Ninguno"
+
+#: ../fields/country-select.php:55
+msgid "Afghanistan"
+msgstr "Afganistán"
+
+#: ../fields/country-select.php:56
+msgid "Åland Islands"
+msgstr "Aland, Isla"
+
+#: ../fields/country-select.php:57 ../fields/iban.php:114
+msgid "Albania"
+msgstr "Albania"
+
+#: ../fields/country-select.php:58
+msgid "Algeria"
+msgstr "Argelia"
+
+#: ../fields/country-select.php:59
+msgid "American Samoa"
+msgstr "Samoa americana"
+
+#: ../fields/country-select.php:60 ../fields/iban.php:112
+msgid "Andorra"
+msgstr "Andorra"
+
+#: ../fields/country-select.php:61
+msgid "Angola"
+msgstr "Angola"
+
+#: ../fields/country-select.php:62
+msgid "Anguilla"
+msgstr "Anguila"
+
+#: ../fields/country-select.php:63
+msgid "Antarctica"
+msgstr "Antártida"
+
+#: ../fields/country-select.php:64
+msgid "Antigua and Barbuda"
+msgstr "Antigua y Barbuda"
+
+#: ../fields/country-select.php:65
+msgid "Argentina"
+msgstr "Argentina"
+
+#: ../fields/country-select.php:66
+msgid "Armenia"
+msgstr "Armenia"
+
+#: ../fields/country-select.php:67
+msgid "Aruba"
+msgstr "Aruba"
+
+#: ../fields/country-select.php:68
+msgid "Australia"
+msgstr "Australia"
+
+#: ../fields/country-select.php:69 ../fields/iban.php:115
+msgid "Austria"
+msgstr "Austria"
+
+#: ../fields/country-select.php:70 ../fields/iban.php:116
+msgid "Azerbaijan"
+msgstr "Azerbaiyán"
+
+#: ../fields/country-select.php:71
+msgid "Bahamas"
+msgstr "Bahamas"
+
+#: ../fields/country-select.php:72 ../fields/iban.php:120
+msgid "Bahrain"
+msgstr "Bahréin"
+
+#: ../fields/country-select.php:73
+msgid "Bangladesh"
+msgstr "Bangladesh"
+
+#: ../fields/country-select.php:74
+msgid "Barbados"
+msgstr "Barbados"
+
+#: ../fields/country-select.php:75
+msgid "Belarus"
+msgstr "Bielorrusia"
+
+#: ../fields/country-select.php:76 ../fields/iban.php:118
+msgid "Belgium"
+msgstr "Bélgica"
+
+#: ../fields/country-select.php:77
+msgid "Belize"
+msgstr "Belice"
+
+#: ../fields/country-select.php:78
+msgid "Benin"
+msgstr "Benín"
+
+#: ../fields/country-select.php:79
+msgid "Bermuda"
+msgstr "Bermudas"
+
+#: ../fields/country-select.php:80
+msgid "Bhutan"
+msgstr "Bután"
+
+#: ../fields/country-select.php:81
+msgid "Bolivia, Plurinational State of"
+msgstr "Bolivia, Estado plurinacional de"
+
+#: ../fields/country-select.php:82
+msgid "Bonaire, Sint Eustatius and Saba"
+msgstr "Bonaire, San Eustaquio y Saba"
+
+#: ../fields/country-select.php:83 ../fields/iban.php:117
+msgid "Bosnia and Herzegovina"
+msgstr "Bosnia y Herzegovina"
+
+#: ../fields/country-select.php:84
+msgid "Botswana"
+msgstr "Botsuana"
+
+#: ../fields/country-select.php:85
+msgid "Bouvet Island"
+msgstr "Bouvet, Isla"
+
+#: ../fields/country-select.php:86 ../fields/iban.php:121
+msgid "Brazil"
+msgstr "Brasil"
+
+#: ../fields/country-select.php:87
+msgid "British Indian Ocean Territory"
+msgstr "Territorio Británico del Océano Índico"
+
+#: ../fields/country-select.php:88
+msgid "Brunei Darussalam"
+msgstr "Brunéi"
+
+#: ../fields/country-select.php:89 ../fields/iban.php:119
+msgid "Bulgaria"
+msgstr "Bulgaria"
+
+#: ../fields/country-select.php:90
+msgid "Burkina Faso"
+msgstr "Burkina Faso"
+
+#: ../fields/country-select.php:91
+msgid "Burundi"
+msgstr "Burundi"
+
+#: ../fields/country-select.php:92
+msgid "Cambodia"
+msgstr "Camboya"
+
+#: ../fields/country-select.php:93
+msgid "Cameroon"
+msgstr "Camerún"
+
+#: ../fields/country-select.php:94
+msgid "Canada"
+msgstr "Canadá"
+
+#: ../fields/country-select.php:95
+msgid "Cape Verde"
+msgstr "Cabo Verde"
+
+#: ../fields/country-select.php:96
+msgid "Cayman Islands"
+msgstr "Caimán, Islas"
+
+#: ../fields/country-select.php:97
+msgid "Central African Republic"
+msgstr "República Centroafricana"
+
+#: ../fields/country-select.php:98
+msgid "Chad"
+msgstr "Chad"
+
+#: ../fields/country-select.php:99
+msgid "Chile"
+msgstr "Chile"
+
+#: ../fields/country-select.php:100
+msgid "China"
+msgstr "China"
+
+#: ../fields/country-select.php:101
+msgid "Christmas Island"
+msgstr "Navidad, Isla de"
+
+#: ../fields/country-select.php:102
+msgid "Cocos (Keeling) Islands"
+msgstr "Cocos (Keeling), Islas"
+
+#: ../fields/country-select.php:103
+msgid "Colombia"
+msgstr "Colombia"
+
+#: ../fields/country-select.php:104
+msgid "Comoros"
+msgstr "Comoras"
+
+#: ../fields/country-select.php:105
+msgid "Congo"
+msgstr "Congo"
+
+#: ../fields/country-select.php:106
+msgid "Congo, the Democratic Republic of the"
+msgstr "Congo, República Democrática del"
+
+#: ../fields/country-select.php:107
+msgid "Cook Islands"
+msgstr "Cook, Islas"
+
+#: ../fields/country-select.php:108 ../fields/iban.php:124
+msgid "Costa Rica"
+msgstr "Costa Rica"
+
+#: ../fields/country-select.php:109
+msgid "Côte d'Ivoire"
+msgstr "Costa de Marfil"
+
+#: ../fields/country-select.php:110 ../fields/iban.php:142
+msgid "Croatia"
+msgstr "Croacia"
+
+#: ../fields/country-select.php:111
+msgid "Cuba"
+msgstr "Cuba"
+
+#: ../fields/country-select.php:112
+msgid "Curaçao"
+msgstr "Curazao"
+
+#: ../fields/country-select.php:113 ../fields/iban.php:125
+msgid "Cyprus"
+msgstr "Chipre"
+
+#: ../fields/country-select.php:114 ../fields/iban.php:126
+msgid "Czech Republic"
+msgstr "República Checa"
+
+#: ../fields/country-select.php:115 ../fields/iban.php:128
+msgid "Denmark"
+msgstr "Dinamarca"
+
+#: ../fields/country-select.php:116
+msgid "Djibouti"
+msgstr "Yibuti"
+
+#: ../fields/country-select.php:117
+msgid "Dominica"
+msgstr "Dominica"
+
+#: ../fields/country-select.php:118 ../fields/iban.php:129
+msgid "Dominican Republic"
+msgstr "República Dominicana"
+
+#: ../fields/country-select.php:119
+msgid "Ecuador"
+msgstr "Ecuador"
+
+#: ../fields/country-select.php:120 ../fields/iban.php:131
+msgid "Egypt"
+msgstr "Egipto"
+
+#: ../fields/country-select.php:121 ../fields/iban.php:181
+msgid "El Salvador"
+msgstr "El Salvador"
+
+#: ../fields/country-select.php:122
+msgid "Equatorial Guinea"
+msgstr "Guinea Ecuatorial"
+
+#: ../fields/country-select.php:123
+msgid "Eritrea"
+msgstr "Eritrea"
+
+#: ../fields/country-select.php:124 ../fields/iban.php:130
+msgid "Estonia"
+msgstr "Estonia"
+
+#: ../fields/country-select.php:125
+msgid "Ethiopia"
+msgstr "Etiopía"
+
+#: ../fields/country-select.php:126
+msgid "Falkland Islands (Malvinas)"
+msgstr "Malvinas, Islas"
+
+#: ../fields/country-select.php:127 ../fields/iban.php:134
+msgid "Faroe Islands"
+msgstr "Feroe, Islas"
+
+#: ../fields/country-select.php:128
+msgid "Fiji"
+msgstr "Fiyi"
+
+#: ../fields/country-select.php:129 ../fields/iban.php:133
+msgid "Finland"
+msgstr "Finlandia"
+
+#: ../fields/country-select.php:130 ../fields/iban.php:135
+msgid "France"
+msgstr "Francia"
+
+#: ../fields/country-select.php:131
+msgid "French Guiana"
+msgstr "Guayana Francesa"
+
+#: ../fields/country-select.php:132
+msgid "French Polynesia"
+msgstr "Polinesia Francesa"
+
+#: ../fields/country-select.php:133
+msgid "French Southern Territories"
+msgstr "Territorios Australes Franceses"
+
+#: ../fields/country-select.php:134
+msgid "Gabon"
+msgstr "Gabón"
+
+#: ../fields/country-select.php:135
+msgid "Gambia"
+msgstr "Gambia"
+
+#: ../fields/country-select.php:136 ../fields/iban.php:137
+msgid "Georgia"
+msgstr "Georgia"
+
+#: ../fields/country-select.php:137 ../fields/iban.php:127
+msgid "Germany"
+msgstr "Alemania"
+
+#: ../fields/country-select.php:138
+msgid "Ghana"
+msgstr "Ghana"
+
+#: ../fields/country-select.php:139 ../fields/iban.php:138
+msgid "Gibraltar"
+msgstr "Gibraltar"
+
+#: ../fields/country-select.php:140
+msgid "Greece"
+msgstr "Grecia"
+
+#: ../fields/country-select.php:141 ../fields/iban.php:139
+msgid "Greenland"
+msgstr "Groenlandia"
+
+#: ../fields/country-select.php:142
+msgid "Grenada"
+msgstr "Granada"
+
+#: ../fields/country-select.php:143
+msgid "Guadeloupe"
+msgstr "Guadalupe"
+
+#: ../fields/country-select.php:144
+msgid "Guam"
+msgstr "Guam"
+
+#: ../fields/country-select.php:145 ../fields/iban.php:141
+msgid "Guatemala"
+msgstr "Guatemala"
+
+#: ../fields/country-select.php:146
+msgid "Guernsey"
+msgstr "Guernsey"
+
+#: ../fields/country-select.php:147
+msgid "Guinea"
+msgstr "Guinea"
+
+#: ../fields/country-select.php:148
+msgid "Guinea-Bissau"
+msgstr "Guinea-Bisáu"
+
+#: ../fields/country-select.php:149
+msgid "Guyana"
+msgstr "Guyana"
+
+#: ../fields/country-select.php:150
+msgid "Haiti"
+msgstr "Haití"
+
+#: ../fields/country-select.php:151
+msgid "Heard Island and McDonald Islands"
+msgstr "Heard y McDonald, Islas"
+
+#: ../fields/country-select.php:152
+msgid "Holy See (Vatican City State)"
+msgstr "Vaticano, Estado de la Ciudad del"
+
+#: ../fields/country-select.php:153
+msgid "Honduras"
+msgstr "Honduras"
+
+#: ../fields/country-select.php:154
+msgid "Hong Kong"
+msgstr "Hong Kong"
+
+#: ../fields/country-select.php:155 ../fields/iban.php:143
+msgid "Hungary"
+msgstr "Hungría"
+
+#: ../fields/country-select.php:156 ../fields/iban.php:147
+msgid "Iceland"
+msgstr "Islandia"
+
+#: ../fields/country-select.php:157
+msgid "India"
+msgstr "India"
+
+#: ../fields/country-select.php:158
+msgid "Indonesia"
+msgstr "Indonesia"
+
+#: ../fields/country-select.php:159
+msgid "Iran, Islamic Republic of"
+msgstr "Irán, República Islámica de"
+
+#: ../fields/country-select.php:160 ../fields/iban.php:146
+msgid "Iraq"
+msgstr "Iraq"
+
+#: ../fields/country-select.php:161 ../fields/iban.php:144
+msgid "Ireland"
+msgstr "Irlanda"
+
+#: ../fields/country-select.php:162
+msgid "Isle of Man"
+msgstr "Man, Isla de"
+
+#: ../fields/country-select.php:163 ../fields/iban.php:145
+msgid "Israel"
+msgstr "Israel"
+
+#: ../fields/country-select.php:164 ../fields/iban.php:148
+msgid "Italy"
+msgstr "Italia"
+
+#: ../fields/country-select.php:165
+msgid "Jamaica"
+msgstr "Jamaica"
+
+#: ../fields/country-select.php:166
+msgid "Japan"
+msgstr "Japón"
+
+#: ../fields/country-select.php:167
+msgid "Jersey"
+msgstr "Jersey"
+
+#: ../fields/country-select.php:168
+msgid "Jordan"
+msgstr "Jordania"
+
+#: ../fields/country-select.php:169 ../fields/iban.php:151
+msgid "Kazakhstan"
+msgstr "Kazajistán"
+
+#: ../fields/country-select.php:170
+msgid "Kenya"
+msgstr "Kenia"
+
+#: ../fields/country-select.php:171
+msgid "Kiribati"
+msgstr "Kiribati"
+
+#: ../fields/country-select.php:172
+msgid "Korea, Democratic People's Republic of"
+msgstr "Corea, República Popular Democrática de"
+
+#: ../fields/country-select.php:173
+msgid "Korea, Republic of"
+msgstr "República de Corea"
+
+#: ../fields/country-select.php:174 ../fields/iban.php:150
+msgid "Kuwait"
+msgstr "Kuwait"
+
+#: ../fields/country-select.php:175
+msgid "Kyrgyzstan"
+msgstr "Kirguistán"
+
+#: ../fields/country-select.php:176
+msgid "Lao People's Democratic Republic"
+msgstr "Laos, República Democrática Popular"
+
+#: ../fields/country-select.php:177 ../fields/iban.php:157
+msgid "Latvia"
+msgstr "Letonia"
+
+#: ../fields/country-select.php:178 ../fields/iban.php:152
+msgid "Lebanon"
+msgstr "Líbano"
+
+#: ../fields/country-select.php:179
+msgid "Lesotho"
+msgstr "Lesoto"
+
+#: ../fields/country-select.php:180
+msgid "Liberia"
+msgstr "Liberia"
+
+#: ../fields/country-select.php:181
+msgid "Libya"
+msgstr "Libia"
+
+#: ../fields/country-select.php:182 ../fields/iban.php:154
+msgid "Liechtenstein"
+msgstr "Liechtenstein"
+
+#: ../fields/country-select.php:183 ../fields/iban.php:155
+msgid "Lithuania"
+msgstr "Lituania"
+
+#: ../fields/country-select.php:184 ../fields/iban.php:156
+msgid "Luxembourg"
+msgstr "Luxemburgo"
+
+#: ../fields/country-select.php:185
+msgid "Macao"
+msgstr "Macao"
+
+#: ../fields/country-select.php:186
+msgid "Macedonia, the Former Yugoslav Republic of"
+msgstr "Macedonia del Norte "
+
+#: ../fields/country-select.php:187
+msgid "Madagascar"
+msgstr "Madagascar"
+
+#: ../fields/country-select.php:188
+msgid "Malawi"
+msgstr "Malaui"
+
+#: ../fields/country-select.php:189
+msgid "Malaysia"
+msgstr "Malasia"
+
+#: ../fields/country-select.php:190
+msgid "Maldives"
+msgstr "Maldivas"
+
+#: ../fields/country-select.php:191
+msgid "Mali"
+msgstr "Mali"
+
+#: ../fields/country-select.php:192 ../fields/iban.php:163
+msgid "Malta"
+msgstr "Malta"
+
+#: ../fields/country-select.php:193
+msgid "Marshall Islands"
+msgstr "Marshall, Islas"
+
+#: ../fields/country-select.php:194
+msgid "Martinique"
+msgstr "Martinica"
+
+#: ../fields/country-select.php:195 ../fields/iban.php:162
+msgid "Mauritania"
+msgstr "Mauritania"
+
+#: ../fields/country-select.php:196 ../fields/iban.php:164
+msgid "Mauritius"
+msgstr "Mauricio"
+
+#: ../fields/country-select.php:197
+msgid "Mayotte"
+msgstr "Mayotte"
+
+#: ../fields/country-select.php:198
+msgid "Mexico"
+msgstr "Méjico"
+
+#: ../fields/country-select.php:199
+msgid "Micronesia, Federated States of"
+msgstr "Micronesia, Estados Federados de"
+
+#: ../fields/country-select.php:200
+msgid "Moldova, Republic of"
+msgstr "Moldavia, República de"
+
+#: ../fields/country-select.php:201 ../fields/iban.php:158
+msgid "Monaco"
+msgstr "Mónaco"
+
+#: ../fields/country-select.php:202
+msgid "Mongolia"
+msgstr "Mongolia"
+
+#: ../fields/country-select.php:203 ../fields/iban.php:160
+msgid "Montenegro"
+msgstr "Montenegro"
+
+#: ../fields/country-select.php:204
+msgid "Montserrat"
+msgstr "Montserrat"
+
+#: ../fields/country-select.php:205
+msgid "Morocco"
+msgstr "Marruecos"
+
+#: ../fields/country-select.php:206
+msgid "Mozambique"
+msgstr "Mozambique"
+
+#: ../fields/country-select.php:207
+msgid "Myanmar"
+msgstr "Birmania"
+
+#: ../fields/country-select.php:208
+msgid "Namibia"
+msgstr "Namibia"
+
+#: ../fields/country-select.php:209
+msgid "Nauru"
+msgstr "Nauru"
+
+#: ../fields/country-select.php:210
+msgid "Nepal"
+msgstr "Nepal"
+
+#: ../fields/country-select.php:211 ../fields/iban.php:165
+msgid "Netherlands"
+msgstr "Países Bajos"
+
+#: ../fields/country-select.php:212
+msgid "New Caledonia"
+msgstr "Nueva Caledonia"
+
+#: ../fields/country-select.php:213
+msgid "New Zealand"
+msgstr "Nueva Zelanda"
+
+#: ../fields/country-select.php:214
+msgid "Nicaragua"
+msgstr "Nicaragua"
+
+#: ../fields/country-select.php:215
+msgid "Niger"
+msgstr "Níger"
+
+#: ../fields/country-select.php:216
+msgid "Nigeria"
+msgstr "Nigeria"
+
+#: ../fields/country-select.php:217
+msgid "Niue"
+msgstr "Niue"
+
+#: ../fields/country-select.php:218
+msgid "Norfolk Island"
+msgstr "Norfolk, Isla"
+
+#: ../fields/country-select.php:219
+msgid "Northern Mariana Islands"
+msgstr "Marianas del Norte, Islas"
+
+#: ../fields/country-select.php:220 ../fields/iban.php:166
+msgid "Norway"
+msgstr "Noruega"
+
+#: ../fields/country-select.php:221
+msgid "Oman"
+msgstr "Omán"
+
+#: ../fields/country-select.php:222 ../fields/iban.php:167
+msgid "Pakistan"
+msgstr "Pakistán"
+
+#: ../fields/country-select.php:223
+msgid "Palau"
+msgstr "Palaos"
+
+#: ../fields/country-select.php:224
+msgid "Palestine, State of"
+msgstr "Palestina, Estado de"
+
+#: ../fields/country-select.php:225
+msgid "Panama"
+msgstr "Panamá"
+
+#: ../fields/country-select.php:226
+msgid "Papua New Guinea"
+msgstr "Papúa Nueva Guinea"
+
+#: ../fields/country-select.php:227
+msgid "Paraguay"
+msgstr "Paraguay"
+
+#: ../fields/country-select.php:228
+msgid "Peru"
+msgstr "Perú"
+
+#: ../fields/country-select.php:229
+msgid "Philippines"
+msgstr "Filipinas"
+
+#: ../fields/country-select.php:230
+msgid "Pitcairn"
+msgstr "Pitcairn"
+
+#: ../fields/country-select.php:231 ../fields/iban.php:168
+msgid "Poland"
+msgstr "Polonia"
+
+#: ../fields/country-select.php:232 ../fields/iban.php:170
+msgid "Portugal"
+msgstr "Portugal"
+
+#: ../fields/country-select.php:233
+msgid "Puerto Rico"
+msgstr "Puerto Rico"
+
+#: ../fields/country-select.php:234 ../fields/iban.php:171
+msgid "Qatar"
+msgstr "Catar"
+
+#: ../fields/country-select.php:235
+msgid "Réunion"
+msgstr "Reunión"
+
+#: ../fields/country-select.php:236 ../fields/iban.php:172
+msgid "Romania"
+msgstr "Rumanía"
+
+#: ../fields/country-select.php:237
+msgid "Russian Federation"
+msgstr "Rusia"
+
+#: ../fields/country-select.php:238
+msgid "Rwanda"
+msgstr "Ruanda"
+
+#: ../fields/country-select.php:239
+msgid "Saint Barthélemy"
+msgstr "San Bartolomé"
+
+#: ../fields/country-select.php:240
+msgid "Saint Helena, Ascension and Tristan da Cunha"
+msgstr "Santa Elena, Ascensión y Tristán de Acuña"
+
+#: ../fields/country-select.php:241
+msgid "Saint Kitts and Nevis"
+msgstr "San Cristóbal y Nieves"
+
+#: ../fields/country-select.php:242 ../fields/iban.php:153
+msgid "Saint Lucia"
+msgstr "Santa Lucía"
+
+#: ../fields/country-select.php:243
+msgid "Saint Martin (French part)"
+msgstr "San Martín (parte francesa)"
+
+#: ../fields/country-select.php:244
+msgid "Saint Pierre and Miquelon"
+msgstr "San Pedro y Miquelón"
+
+#: ../fields/country-select.php:245
+msgid "Saint Vincent and the Grenadines"
+msgstr "San Vicente y las Granadinas"
+
+#: ../fields/country-select.php:246
+msgid "Samoa"
+msgstr "Samoa"
+
+#: ../fields/country-select.php:247 ../fields/iban.php:179
+msgid "San Marino"
+msgstr "San Marino"
+
+#: ../fields/country-select.php:248 ../fields/iban.php:180
+msgid "Sao Tome and Principe"
+msgstr "Santo Tomé y Principe"
+
+#: ../fields/country-select.php:249 ../fields/iban.php:174
+msgid "Saudi Arabia"
+msgstr "Arabia Saudí"
+
+#: ../fields/country-select.php:250
+msgid "Senegal"
+msgstr "Senegal"
+
+#: ../fields/country-select.php:251 ../fields/iban.php:173
+msgid "Serbia"
+msgstr "Serbia"
+
+#: ../fields/country-select.php:252 ../fields/iban.php:175
+msgid "Seychelles"
+msgstr "Seychelles"
+
+#: ../fields/country-select.php:253
+msgid "Sierra Leone"
+msgstr "Sierra Leona"
+
+#: ../fields/country-select.php:254
+msgid "Singapore"
+msgstr "Singapur"
+
+#: ../fields/country-select.php:255
+msgid "Sint Maarten (Dutch part)"
+msgstr "San Martín (parte neerlandesa)"
+
+#: ../fields/country-select.php:256 ../fields/iban.php:178
+msgid "Slovakia"
+msgstr "Eslovaquia"
+
+#: ../fields/country-select.php:257 ../fields/iban.php:177
+msgid "Slovenia"
+msgstr "Eslovenia"
+
+#: ../fields/country-select.php:258
+msgid "Solomon Islands"
+msgstr "Salomón, Islas"
+
+#: ../fields/country-select.php:259
+msgid "Somalia"
+msgstr "Somalia"
+
+#: ../fields/country-select.php:260
+msgid "South Africa"
+msgstr "Sudáfrica"
+
+#: ../fields/country-select.php:261
+msgid "South Georgia and the South Sandwich Islands"
+msgstr "Georgias del Sur y Sandwich del Sur, Islas"
+
+#: ../fields/country-select.php:262
+msgid "South Sudan"
+msgstr "Sudán del Sur"
+
+#: ../fields/country-select.php:263 ../fields/iban.php:132
+msgid "Spain"
+msgstr "España"
+
+#: ../fields/country-select.php:264
+msgid "Sri Lanka"
+msgstr "Sri Lanka"
+
+#: ../fields/country-select.php:265
+msgid "Sudan"
+msgstr "Sudán"
+
+#: ../fields/country-select.php:266
+msgid "Suriname"
+msgstr "Surinam"
+
+#: ../fields/country-select.php:267
+msgid "Svalbard and Jan Mayen"
+msgstr "Svalbard y Jan Mayen"
+
+#: ../fields/country-select.php:268
+msgid "Swaziland"
+msgstr "Suazilandia"
+
+#: ../fields/country-select.php:269 ../fields/iban.php:176
+msgid "Sweden"
+msgstr "Suecia"
+
+#: ../fields/country-select.php:270 ../fields/iban.php:123
+msgid "Switzerland"
+msgstr "Suiza"
+
+#: ../fields/country-select.php:271
+msgid "Syrian Arab Republic"
+msgstr "Siria, República Árabe"
+
+#: ../fields/country-select.php:272
+msgid "Taiwan, Province of China"
+msgstr "Taiwán, provincia de"
+
+#: ../fields/country-select.php:273
+msgid "Tajikistan"
+msgstr "Tayikistán"
+
+#: ../fields/country-select.php:274
+msgid "Tanzania, United Republic of"
+msgstr "Tanzania, República Unida de"
+
+#: ../fields/country-select.php:275
+msgid "Thailand"
+msgstr "Tailandia"
+
+#: ../fields/country-select.php:276 ../fields/iban.php:182
+msgid "Timor-Leste"
+msgstr "Timor Oriental"
+
+#: ../fields/country-select.php:277
+msgid "Togo"
+msgstr "Togo"
+
+#: ../fields/country-select.php:278
+msgid "Tokelau"
+msgstr "Tokelau"
+
+#: ../fields/country-select.php:279
+msgid "Tonga"
+msgstr "Tonga"
+
+#: ../fields/country-select.php:280
+msgid "Trinidad and Tobago"
+msgstr "Trinidad y Tobago"
+
+#: ../fields/country-select.php:281 ../fields/iban.php:183
+msgid "Tunisia"
+msgstr "Túnez"
+
+#: ../fields/country-select.php:282 ../fields/iban.php:184
+msgid "Turkey"
+msgstr "Turquía"
+
+#: ../fields/country-select.php:283
+msgid "Turkmenistan"
+msgstr "Turkmenistán"
+
+#: ../fields/country-select.php:284
+msgid "Turks and Caicos Islands"
+msgstr "Turcas y Caicos, Islas"
+
+#: ../fields/country-select.php:285
+msgid "Tuvalu"
+msgstr "Tuvalu"
+
+#: ../fields/country-select.php:286
+msgid "Uganda"
+msgstr "Uganda"
+
+#: ../fields/country-select.php:287 ../fields/iban.php:185
+msgid "Ukraine"
+msgstr "Ucrania"
+
+#: ../fields/country-select.php:288 ../fields/iban.php:113
+msgid "United Arab Emirates"
+msgstr "Emiratos Árabes Unidos"
+
+#: ../fields/country-select.php:289 ../fields/iban.php:136
+msgid "United Kingdom"
+msgstr "Reino Unido"
+
+#: ../fields/country-select.php:290
+msgid "United States"
+msgstr "Estados Unidos"
+
+#: ../fields/country-select.php:291
+msgid "United States Minor Outlying Islands"
+msgstr "Ultramarinas Menores de los Estados Unidos, Islas"
+
+#: ../fields/country-select.php:292
+msgid "Uruguay"
+msgstr "Uruguay"
+
+#: ../fields/country-select.php:293
+msgid "Uzbekistan"
+msgstr "Uzbekistán"
+
+#: ../fields/country-select.php:294
+msgid "Vanuatu"
+msgstr "Vanuatu"
+
+#: ../fields/country-select.php:295
+msgid "Venezuela, Bolivarian Republic of"
+msgstr "Venezuela, República Bolivariana de"
+
+#: ../fields/country-select.php:296
+msgid "Viet Nam"
+msgstr "Vietnam"
+
+#: ../fields/country-select.php:297
+msgid "Virgin Islands, British"
+msgstr "Vírgenes, Islas Britanicas"
+
+#: ../fields/country-select.php:298
+msgid "Virgin Islands, U.S."
+msgstr "Vírgenes, Islas Estadounidenses"
+
+#: ../fields/country-select.php:299
+msgid "Wallis and Futuna"
+msgstr "Wallis y Futuna"
+
+#: ../fields/country-select.php:300
+msgid "Western Sahara"
+msgstr "Sáhara Occidental"
+
+#: ../fields/country-select.php:301
+msgid "Yemen"
+msgstr "Yemen"
+
+#: ../fields/country-select.php:302
+msgid "Zambia"
+msgstr "Zambia"
+
+#: ../fields/country-select.php:303
+msgid "Zimbabwe"
+msgstr "Zimbabue"
+
+#: ../fields/country-select.php:323 ../fields/country-select.php:330
+#, php-format
+msgid "Invalid country in field %s."
+msgstr "País inválido en el campo %s."
+
+#: ../fields/dni.php:70
+#, php-format
+msgid "Invalid DNI provided in field %s."
+msgstr "DNI inválido en el campo %s."
+
+#: ../fields/city-select.php:72 ../fields/spanish-province-select.php:52
+#: ../fields/geography/spain/provinces.php:4
+msgid "Alava"
+msgstr "Álava"
+
+#: ../fields/city-select.php:73 ../fields/spanish-province-select.php:53
+#: ../fields/geography/spain/provinces.php:5
+msgid "Albacete"
+msgstr "Albacete"
+
+#: ../fields/city-select.php:74 ../fields/spanish-province-select.php:54
+#: ../fields/geography/spain/provinces.php:6
+msgid "Alicante"
+msgstr "Alicante"
+
+#: ../fields/city-select.php:75 ../fields/spanish-province-select.php:55
+#: ../fields/geography/spain/provinces.php:7
+msgid "Almeria"
+msgstr "Almería"
+
+#: ../fields/city-select.php:76 ../fields/spanish-province-select.php:56
+#: ../fields/geography/spain/provinces.php:8
+msgid "Asturias"
+msgstr "Asturias"
+
+#: ../fields/city-select.php:77 ../fields/spanish-province-select.php:57
+#: ../fields/geography/spain/provinces.php:9
+msgid "Avila"
+msgstr "Ávila"
+
+#: ../fields/city-select.php:78 ../fields/spanish-province-select.php:58
+#: ../fields/geography/spain/provinces.php:10
+msgid "Badajoz"
+msgstr "Badajoz"
+
+#: ../fields/city-select.php:79 ../fields/spanish-province-select.php:59
+#: ../fields/geography/spain/provinces.php:11
+msgid "Baleares"
+msgstr "Baleares"
+
+#: ../fields/city-select.php:80 ../fields/spanish-province-select.php:60
+#: ../fields/geography/spain/provinces.php:12
+msgid "Barcelona"
+msgstr "Barcelona"
+
+#: ../fields/city-select.php:81 ../fields/spanish-province-select.php:61
+#: ../fields/geography/spain/provinces.php:13
+msgid "Burgos"
+msgstr "Burgos"
+
+#: ../fields/city-select.php:82 ../fields/spanish-province-select.php:62
+#: ../fields/geography/spain/provinces.php:14
+msgid "Caceres"
+msgstr "Cáceres"
+
+#: ../fields/city-select.php:83 ../fields/spanish-province-select.php:63
+#: ../fields/geography/spain/provinces.php:15
+msgid "Cadiz"
+msgstr "Cádiz"
+
+#: ../fields/city-select.php:84 ../fields/spanish-province-select.php:64
+#: ../fields/geography/spain/provinces.php:16
+msgid "Cantabria"
+msgstr "Cantabria"
+
+#: ../fields/city-select.php:85 ../fields/spanish-province-select.php:65
+#: ../fields/geography/spain/provinces.php:17
+msgid "Castellon"
+msgstr "Castellón"
+
+#: ../fields/city-select.php:86 ../fields/spanish-province-select.php:66
+#: ../fields/geography/spain/provinces.php:18
+msgid "Ceuta"
+msgstr "Ceuta"
+
+#: ../fields/city-select.php:87 ../fields/spanish-province-select.php:67
+#: ../fields/geography/spain/provinces.php:19
+msgid "Ciudad Real"
+msgstr "Ciudad Real"
+
+#: ../fields/city-select.php:88 ../fields/spanish-province-select.php:68
+#: ../fields/geography/spain/provinces.php:20
+msgid "Cordoba"
+msgstr "Córdoba"
+
+#: ../fields/city-select.php:89 ../fields/spanish-province-select.php:69
+#: ../fields/geography/spain/provinces.php:21
+msgid "Cuenca"
+msgstr "Cuenca"
+
+#: ../fields/city-select.php:90 ../fields/spanish-province-select.php:70
+#: ../fields/geography/spain/provinces.php:22
+msgid "Gerona"
+msgstr "Gerona"
+
+#: ../fields/city-select.php:91 ../fields/spanish-province-select.php:71
+#: ../fields/geography/spain/provinces.php:23
+msgid "Granada"
+msgstr "Granada"
+
+#: ../fields/city-select.php:92 ../fields/spanish-province-select.php:72
+#: ../fields/geography/spain/provinces.php:24
+msgid "Guadalajara"
+msgstr "Guadalajara"
+
+#: ../fields/city-select.php:93 ../fields/spanish-province-select.php:73
+#: ../fields/geography/spain/provinces.php:25
+msgid "Guipuzcoa"
+msgstr "Guipúzcoa"
+
+#: ../fields/city-select.php:94 ../fields/spanish-province-select.php:74
+#: ../fields/geography/spain/provinces.php:26
+msgid "Huelva"
+msgstr "Huelva"
+
+#: ../fields/city-select.php:95 ../fields/spanish-province-select.php:75
+#: ../fields/geography/spain/provinces.php:27
+msgid "Huesca"
+msgstr "Huesca"
+
+#: ../fields/city-select.php:96 ../fields/spanish-province-select.php:76
+#: ../fields/geography/spain/provinces.php:28
+msgid "Jaen"
+msgstr "Jaén"
+
+#: ../fields/city-select.php:97 ../fields/spanish-province-select.php:77
+#: ../fields/geography/spain/provinces.php:29
+msgid "La Coruña"
+msgstr "La Coruña"
+
+#: ../fields/city-select.php:98 ../fields/spanish-province-select.php:78
+#: ../fields/geography/spain/provinces.php:30
+msgid "La Rioja"
+msgstr "La Rioja"
+
+#: ../fields/city-select.php:99 ../fields/spanish-province-select.php:79
+#: ../fields/geography/spain/provinces.php:31
+msgid "Las Palmas"
+msgstr "Las Palmas"
+
+#: ../fields/city-select.php:100 ../fields/spanish-province-select.php:80
+#: ../fields/geography/spain/provinces.php:32
+msgid "Leon"
+msgstr "León"
+
+#: ../fields/city-select.php:101 ../fields/spanish-province-select.php:81
+#: ../fields/geography/spain/provinces.php:33
+msgid "Lerida"
+msgstr "Lérida"
+
+#: ../fields/city-select.php:102 ../fields/spanish-province-select.php:82
+#: ../fields/geography/spain/provinces.php:34
+msgid "Lugo"
+msgstr "Lugo"
+
+#: ../fields/city-select.php:103 ../fields/spanish-province-select.php:83
+#: ../fields/geography/spain/provinces.php:35
+msgid "Madrid"
+msgstr "Madrid"
+
+#: ../fields/city-select.php:104 ../fields/spanish-province-select.php:84
+#: ../fields/geography/spain/provinces.php:36
+msgid "Malaga"
+msgstr "Málaga"
+
+#: ../fields/city-select.php:105 ../fields/spanish-province-select.php:85
+#: ../fields/geography/spain/provinces.php:37
+msgid "Melilla"
+msgstr "Melilla"
+
+#: ../fields/city-select.php:106 ../fields/spanish-province-select.php:86
+#: ../fields/geography/spain/provinces.php:38
+msgid "Murcia"
+msgstr "Murcia"
+
+#: ../fields/city-select.php:107 ../fields/spanish-province-select.php:87
+#: ../fields/geography/spain/provinces.php:39
+msgid "Navarra"
+msgstr "Navarra"
+
+#: ../fields/city-select.php:108 ../fields/spanish-province-select.php:88
+#: ../fields/geography/spain/provinces.php:40
+msgid "Orense"
+msgstr "Orense"
+
+#: ../fields/city-select.php:109 ../fields/spanish-province-select.php:89
+#: ../fields/geography/spain/provinces.php:41
+msgid "Palencia"
+msgstr "Palencia"
+
+#: ../fields/city-select.php:110 ../fields/spanish-province-select.php:90
+#: ../fields/geography/spain/provinces.php:42
+msgid "Pontevedra"
+msgstr "Pontevedra"
+
+#: ../fields/city-select.php:111 ../fields/spanish-province-select.php:91
+#: ../fields/geography/spain/provinces.php:43
+msgid "Salamanca"
+msgstr "Salamanca"
+
+#: ../fields/city-select.php:112 ../fields/spanish-province-select.php:92
+#: ../fields/geography/spain/provinces.php:44
+msgid "Santa Cruz de Tenerife"
+msgstr "Santa Cruz de Tenerife"
+
+#: ../fields/city-select.php:113 ../fields/spanish-province-select.php:93
+#: ../fields/geography/spain/provinces.php:45
+msgid "Segovia"
+msgstr "Segovia"
+
+#: ../fields/city-select.php:114 ../fields/spanish-province-select.php:94
+#: ../fields/geography/spain/provinces.php:46
+msgid "Sevilla"
+msgstr "Sevilla"
+
+#: ../fields/city-select.php:115 ../fields/spanish-province-select.php:95
+#: ../fields/geography/spain/provinces.php:47
+msgid "Soria"
+msgstr "Soria"
+
+#: ../fields/city-select.php:116 ../fields/spanish-province-select.php:96
+#: ../fields/geography/spain/provinces.php:48
+msgid "Tarragona"
+msgstr "Tarragona"
+
+#: ../fields/city-select.php:117 ../fields/spanish-province-select.php:97
+#: ../fields/geography/spain/provinces.php:49
+msgid "Teruel"
+msgstr "Teruel"
+
+#: ../fields/city-select.php:118 ../fields/spanish-province-select.php:98
+#: ../fields/geography/spain/provinces.php:50
+msgid "Toledo"
+msgstr "Toledo"
+
+#: ../fields/city-select.php:119 ../fields/spanish-province-select.php:99
+#: ../fields/geography/spain/provinces.php:51
+msgid "Valencia"
+msgstr "Valencia"
+
+#: ../fields/city-select.php:120 ../fields/spanish-province-select.php:100
+#: ../fields/geography/spain/provinces.php:52
+msgid "Valladolid"
+msgstr "Valladolid"
+
+#: ../fields/city-select.php:121 ../fields/spanish-province-select.php:101
+#: ../fields/geography/spain/provinces.php:53
+msgid "Vizcaya"
+msgstr "Vizcaya"
+
+#: ../fields/city-select.php:122 ../fields/spanish-province-select.php:102
+#: ../fields/geography/spain/provinces.php:54
+msgid "Zamora"
+msgstr "Zamora"
+
+#: ../fields/city-select.php:123 ../fields/spanish-province-select.php:103
+#: ../fields/geography/spain/provinces.php:55
+msgid "Zaragoza"
+msgstr "Zaragoza"
+
+#: ../fields/city-select.php:139 ../fields/city-select.php:146
+#: ../fields/spanish-province-select.php:119
+#: ../fields/spanish-province-select.php:126
+#, php-format
+msgid "Invalid province in field %s."
+msgstr "Provincia inválida en el campo %s."
+
+#: ../fields/nif.php:136
+#, php-format
+msgid "Invalid NIF provided in field %s."
+msgstr "NIF inválido en el campo %s."
+
+#: ../fields/multi-contact.php:103
+#: ../fields/templates/admin/multi-contact.php:37
+msgid "Contact"
+msgstr "Contacto"
+
+#: ../fields/multi-contact.php:104
+#: ../fields/templates/admin/multi-contact.php:142
+msgid "Remove"
+msgstr "Quitar"
+
+#: ../fields/multi-contact.php:127 ../fields/stars.php:98
+#: ../fields/stars.php:105 ../fields/tinymce.php:131 ../fields/text.php:91
+#: ../fields/iban.php:496
+#, php-format
+msgid "Field %s contains invalid data."
+msgstr "El campo %s datos inválidos."
+
+#: ../fields/upload-ajax-image-position.php:136
+#: ../fields/upload-ajax-image-cropper.php:107
+#: ../fields/upload-ajax-image-multiple.php:94
+#: ../fields/upload-ajax-image-multiple.php:148
+#: ../fields/upload-ajax-image.php:163 ../fields/upload-ajax-image.php:217
+#: ../fields/templates/image-selection-window.php:7
+#: ../fields/templates/image-selection-window.php:14
+msgid "Select image"
+msgstr "Seleccionar imagen"
+
+#: ../fields/upload-ajax-image-position.php:137
+#: ../fields/upload-ajax-image-cropper.php:108
+#: ../fields/upload-ajax-image-multiple.php:95
+#: ../fields/upload-ajax-image-multiple.php:149
+#: ../fields/upload-ajax-image.php:164 ../fields/upload-ajax-image.php:218
+msgid "Use selected image"
+msgstr "Usar imagen seleccionada"
+
+#: ../fields/post-select.php:116 ../fields/user-select.php:102
+#: ../fields/term-select.php:107
+#, php-format
+msgid "Selection in %s is not valid."
+msgstr "La selección %s es invalida."
+
+#: ../fields/select.php:249
+#, php-format
+msgid "The field %s must contain a valid selection."
+msgstr "El campo %s debe contener una selección válida."
+
+#: ../fields/checkbox.php:39
+#, php-format
+msgid "You must check the checkbox %s."
+msgstr "Debe marcar la casilla %s."
+
+#: ../fields/radiobutton-group.php:84
+#, php-format
+msgid "An option in %s must be selected."
+msgstr "Debe seleccionar una opción en %s."
+
+#: ../fields/google-captcha.php:55 ../fields/google-captcha.php:77
+msgid "Humanity confirmation is required."
+msgstr "Se requiere confirmación de humanidad."
+
+#: ../fields/jquery-slider.php:62
+#, php-format
+msgid "Invalid value provied in field %s."
+msgstr "Valor inválido en el campo %s."
+
+#: ../fields/jquery-slider.php:71 ../fields/jquery-range-slider.php:104
+#: ../fields/number.php:92 ../fields/date.php:96
+#, php-format
+msgid "Field %s must not be greater than %s."
+msgstr "El campo %s no debe ser mayor que %s."
+
+#: ../fields/jquery-slider.php:78 ../fields/jquery-range-slider.php:111
+#: ../fields/number.php:99 ../fields/date.php:106
+#, php-format
+msgid "Field %s must not be smaller than %s."
+msgstr "El campo %s no debe ser menor que %s."
+
+#: ../fields/background.php:55 ../fields/background.php:67
+msgid "Opacity"
+msgstr "Opacidad"
+
+#: ../fields/jquery-range-slider.php:85 ../fields/jquery-range-slider.php:94
+#, php-format
+msgid "Invalid range provied in field %s."
+msgstr "Rango inválido en el campo %s."
+
+#: ../fields/abstract-field.php:95 ../fields/number.php:74
+#, php-format
+msgid "Field %s is required."
+msgstr "El campo %s es obligatorio."
+
+#: ../fields/table-variable.php:286
+msgid "Add row"
+msgstr "Añadir fila"
+
+#: ../fields/table-variable.php:293
+msgid "Remove row"
+msgstr "Eliminar fila"
+
+#: ../fields/spanish-city-select.php:80 ../fields/spanish-city-select.php:87
+#, php-format
+msgid "Invalid city in field %s."
+msgstr "Ciudad inválida en el campo %s."
+
+#: ../fields/checkbox-group.php:127
+#, php-format
+msgid "The option %s in %s must be selected."
+msgstr "Debe seleccionar la opción %s en %s."
+
+#: ../fields/email.php:56
+#, php-format
+msgid "Separate email addresses with %s"
+msgstr "Separe las direcciones de email con %s"
+
+#: ../fields/email.php:78 ../fields/email.php:92
+#, php-format
+msgid "Invalid email provided in field %s."
+msgstr "Email inválido en el campo %s."
+
+#: ../fields/number.php:83
+#, php-format
+msgid "Invalid number provied in field %s."
+msgstr "Número inválido en el campo %s."
+
+#: ../fields/date.php:85
+#, php-format
+msgid "Invalid date provied in field %s."
+msgstr "Fecha inválida en el campo %s."
+
+#: ../fields/text.php:100
+#, php-format
+msgid "Field %s must be not greater than %d characters"
+msgstr "El campo %s no debe ser mayor que %d caracteres."
+
+#: ../fields/file.php:91
+#, php-format
+msgid "You must upload a file in field %s."
+msgstr "Debe subir un archivo en el campo %s."
+
+#: ../fields/file.php:99
+#, php-format
+msgid "Can not upload file in field %s."
+msgstr "No se puede subir el archivo en el campo %s."
+
+#: ../fields/file.php:106
+#, php-format
+msgid "File in field %s exceeds the size limit."
+msgstr "El archivo en el campo %s supera el límite de tamaño."
+
+#: ../fields/file.php:116
+#, php-format
+msgid "File in field %s has not allowed extension."
+msgstr "El archivo en el campo %s no tiene una extensión permitida."
+
+#: ../fields/file.php:128
+#, php-format
+msgid "File in field %s has not allowed MIME type."
+msgstr "El archivo en el campo %s no tiene un tipo MIME permitido."
+
+#: ../fields/iban.php:122
+msgid "Republic of Belarus"
+msgstr "República de Bielorrusia"
+
+#: ../fields/iban.php:140
+msgid "Grece"
+msgstr "Grecia"
+
+#: ../fields/iban.php:149
+msgid "Jordania"
+msgstr "Jordania"
+
+#: ../fields/iban.php:159
+msgid "Moldova"
+msgstr "Moldavia"
+
+#: ../fields/iban.php:161
+msgid "Macedonia"
+msgstr "Macedonia"
+
+#: ../fields/iban.php:169
+msgid "Palestina"
+msgstr "Palestina"
+
+#: ../fields/iban.php:186
+msgid "Vatican City State"
+msgstr "Estado de la Ciudad del Vaticano"
+
+#: ../fields/iban.php:187
+msgid "Virgin Islands"
+msgstr "Islas Vírgenes"
+
+#: ../fields/iban.php:188
+msgid "Kosovo"
+msgstr "Kosovo"
+
+#: ../fields/iban.php:516
+#, php-format
+msgid "%s field of type IBAN is missconfigured: Country %s is not available."
+msgstr ""
+"El campo %s de tipo IBAN esta desconfigurado: El país %s no está disponible."
+
+#: ../fields/iban.php:522
+msgid "There was an error. Please try again later."
+msgstr "Hubo un error. Inténtelo de nuevo más tarde, por favor."
+
+#: ../fields/iban.php:530
+#, php-format
+msgid "%s field is not a valid IBAN for %s."
+msgstr "El campo %s no es un IBAN válido para %s."
+
+#: ../fields/iban.php:540
+#, php-format
+msgid "Invalid IBAN in field %s."
+msgstr "IBAN inválido en el campo %s."
+
+#: ../fields/upload-ajax-image.php:307
+msgid "Invalid file"
+msgstr "Archivo inválido"
+
+#: ../fields/templates/upload-ajax-image-position.php:7
+#: ../fields/templates/upload-ajax-image-position.php:15
+#: ../fields/templates/upload-private-image.php:16
+#: ../fields/templates/upload-ajax-image-cropper.php:6
+#: ../fields/templates/upload-ajax-image-multiple.php:32
+#: ../fields/templates/upload-ajax-image.php:6
+#: ../fields/templates/admin/upload-private-image.php:29
+#: ../fields/templates/admin/upload-ajax-image.php:42
+msgid "Selected image"
+msgstr "Imagen seleccionada"
+
+#: ../fields/templates/calendar.php:11
+#: ../fields/templates/admin/calendar.php:24
+msgid "Select a date, please."
+msgstr "Seleccione una fecha, por favor."
+
+#: ../fields/templates/calendar.php:33
+#: ../fields/templates/admin/calendar.php:46
+msgid "This field requires JLCCalendar plugin."
+msgstr "Este campo requiere el plugin JLCCalendar."
+
+#: ../fields/templates/save-and-add-buttons.php:23
+#: ../fields/templates/admin/save-and-add-buttons.php:27
+msgid "Save and add new"
+msgstr "Guardar y añadir nuevo"
+
+#: ../fields/templates/background.php:14
+msgid "Solid"
+msgstr "Solido"
+
+#: ../fields/templates/background.php:15
+msgid "Gradient"
+msgstr "Gradiente"
+
+#: ../fields/templates/background.php:16
+msgid "Vertical gradient"
+msgstr "Gradiente vertical"
+
+#: ../fields/templates/upload-ajax-image-multiple.php:24
+msgid "Add image"
+msgstr "Añadir imagen"
+
+#: ../fields/templates/admin/multi-contact.php:40
+#: ../fields/templates/admin/multi-contact.php:155
+msgid "City"
+msgstr "Ciudad"
+
+#: ../fields/templates/admin/multi-contact.php:50
+#: ../fields/templates/admin/multi-contact.php:166
+msgid "Post code"
+msgstr "Código postal"
+
+#: ../fields/templates/admin/multi-contact.php:62
+#: ../fields/templates/admin/multi-contact.php:179
+msgid "State / Province"
+msgstr "Estado / Provincia"
+
+#: ../fields/templates/admin/multi-contact.php:72
+#: ../fields/templates/admin/multi-contact.php:190
+msgid "Country"
+msgstr "País"
+
+#: ../fields/templates/admin/multi-contact.php:84
+#: ../fields/templates/admin/multi-contact.php:203
+msgid "Address"
+msgstr "Dirección"
+
+#: ../fields/templates/admin/multi-contact.php:96
+#: ../fields/templates/admin/multi-contact.php:216
+msgid "Longitude"
+msgstr "Longitud"
+
+#: ../fields/templates/admin/multi-contact.php:106
+#: ../fields/templates/admin/multi-contact.php:227
+msgid "Latidude"
+msgstr "Latitud"
+
+#: ../fields/templates/admin/multi-contact.php:118
+#: ../fields/templates/admin/multi-contact.php:240
+msgid "Email"
+msgstr "E-mail"
+
+#: ../fields/templates/admin/multi-contact.php:128
+#: ../fields/templates/admin/multi-contact.php:251
+msgid "Phone"
+msgstr "Teléfono"
+
+#: ../fields/templates/admin/multi-contact.php:152
+#: ../fields/templates/admin/multi-contact.php:209
+msgid "New address"
+msgstr "Nueva dirección"
+
+#: ../fields/templates/admin/multi-contact.php:161
+msgid "New city"
+msgstr "Nueva ciudad"
+
+#: ../fields/templates/admin/multi-contact.php:172
+msgid "New postcode"
+msgstr "Nuevo código postal"
+
+#: ../fields/templates/admin/multi-contact.php:184
+msgid "New state"
+msgstr "Nuevo estado"
+
+#: ../fields/templates/admin/multi-contact.php:196
+msgid "New country"
+msgstr "Nuevo país"
+
+#: ../fields/templates/admin/multi-contact.php:222
+msgid "In º (e.g. 4.567531)"
+msgstr "En º (ej: 4.567531)"
+
+#: ../fields/templates/admin/multi-contact.php:233
+msgid "In º (e.g. 10.23145"
+msgstr "En º (ej: 10.23145)"
+
+#: ../fields/templates/admin/multi-contact.php:246
+msgid "New email"
+msgstr "Nuevo correo electrónico"
+
+#: ../fields/templates/admin/multi-contact.php:257
+msgid "New phone"
+msgstr "Nuevo teléfono"
+
+#: ../fields/templates/admin/multi-contact.php:266
+msgid "Add"
+msgstr "Añadir"
+
+#: ../templates/admin/registered-forms.php:4
+msgid "Registered forms"
+msgstr "Formularios registrados"
+
+#: ../templates/admin/registered-forms.php:4
+msgid "Help"
+msgstr "Ayuda"
+
+#: ../templates/admin/settings.php:4
+msgid "Settings"
+msgstr "Ajustes"
+
+#~ msgid "Delete"
+#~ msgstr "Eliminar"
+
+#~ msgid "Student: %s"
+#~ msgstr "Estudiante: %s"
+
+#~ msgid "Chakras course"
+#~ msgstr "Curso de Chakras"
+
+#~ msgid "Students"
+#~ msgstr "Estudiantes"
+
+#~ msgid "Subscribe"
+#~ msgstr "¡Suscribirme!"
+
+#~ msgid "You must be registered in %s to gain access to this course."
+#~ msgstr "Debe estar registrado en %s para acceder a este curso."
+
+#~ msgid "Subscribe today and gain access to our course"
+#~ msgstr "Suscríbete hoy para poder acceder a nuestro curso"
+
+#~ msgid "Subscription is not currently available."
+#~ msgstr "La suscripción no esta disponible actualmente."
+
+#~ msgid "Register today and gain access to our course"
+#~ msgstr "Regístrate hoy para acceder a nuestro curso"
+
+#~ msgid "Order"
+#~ msgstr "Pedido"
+
+#~ msgid "Product"
+#~ msgstr "Producto"
+
+#~ msgid "Registered"
+#~ msgstr "Registrado"
+
+#~ msgid "Student"
+#~ msgstr "Estudiante"
+
+#~ msgid "View"
+#~ msgstr "Ver"
+
+#~ msgid "No students found."
+#~ msgstr "No se encontraron estudiantes."
+
+#~ msgid "Notification addresses"
+#~ msgstr "Direcciones de notificación"
+
+#~ msgid "JLC Course"
+#~ msgstr "Curso JLC"
+
+#~ msgid "Contact page"
+#~ msgstr "Página de contacto"
+
+#~ msgid "Landing page"
+#~ msgstr "Página de llegada"
+
+#~ msgid "Debug mode"
+#~ msgstr "Modo depuración"
+
+#~ msgid "Subscription product"
+#~ msgstr "Producto de suscripción"
+
+#~ msgid "Your email"
+#~ msgstr "Tu email"
+
+#~ msgid "I want to register in this course"
+#~ msgstr "Quiero registrarme en este curso"
+
+#~ msgid "You have been successfuly registered."
+#~ msgstr "Ha sido registrado satisfactoriamente"
+
+#~ msgid "Send"
+#~ msgstr "Enviar"
+
+#~ msgid ""
+#~ "Thank you for do the exam. We will contact you to confirm the result."
+#~ msgstr ""
+#~ "¡Gracias por hacer el examen! Contactaremos contigo para confirmar el "
+#~ "resultado."
+
+#~ msgid "Go to course!"
+#~ msgstr "¡Ir al curso!"
+
+#~ msgid "Subscribe!"
+#~ msgstr "¡Suscribirme!"
+
+#~ msgid "Y/m/d"
+#~ msgstr "d/m/Y"
+
+#~ msgid "Y/m/d H:i:s"
+#~ msgstr "d/m/Y H:i:s"
+
+#~ msgid "Instance created successfully"
+#~ msgstr "Instancia creada satisfactoriamente"
+
+#~ msgid "Instance deleted successfully"
+#~ msgstr "Instancia eliminada correctamente"
+
+#~ msgid "Settings saved"
+#~ msgstr "Ajustes guardados"
+
+#~ msgid "Student deleted successfully"
+#~ msgstr "Estudiante eliminado correctamente"
+
+#~ msgid "Dates are not in range."
+#~ msgstr "Las fechas no tienen un orden válido."
+
+#~ msgid "Doubt is already ansered."
+#~ msgstr "La duda ya ha sido contestada."
+
+#~ msgid ""
+#~ "The course has already started and at leats one user has registered. "
+#~ "Therefor can not be updated or deleted."
+#~ msgstr ""
+#~ "El curso ya ha empezado y al menos tiene un usuario registrado. Por "
+#~ "tanto, no puede ser actualizado o eliminado."
+
+#~ msgid "Selected student does not exist."
+#~ msgstr "El estudiante seleccionado no existe."
+
+#~ msgid "Fill all the fields."
+#~ msgstr "Rellene todos los campos."
+
+#~ msgid "Waiting for subscription opening"
+#~ msgstr "Esperando la apertura del periodo de inscripción"
+
+#~ msgid "In process"
+#~ msgstr "En proceso"
+
+#~ msgid "Subscription closed"
+#~ msgstr "Suscripción cerrada"
+
+#~ msgid "Subscription opened"
+#~ msgstr "Suscripción abierta"
+
+#~ msgid "Fibromyalgia"
+#~ msgstr "Fibromialgia"
+
+#~ msgid "Instances"
+#~ msgstr "Instancias"
+
+#~ msgid "There are not course available now."
+#~ msgstr "No hay cursos disponibles ahora."
+
+#~ msgid "There course will start at %s."
+#~ msgstr "El curso empezará el %s."
+
+#~ msgid "%A %e of %B %Y"
+#~ msgstr "%A %e de %B de %Y"
+
+#~ msgid "Course info"
+#~ msgstr "Información del curso"
+
+#~ msgid "Course date"
+#~ msgstr "Fecha del curso"
+
+#~ msgid "There was an error in exercise form."
+#~ msgstr "Hubo un error en el formulario del ejercicio."
+
+#~ msgid "Few Fibromyalgia instances available"
+#~ msgstr "Pocas instancias del curso de fibromialgia disponibles"
+
+#~ msgid "Welcome to Fibromyalgia Course"
+#~ msgstr "Bienvenido al curso sobre Fibromialgia"
+
+#~ msgid "New user registered"
+#~ msgstr "Nuevo usuario registrado"
+
+#~ msgid "Registration error"
+#~ msgstr "Error de registro"
+
+#~ msgid "A doubt has been answered."
+#~ msgstr "Se ha respondido una duda."
+
+#~ msgid "Set date"
+#~ msgstr "Fijar fecha"
+
+#~ msgid "Left blank for current date"
+#~ msgstr "Dejar en blanco para la fecha actual"
+
+#~ msgid "When do you want to do the course?"
+#~ msgstr "¿Cuándo quieres hacer el curso?"
+
+#~ msgid "From %s to %s."
+#~ msgstr "Del %s al %s."
+
+#~ msgid "Fibromyalgia Course"
+#~ msgstr "Curso Fibromialgia"
+
+#~ msgid "The course is inactive."
+#~ msgstr "El curso no está activo."
+
+#~ msgid "Log in"
+#~ msgstr "Iniciar sesión"
+
+#~ msgid "Password"
+#~ msgstr "Contraseña"
+
+#~ msgid "Remember me"
+#~ msgstr "Recuérdame"
+
+#~ msgid "Click here to register."
+#~ msgstr "Clic aquí para registrarse."
+
+#~ msgid "You have finished the course."
+#~ msgstr "Has acabado el curso."
+
+#~ msgid "The course has not started yet. We will write you when it starts."
+#~ msgstr "El curso no ha empezado aun. Te escribiremos cuando empiece."
+
+#~ msgid "New Fibromyalgia instance"
+#~ msgstr "Nueva instancia de Fibromialgia"
+
+#~ msgid "Label"
+#~ msgstr "Etiqueta"
+
+#~ msgid "Name this instance to differ it from others."
+#~ msgstr "Ponga un nombre a esta instancia para diferenciarla del resto."
+
+#~ msgid "Subscription end date"
+#~ msgstr "Fecha de finalización de suscripción"
+
+#~ msgid "Left blank to limit the subscription until the course starts."
+#~ msgstr ""
+#~ "Dejar en blanco para limitar el periodo de inscripción al día en que "
+#~ "empieza el curso"
+
+#~ msgid "Course start date"
+#~ msgstr "Fecha de inicio del curso"
+
+#~ msgid "Save new instance"
+#~ msgstr "Guardar nueva instancia"
+
+#~ msgid "Fibromyalgia course students"
+#~ msgstr "Estudiantes del curso Fibromialgia"
+
+#~ msgid "The course instance for this register was deleted"
+#~ msgstr "La instancia del curso para este registro fue eliminada."
+
+#~ msgid "First name"
+#~ msgstr "Nombre"
+
+#~ msgid "Last name"
+#~ msgstr "Apellidos"
+
+#~ msgid "Excercises"
+#~ msgstr "Ejercicios"
+
+#~ msgid "Exercise %d"
+#~ msgstr "Ejercicio %d"
+
+#~ msgid "(%d of %d doubts answered)"
+#~ msgstr "(%d de %d dudas respondidas)"
+
+#~ msgid "Waiting for response"
+#~ msgstr "Esperando respuesta"
+
+#~ msgid "Not available yet"
+#~ msgstr "Aun no disponible."
+
+#~ msgid "Not answered"
+#~ msgstr "Sin responder."
+
+#~ msgid "Not info available."
+#~ msgstr "No hay información disponible."
+
+#~ msgid "No registered user"
+#~ msgstr "Usuario sin registrar"
+
+#~ msgid "Fibromyalgia instances"
+#~ msgstr "Instancias de fibromialgia"
+
+#~ msgid "Add new instance"
+#~ msgstr "Añadir nueva instancia"
+
+#~ msgid "Subscription start"
+#~ msgstr "Inicio de suscripción"
+
+#~ msgid "Subscription end"
+#~ msgstr "Fin de suscripción"
+
+#~ msgid "Course start"
+#~ msgstr "Inicio del curso"
+
+#~ msgid "Status"
+#~ msgstr "Estado"
+
+#~ msgid "Are you sure?"
+#~ msgstr "¿Está seguro?"
+
+#~ msgid "No instances found"
+#~ msgstr "No se encontraron instancias"
+
+#~ msgid "Separate with commas"
+#~ msgstr "Separar con comas"
+
+#~ msgid "This course page used to promotionate this course."
+#~ msgstr "Esta página de curso se utiliza para promocionar este curso."
+
+#~ msgid ""
+#~ "Enable this option allows administrators to simulate dates for the courses"
+#~ msgstr ""
+#~ "Activar esta opción permite a los administradores simular distintas "
+#~ "fechas para los cursos."
+
+#~ msgid "Edit Fibromyalgia instance"
+#~ msgstr "Editar instancia de Fibromialgia"
+
+#~ msgid "In progress"
+#~ msgstr "En proceso"
+
+#~ msgid "No instances in progress"
+#~ msgstr "No hay instancias en proceso."
+
+#~ msgid "Started"
+#~ msgstr "Emepezado"
+
+#~ msgid "View instance"
+#~ msgstr "Ver instancia"
+
+#~ msgid "Edit instance"
+#~ msgstr "Editar instancia"
+
+#~ msgid "View students"
+#~ msgstr "Ver estudiantes"
+
+#~ msgid "Register available"
+#~ msgstr "Registro disponible"
+
+#~ msgid "No instances available"
+#~ msgstr "No hay instancias disponibles"
+
+#~ msgid "Start date"
+#~ msgstr "Fecha de inicio"
+
+#~ msgid "Doubts"
+#~ msgstr "Dudas"
+
+#~ msgid "There are not pending doubts."
+#~ msgstr "No hay dudas pendientes."
+
+#~ msgid "Question"
+#~ msgstr "Pregunta"
+
+#~ msgid "Asked"
+#~ msgstr "Preguntado"
+
+#~ msgid "Answer doubt"
+#~ msgstr "Responder duda"
+
+#~ msgid "Filtered by instance:"
+#~ msgstr "Filtrado por instancia"
+
+#~ msgid "Y/m/d H:i"
+#~ msgstr "d/m/Y H:i"
+
+#~ msgid "Your doubts"
+#~ msgstr "Tus dudas"
+
+#~ msgid "Not answered yet"
+#~ msgstr "Sin responder aun"
+
+#~ msgid "Have you any doubt?"
+#~ msgstr "¿Tiene alguna duda?"
+
+#~ msgid "You can make three questions the first day of the week."
+#~ msgstr "Puedes hacer tres preguntas el primer día de cada semana."
+
+#~ msgid "Have you more doubts?"
+#~ msgstr "¿Tiene más dudas?"
+
+#~ msgid "You can make %d question(s) more today."
+#~ msgstr "Puedes hacer %d pregunta(s) más hoy."
+
+#~ msgid "You have reached the doubts limit for this exercise."
+#~ msgstr "Has alcanzado el límite de dudas para este ejercicio."
+
+#~ msgid "Doubts (answered %d of %d)"
+#~ msgstr "Dudas (respondidas %d de %d)"
+
+#~ msgid "· Doubt %d - At %s"
+#~ msgstr "· Duda %d - el %s"
+
+#~ msgid "Answer here"
+#~ msgstr "Responder aquí"
+
+#~ msgid "Send answer"
+#~ msgstr "Enviar respuesta"
+
+#~ msgid "Answered at %s:"
+#~ msgstr "Respondido el %s:"
+
+#~ msgid "Your question:"
+#~ msgstr "Su pregunta:"
+
+#~ msgid "Your doubt:"
+#~ msgstr "Su duda:"
+
+#~ msgid "Answer:"
+#~ msgstr "Respuesta:"
+
+#~ msgid "There was an error in excersise form."
+#~ msgstr "Hubo un error en el formulario del ejercicio."
+
+#~ msgid ""
+#~ "Registered user can not access the course in which is registered. Contact "
+#~ "the developer."
+#~ msgstr ""
+#~ "Un usuario registrado no puede acceder a un curso en el que se ha "
+#~ "registrado. Contacte con el administrador del sitio."
+
+#~ msgid "There was an error in a registration process."
+#~ msgstr "Hubo un error en el proceso de registro."
+
+#~ msgid "Client email:"
+#~ msgstr "Email del cliente:"
+
+#~ msgid "Order ID:"
+#~ msgstr "ID pedido:"
+
+#~ msgid "Date:"
+#~ msgstr "Fecha:"
+
+#~ msgid "%s has been registered in Fibromyalgia Course."
+#~ msgstr "%s ha sido registrado en el curso Fibromialgia"
+
+#~ msgid "student"
+#~ msgstr "estudiante"
+
+#~ msgid "Fibromyalgia - Excersise %d"
+#~ msgstr "Fibromialgia - Ejercicio %d"
+
+#~ msgid "A response has been sent."
+#~ msgstr "Se ha enviado una respuesta."
+
+#~ msgid "A doubt has been sent."
+#~ msgstr "Se ha enviado una duda."
+
+#~ msgid "Superar la fibromialgia a través de una vida sana - Exercise %d"
+#~ msgstr "Superar la fibromialgia a través de una vida sana - Ejercicio %d"
+
+#~ msgid "You can access this exercise and make questions in our site:"
+#~ msgstr ""
+#~ "Puede acceder a este ejercicio y hacer sus propias preguntas en nuestro "
+#~ "sitio:"
+
+#~ msgid "Go to exercise"
+#~ msgstr "Ir al ejercicio"
+
+#~ msgid "Go to site"
+#~ msgstr "Ir al sitio"
+
+#~ msgid "%s has sent an exercise response"
+#~ msgstr "%s ha enviado la respuesta de un ejercicio"
+
+#~ msgid "View response here"
+#~ msgstr "Vea la respuesta aquí"
+
+#~ msgid ""
+#~ "You already have sent this form. The next exercise will be available soon."
+#~ msgstr ""
+#~ "Ya has enviado este formulario. El siguiente ejercicio estará disponible "
+#~ "el primer día de la siguiente semana."
+
+#~ msgid "Access our site to answer the questions of the last exercise."
+#~ msgstr ""
+#~ "Accede a nuestro sitio para responder las cuestiones del último ejercicio."
+
+#~ msgid "%s has sent a doubt"
+#~ msgstr "%s ha enviado una duda"
+
+#~ msgid "Answer doubt here"
+#~ msgstr "Responder duda aquí"
+
+#~ msgid "Mindfulness"
+#~ msgstr "Mindfulness"
+
+#~ msgid "Welcome to Mindfulness"
+#~ msgstr "¡Bienvenido a Mindfulness!"
+
+#~ msgid "Mindfulness students"
+#~ msgstr "Estudiantes de Mindfulness"
+
+#~ msgid "Mindfulness instances"
+#~ msgstr "Instancias de Mindfulness"
+
+#~ msgid "Edit Mindfulness instance"
+#~ msgstr "Editar instancia de Mindfulness"
+
+#~ msgid "Dear %s"
+#~ msgstr "Estimad@ %s"
+
+#~ msgid "Mindfulness - Exercise %d"
+#~ msgstr "Mindfulness - Ejercicio %d"
+
+#~ msgid "Comment your experience in 250 characters."
+#~ msgstr "Comenta tu experiencia en 250 caracteres."
+
+#~ msgid "Comenta tu experiencia de la semana y del curso."
+#~ msgstr "Comenta tu experiencia de la semana y del curso."
+
+#~ msgid "Comment your experience."
+#~ msgstr "Comenta tu experiencia."
+
+#~ msgid "l jS \\of F Y"
+#~ msgstr "l j \\d\\e F \\d\\e Y"

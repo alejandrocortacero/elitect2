@@ -1,0 +1,196 @@
+<?php defined( 'ABSPATH' ) or die('Wrong Access!');
+
+if( !EpointPersonalTrainer::is_site_client()/* || !EpointPersonalTrainer::is_site_trainer()*/ )
+{
+	wp_redirect( get_site_url() );
+	exit;
+}
+
+$member = wp_get_current_user();
+
+
+
+add_filter( 'body_class', function( $classes, $class ){ $classes[] = 'page-my-training'; return $classes; }, 10, 2 );
+
+ ?><?php get_header( 'noopen' ); ?>
+<div class="container">
+	<?php if( have_posts() ) : the_post(); ?>
+		<div class="row">
+			<div class="col-xxs-12 col-xs-12">
+				<div class="row">
+					<div class="col-xs-12 page-content">
+					<?php if( class_exists( 'EpointPersonalTrainer', false ) ) : ?>
+						<?php if( empty( $_GET['training'] ) ) : ?>
+<?php
+$now = time();
+
+$training_items = EpointPersonalTrainerMapper::get_user_training_items( $member->ID );
+$previous_items = array();
+$current_items = array();
+$next_items = array();
+foreach( $training_items as $item )
+{
+	if( strtotime( $item->end ) < $now )
+		$previous_items[] = $item;
+	elseif( strtotime( $item->start ) > $now )
+		$next_items[] = $item;
+	else
+		$current_items[] = $item;
+}
+?>
+							<h1>Mis entrenamientos <a class="btn btn-primary pull-right" href="<?php echo EliteTrainerSiteTheme::get_my_account_url(); ?>">Volver al perfil</a></h1>
+
+							<div class="my-training-list">
+
+								<h2 class="text-center">Entrenamientos actuales</h2>
+								<?php if( !empty( $current_items ) ) : ?>
+
+									<?php foreach( $current_items as $tt ) : ?>
+										<?php include( implode( DIRECTORY_SEPARATOR, array( __DIR__, 'templates', 'training', 'training-list-item.php' ) ) ); ?>
+									<?php endforeach; ?>
+
+								<?php else : ?>
+									<p>No hay entrenamientos asignados.</p>
+								<?php endif; ?>
+
+								<h2 class="text-center">Entrenamientos futuros</h2>
+								<?php if( !empty( $next_items ) ) : ?>
+
+									<?php foreach( $next_items as $tt ) : ?>
+										<?php include( implode( DIRECTORY_SEPARATOR, array( __DIR__, 'templates', 'training', 'training-list-item.php' ) ) ); ?>
+									<?php endforeach; ?>
+
+								<?php else : ?>
+									<p>No hay entrenamientos asignados.</p>
+								<?php endif; ?>
+
+								<h2 class="text-center">Entrenamientos pasados</h2>
+								<?php if( !empty( $previous_items ) ) : ?>
+
+									<?php foreach( $previous_items as $tt ) : ?>
+										<?php include( implode( DIRECTORY_SEPARATOR, array( __DIR__, 'templates', 'training', 'training-list-item.php' ) ) ); ?>
+									<?php endforeach; ?>
+
+								<?php else : ?>
+									<p>No hay entrenamientos asignados.</p>
+								<?php endif; ?>
+							</div>
+
+						<?php else : ?>
+							<?php $training = EpointPersonalTrainerMapper::get_training( (int)$_GET['training'] ); ?>
+							<?php if( $training && $training->user == $member->ID ) : ?>
+								<h1><?php echo esc_html( $training->name ); ?> <a href="<?php echo EliteTrainerSiteTheme::get_my_training_url(); ?>" class="btn btn-primary pull-right">Volver a la lista</a></h1>
+								<div class"dates">
+									<p><?php echo esc_html( sprintf( "Desde %s hasta %s", $training->start, $training->end ) ); ?></p>
+								</div>
+								<div class="objectives">
+									<?php $objectives_names = EpointPersonalTrainerMapper::get_training_objectives_names( $training->ID ); ?>	
+									<p><strong>Objetivos:</strong> <?php echo esc_html( implode( ', ', $objectives_names ) ); ?></p>
+								</div>
+								<div class="environments">
+									<?php $environments_names = EpointPersonalTrainerMapper::get_training_environments_names( $training->ID ); ?>	
+									<p><strong>Entornos:</strong> <?php echo esc_html( implode( ', ', $environments_names ) ); ?></p>
+								</div>
+								<div class="description">
+									<?php echo wp_kses_post( $training->description ); ?>
+								</div>
+								<div class="exercises">
+								<?php $exercise_categories = EpointPersonalTrainer::get_training_exercises_categorized( $training->ID ); ?>
+								<?php foreach( $exercise_categories as $cat ) : ?>
+<div class="exercise-category">
+	<h3><?php echo esc_html( $cat['name'] ); ?></h3>
+	<div class="category-exercises">
+	<?php foreach( $cat['exercises'] as $ex_id => $ex ) : ?>
+		<div class="exercise">
+			<div class="basic">
+				<div class="name">
+					<p><strong><?php echo esc_html( $ex['exercise']->name ); ?></strong></p>
+					<?php if( !empty( $ex['current']->description ) ) : ?>
+						<div class="training-exercise-description">
+							<?php echo wp_kses_post( $ex['current']->description ); ?>
+						</div>
+					<?php endif; ?>
+				</div>
+				<div class="data">
+					<div class="current">
+						<div class="series"><p><strong>Series</strong></p><p><?php echo esc_html( $ex['current']->series ); ?></p></div>
+						<div class="repetitions"><p><strong>Repeticiones</strong></p><p><?php echo esc_html( $ex['current']->repetitions ); ?></p></div>
+						<div class="loads" data-exercise="<?php echo esc_attr( $ex_id ); ?>" data-training="<?php echo esc_attr( $training->ID ); ?>"><p><strong>Cargas</strong></p><?php echo EpointPersonalTrainerPublic::get_loads_form( $training->ID, $ex_id ); ?></div>
+					</div>
+					<div class="historial collapse" id="historial-<?php echo $ex_id; ?>">
+						<div class="historial-row head">
+							<div class="series">Series</div>
+							<div class="repetitions">Repeticiones</div>
+							<div class="loads">Cargas</div>
+						</div>
+					<?php foreach( $ex['historial'] as $h ) : ?>
+						<div class="historial-row">
+							<div class="series"><?php echo esc_html( $h->series ); ?></div>
+							<div class="repetitions"><?php echo esc_html( $h->repetitions ); ?></div>
+							<div class="loads"><?php echo esc_html( $h->loads ); ?></div>
+						</div>
+					<?php endforeach; ?>
+					</div>
+				</div>
+				<div class="more">
+					<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#exercise-<?php echo $ex_id; ?>" aria-expanded="false" aria-controls="exercise-<?php echo $ex_id; ?>">Detalles</button>
+					<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#historial-<?php echo $ex_id; ?>" aria-expanded="false" aria-controls="historial-<?php echo $ex_id; ?>">Historial</button>
+				</div>
+			</div>
+			<div class="details collapse" id="exercise-<?php echo $ex_id; ?>">
+				<div class="images">
+					<img src="<?php echo EliteTrainerSiteTheme::get_exercise_image( $ex['exercise'], 'start' ); ?>"  alt="Inicio" />
+					<img src="<?php echo EliteTrainerSiteTheme::get_exercise_image( $ex['exercise'], 'end' ); ?>"  alt="fin" />
+				</div>
+				<div class="description">
+					<?php echo wp_kses_post( $ex['exercise']->description ); ?>
+				</div>
+				<?php if( !empty( $ex['exercise']->video ) ) : ?>
+				<div class="video-layer">
+					<div class="video">
+						<?php echo wp_kses( EliteTrainerSiteThemeCustomizer::get_video_iframe_from_link( $ex['exercise']->video ), array( 'iframe' => array( 'width' => array(), 'height' => array(), 'src' => array(), 'frameborder' => array(), 'allow' => array(), 'allowfullscreen' => array() ) ) ); ?>
+					</div>
+				</div>
+				<?php endif; ?>
+			</div>
+		</div>
+	<?php endforeach; ?>
+	</div>
+</div>
+								<?php endforeach; ?>
+								</div>
+<?php if( false ) : ?>
+								<?php $exercises = EpointPersonalTrainerMapper::get_training_exercises( $training->ID ); ?>
+								<div class="exercises">
+								<?php foreach( $exercises as $e ) : ?>
+<?php $exercise = EpointPersonalTrainerMapper::get_exercise( $e->ID ); ?>
+<h3><?php echo esc_html( $exercise->name ); ?></h3>
+<div class="images" style="clear:both;">
+	<img src="<?php echo EliteTrainerSiteTheme::get_exercise_image( $exercise, 'start' ); ?>" style="max-width:40%; float:left; margin-right:20px;" />
+	<img src="<?php echo EliteTrainerSiteTheme::get_exercise_image( $exercise, 'end' ); ?>" style="max-width:40%; float:left;" />
+</div>
+<div class="description" style="clear:both;">
+	<?php echo wp_kses_post( $exercise->description ); ?>
+</div>
+<hr />
+								<?php endforeach; ?>
+								</div>
+<?php endif; ?>
+
+								
+							<?php else : ?>
+								<p>Entrenamiento no encontrado.</p>
+							<?php endif; ?>
+							
+						<?php endif; // empty( $_GET['trianing'] ) ?>
+					<?php endif; //class_exists ?>
+					</div>
+				</div>
+			</div>
+		</div>
+	<?php else : ?>
+		<h1><?php echo esc_html( __( 'Not found.', EliteTrainerSiteTheme::TEXT_DOMAIN ) ); ?></h1>
+	<?php endif; ?>
+</div>
+<?php //get_template_part( 'templates/contact', 'container' ); ?>
+<?php get_footer( 'noclose' ); ?>

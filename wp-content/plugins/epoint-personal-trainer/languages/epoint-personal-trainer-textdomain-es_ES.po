@@ -1,0 +1,3306 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BubbleFish - Scoring and firm\n"
+"POT-Creation-Date: 2022-07-26 20:41+0100\n"
+"PO-Revision-Date: 2022-07-26 21:00+0100\n"
+"Last-Translator: José Luis Contreras <joseluisc6m6@gmail.com>\n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_x;_e;_n:1,2\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../epoint-personal-trainer.php:242
+msgid "Master"
+msgstr ""
+
+#: ../epoint-personal-trainer.php:257
+msgid "Ajustes de precios"
+msgstr ""
+
+#: ../epoint-personal-trainer.php:270
+msgid "Exportar datos comerciales"
+msgstr ""
+
+#: ../epoint-personal-trainer.php:656
+msgid "Trainer"
+msgstr "Entrenador"
+
+#: ../epoint-personal-trainer.php:657
+msgid "Sportsman"
+msgstr "Deportista"
+
+#: ../epoint-personal-trainer.php:1059 ../epoint-personal-trainer.php:1074
+msgid "Site created"
+msgstr "Sitio creado"
+
+#: ../epoint-personal-trainer.php:1062
+#, php-format
+msgid ""
+"Your site %s (%s) has been created successfully. \\n\\nNow you can configure "
+"it. Just go to \"My Account\" to log in and a new link \"Settings\" will "
+"appear. Here you can manage the site style and the sport data."
+msgstr ""
+"Tu sitio %s (%s) ha sido creado satisfactoriamente.\n"
+"\n"
+"Ahora puedes configurarlo. Simplemente entra en \"Mi Cuenta\" para iniciar "
+"sesión y un nuevo enlace \"Ajustes\" aparecerá. Aquí podrás administrar el "
+"aspecto de tu sitio y los datos deportivos."
+
+#: ../epoint-personal-trainer.php:1082 ../epoint-personal-trainer.php:1112
+msgid "New user registered"
+msgstr "Nueva usuario registrado"
+
+#: ../epoint-personal-trainer.php:1098
+#, php-format
+msgid "A new user ( %s - %s ) has been registered in your site %s (%s)"
+msgstr "Un nuevo usuario ( %s - %s ) se ha registrado en tu sitio %s (%s)"
+
+#: ../epoint-personal-trainer.php:1290
+msgid "Y/m/d H:i:s"
+msgstr "d/m/Y H:i:s"
+
+#: ../include/epoint-personal-trainer-admin.php:74
+msgid "Personal Training"
+msgstr "Entrenamiento Personal"
+
+#: ../include/epoint-personal-trainer-admin.php:89
+#: ../include/preset-exercises-table.php:14 ../templates/admin/exercises.php:4
+msgid "Exercises"
+msgstr "Ejercicios"
+
+#: ../include/epoint-personal-trainer-admin.php:103
+#: ../include/preset-exercise-categories-table.php:14
+#: ../templates/admin/exercise-categories.php:4
+msgid "Exercise categories"
+msgstr "Categorías de ejercicio"
+
+#: ../include/epoint-personal-trainer-admin.php:117
+#: ../include/epoint-personal-trainer-admin.php:361
+msgid "Training"
+msgstr "Entrenamiento"
+
+#: ../include/epoint-personal-trainer-admin.php:131
+#: ../templates/admin/settings.php:3
+msgid "Settings"
+msgstr "Ajustes"
+
+#: ../include/epoint-personal-trainer-admin.php:144
+msgid "Import"
+msgstr "Importar"
+
+#: ../include/epoint-personal-trainer-admin.php:208
+#: ../include/epoint-personal-trainer-admin.php:222
+#: ../include/epoint-personal-trainer-admin.php:267
+#: ../include/epoint-personal-trainer-admin.php:281
+#: ../include/epoint-personal-trainer-admin.php:327
+#: ../include/epoint-personal-trainer-admin.php:341
+#: ../include/admin-import-joomla.php:127
+#: ../include/admin-import-joomla.php:152
+#: ../include/admin-import-joomla.php:167
+#: ../include/admin-import-joomla.php:243
+#: ../include/admin-import-joomla.php:258
+#: ../include/admin-import-joomla.php:333
+#: ../include/admin-import-joomla.php:348
+msgid "Reinstall the plugin"
+msgstr "Reinstale el plugin"
+
+#: ../include/epoint-personal-trainer-admin.php:242
+#: ../include/preset-exercises-table.php:13
+msgid "Exercise"
+msgstr "Ejercicio"
+
+#: ../include/epoint-personal-trainer-admin.php:301
+#: ../include/preset-exercise-categories-table.php:13
+msgid "Exercise category"
+msgstr "Categoría de ejercicio"
+
+#: ../include/preset-exercises-table.php:23
+#: ../include/preset-exercise-categories-table.php:23
+#: ../include/preset-training-table.php:23
+#: ../include/forms/EpointPersonalTrainerEditFood.php:45
+#: ../include/forms/EpointPersonalTrainerRegisterTrainer.php:34
+#: ../include/forms/EpointPersonalTrainerEditDietRestriction.php:44
+#: ../include/forms/EpointPersonalTrainerAddFoodCategory.php:29
+#: ../include/forms/EpointPersonalTrainerEditEvolutionMagnitude.php:53
+#: ../include/forms/EpointPersonalTrainerEditDiet.php:45
+#: ../include/forms/EpointPersonalTrainerEditFoodCategory.php:37
+#: ../include/forms/EpointPersonalTrainerCreateUserDiet.php:58
+#: ../include/forms/EpointPersonalTrainerEditObjective.php:44
+#: ../include/forms/EpointPersonalTrainerEditEnvironment.php:44
+#: ../include/forms/EpointPersonalTrainerEditDietObjective.php:44
+#: ../include/forms/EpointPersonalTrainerEditExercise.php:44
+#: ../include/forms/EpointPersonalTrainerEditPresetExercise.php:39
+#: ../include/forms/EpointPersonalTrainerEditTraining.php:50
+#: ../include/forms/EpointPersonalTrainerEditPresetTraining.php:39
+#: ../include/forms/EpointPersonalTrainerEditExerciseCategory.php:37
+#: ../include/forms/EpointPersonalTrainerCloneExerciseAndAssign.php:53
+#: ../include/forms/EpointPersonalTrainerAddUserFood.php:40
+#: ../include/forms/EpointPersonalTrainerAddExerciseCategory.php:29
+msgid "Name"
+msgstr "Nombre"
+
+#: ../include/preset-exercises-table.php:24
+#: ../include/forms/EpointPersonalTrainerEditExercise.php:79
+#: ../include/forms/EpointPersonalTrainerEditPresetExercise.php:72
+#: ../include/forms/EpointPersonalTrainerCloneExerciseAndAssign.php:88
+msgid "Categories"
+msgstr "Categorías"
+
+#: ../include/preset-exercises-table.php:25
+#: ../include/preset-exercise-categories-table.php:24
+#: ../include/preset-training-table.php:24
+#: ../include/forms/EpointPersonalTrainerEditPresetExercise.php:62
+msgid "Active"
+msgstr "Activo"
+
+#: ../include/preset-exercises-table.php:66
+#: ../include/preset-exercise-categories-table.php:65
+#: ../include/preset-training-table.php:65
+msgid "Edit"
+msgstr "Editar"
+
+#: ../include/preset-exercises-table.php:75
+#: ../include/preset-exercises-table.php:152
+#: ../include/preset-exercise-categories-table.php:74
+#: ../include/preset-exercise-categories-table.php:145
+#: ../include/preset-training-table.php:74
+#: ../include/preset-training-table.php:145
+msgid "Delete"
+msgstr "Borrar"
+
+#: ../include/preset-exercises-table.php:141
+msgid "No exercise found."
+msgstr "No se encontraron ejercicios."
+
+#: ../include/preset-exercise-categories-table.php:134
+msgid "No exercise categories found."
+msgstr "No se encontraron categorías de ejercicio."
+
+#: ../include/preset-training-table.php:13
+msgid "Training template"
+msgstr "Plantilla de entrenamiento"
+
+#: ../include/preset-training-table.php:14
+#: ../templates/admin/training-templates.php:4
+msgid "Training templates"
+msgstr "Plantillas de entrenamiento"
+
+#: ../include/preset-training-table.php:134
+msgid "No training found."
+msgstr "No se encontraron entrenamientos."
+
+#: ../include/data/personal-info.php:16
+#: ../include/forms/EpointPersonalTrainerEditDiet.php:77
+#: ../include/forms/EpointPersonalTrainerCreateUserDiet.php:89
+#: ../include/forms/EpointPersonalTrainerEditTraining.php:82
+#: ../include/forms/EpointPersonalTrainerEditPresetTraining.php:72
+msgid "Objetivos"
+msgstr ""
+
+#: ../include/data/personal-info.php:17
+msgid "Lesionado"
+msgstr "Lesionado"
+
+#: ../include/data/personal-info.php:18
+msgid "Lesiones"
+msgstr "Lesiones"
+
+#: ../include/data/personal-info.php:19
+msgid "Enfermo"
+msgstr ""
+
+#: ../include/data/personal-info.php:20
+msgid "Enfermedades"
+msgstr ""
+
+#: ../include/data/personal-info.php:21
+msgid "Medicado"
+msgstr ""
+
+#: ../include/data/personal-info.php:22
+msgid "Medicamentos"
+msgstr "Medicamentos"
+
+#: ../include/data/personal-info.php:23
+msgid "Tensión"
+msgstr ""
+
+#: ../include/data/personal-info.php:24
+msgid "Deportista habitual"
+msgstr ""
+
+#: ../include/data/personal-info.php:25
+msgid "Deporte"
+msgstr "Deporte"
+
+#: ../include/data/personal-info.php:26
+msgid "Otro deporte"
+msgstr ""
+
+#: ../include/data/personal-info.php:27
+msgid "Practicando deporte"
+msgstr ""
+
+#: ../include/data/personal-info.php:28
+msgid "Frecuencia de práctica deportiva"
+msgstr ""
+
+#: ../include/data/personal-info.php:29
+msgid "Días disponibles"
+msgstr ""
+
+#: ../include/data/personal-info.php:30
+msgid "Horas disponibles"
+msgstr ""
+
+#: ../include/data/personal-info.php:31
+msgid "Ocupación"
+msgstr ""
+
+#: ../include/data/personal-info.php:32
+#: ../include/forms/EpointPersonalTrainerMembersFilter.php:143
+msgid "Tipo de ocupación"
+msgstr ""
+
+#: ../include/data/personal-info.php:33
+msgid "Horas de sueño"
+msgstr ""
+
+#: ../include/data/personal-info.php:34
+msgid "Alimentación saludable"
+msgstr ""
+
+#: ../include/data/personal-info.php:35
+msgid "Comidas al día"
+msgstr ""
+
+#: ../include/data/personal-info.php:36
+msgid "Uso de suplementos"
+msgstr ""
+
+#: ../include/data/personal-info.php:37
+msgid "Suplementos"
+msgstr "Suplementos"
+
+#: ../include/data/personal-info.php:38
+msgid "Otro suplemento"
+msgstr ""
+
+#: ../include/data/personal-info.php:45
+msgid "Salud"
+msgstr ""
+
+#: ../include/data/personal-info.php:46
+msgid "Perder grasa corporal"
+msgstr ""
+
+#: ../include/data/personal-info.php:47
+msgid "Eliminar tensiones"
+msgstr ""
+
+#: ../include/data/personal-info.php:48
+msgid "Mejoramiento postural"
+msgstr ""
+
+#: ../include/data/personal-info.php:49
+msgid "Mejorar físicamente"
+msgstr ""
+
+#: ../include/data/personal-info.php:50
+msgid "Aumentar masa muscular"
+msgstr ""
+
+#: ../include/data/personal-info.php:51
+msgid "Fuerza o potencia"
+msgstr ""
+
+#: ../include/data/personal-info.php:52
+msgid "Redurcir volumen"
+msgstr ""
+
+#: ../include/data/personal-info.php:53
+msgid "Recuperación de lesión"
+msgstr ""
+
+#: ../include/data/personal-info.php:54
+msgid "Resistencia física"
+msgstr ""
+
+#: ../include/data/personal-info.php:55 ../include/data/trainer-info.php:42
+#: ../include/forms/EpointPersonalTrainerTrainerInfo.php:216
+#: ../include/forms/EpointPersonalTrainerTrainingCenterInfo.php:214
+msgid "Oposiciones"
+msgstr ""
+
+#: ../include/data/personal-info.php:56
+msgid "Otro"
+msgstr ""
+
+#: ../include/data/trainer-info.php:16
+#: ../include/forms/EpointPersonalTrainerTrainerInfo.php:38
+msgid "Tu foto"
+msgstr ""
+
+#: ../include/data/trainer-info.php:17
+#: ../include/forms/EpointPersonalTrainerEditMember.php:116
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:106
+#: ../include/forms/EpointPersonalTrainerRegisterUser.php:81
+#: ../include/forms/EpointPersonalTrainerMembersFilter.php:71
+#: ../include/forms/EpointPersonalTrainerTrainerInfo.php:51
+msgid "Sexo"
+msgstr ""
+
+#: ../include/data/trainer-info.php:18
+#: ../include/forms/EpointPersonalTrainerTrainerInfo.php:70
+msgid "Edad"
+msgstr ""
+
+#: ../include/data/trainer-info.php:19
+#: ../include/forms/EpointPersonalTrainerTrainerInfo.php:82
+msgid "Ciudad de residencia"
+msgstr ""
+
+#: ../include/data/trainer-info.php:20
+#: ../include/forms/EpointPersonalTrainerTrainerInfo.php:91
+#: ../include/forms/EpointPersonalTrainerTrainingCenterInfo.php:87
+msgid "Provincia"
+msgstr "Provincia"
+
+#: ../include/data/trainer-info.php:21
+#: ../include/forms/EpointPersonalTrainerTrainerInfo.php:104
+msgid "Teléfono"
+msgstr ""
+
+#: ../include/data/trainer-info.php:22
+#: ../include/forms/EpointPersonalTrainerTrainerInfo.php:115
+msgid "Precio de la hora presencial"
+msgstr ""
+
+#: ../include/data/trainer-info.php:23
+#: ../include/forms/EpointPersonalTrainerTrainerInfo.php:127
+msgid "Precio del seguimiento online"
+msgstr ""
+
+#: ../include/data/trainer-info.php:24
+msgid "Años de experiencia laboral"
+msgstr ""
+
+#: ../include/data/trainer-info.php:25
+#: ../include/forms/EpointPersonalTrainerTrainerInfo.php:151
+msgid "Experiencia laboral"
+msgstr ""
+
+#: ../include/data/trainer-info.php:26
+#: ../include/forms/EpointPersonalTrainerTrainerInfo.php:161
+msgid "Estudios"
+msgstr ""
+
+#: ../include/data/trainer-info.php:27
+#: ../include/forms/EpointPersonalTrainerTrainerInfo.php:267
+msgid "Comentario personal"
+msgstr ""
+
+#: ../include/data/trainer-info.php:28
+#: ../include/forms/EpointPersonalTrainerTrainingCenterInfo.php:54
+msgid "Nombre del centro"
+msgstr ""
+
+#: ../include/data/trainer-info.php:29
+#: ../include/forms/EpointPersonalTrainerTrainingCenterInfo.php:64
+msgid "Año de creación"
+msgstr ""
+
+#: ../include/data/trainer-info.php:30
+#: ../include/forms/EpointPersonalTrainerTrainingCenterInfo.php:76
+msgid "Número de trabajadores"
+msgstr ""
+
+#: ../include/data/trainer-info.php:31
+msgid "M2 del centro"
+msgstr ""
+
+#: ../include/data/trainer-info.php:32
+#: ../include/forms/EpointPersonalTrainerTrainingCenterInfo.php:112
+msgid "Actividades"
+msgstr "Actividades"
+
+#: ../include/data/trainer-info.php:33
+#: ../include/forms/EpointPersonalTrainerTrainingCenterInfo.php:122
+msgid "Equipamiento"
+msgstr ""
+
+#: ../include/data/trainer-info.php:34
+msgid "Aparcamiento privado"
+msgstr ""
+
+#: ../include/data/trainer-info.php:35
+msgid "Climatización"
+msgstr ""
+
+#: ../include/data/trainer-info.php:36
+#: ../include/forms/EpointPersonalTrainerTrainingCenterInfo.php:265
+msgid "Comentarios"
+msgstr ""
+
+#: ../include/data/trainer-info.php:37
+#: ../include/forms/EpointPersonalTrainerTrainingCenterInfo.php:275
+msgid "Precios"
+msgstr ""
+
+#: ../include/data/trainer-info.php:39
+msgid "Conocimientos dietéticos"
+msgstr ""
+
+#: ../include/data/trainer-info.php:40
+#: ../include/forms/EpointPersonalTrainerTrainerInfo.php:192
+#: ../include/forms/EpointPersonalTrainerTrainingCenterInfo.php:190
+msgid "Hipertrofia muscular"
+msgstr ""
+
+#: ../include/data/trainer-info.php:41
+#: ../include/forms/EpointPersonalTrainerTrainerInfo.php:204
+#: ../include/forms/EpointPersonalTrainerTrainingCenterInfo.php:202
+msgid "Adelgazamiento"
+msgstr ""
+
+#: ../include/data/trainer-info.php:43
+#: ../include/forms/EpointPersonalTrainerTrainerInfo.php:228
+#: ../include/forms/EpointPersonalTrainerTrainingCenterInfo.php:226
+msgid "Rehabilitación"
+msgstr ""
+
+#: ../include/data/trainer-info.php:45
+msgid "Deportes"
+msgstr "Deportes"
+
+#: ../include/forms/EpointPersonalTrainerMemberCorporalMeasures.php:121
+#: ../include/forms/EpointPersonalTrainerEditMember.php:386
+#: ../include/forms/EpointPersonalTrainerEditFood.php:103
+#: ../include/forms/EpointPersonalTrainerEditDietRestriction.php:79
+#: ../include/forms/EpointPersonalTrainerMemberPhysicalTest.php:135
+#: ../include/forms/EpointPersonalTrainerAddFoodCategory.php:38
+#: ../include/forms/EpointPersonalTrainerEditEvolutionMagnitude.php:98
+#: ../include/forms/EpointPersonalTrainerLoads.php:55
+#: ../include/forms/EpointPersonalTrainerEditDiet.php:302
+#: ../include/forms/EpointPersonalTrainerEditFoodCategory.php:46
+#: ../include/forms/EpointPersonalTrainerEditObjective.php:79
+#: ../include/forms/EpointPersonalTrainerFoodQuestionnaire.php:140
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:436
+#: ../include/forms/EpointPersonalTrainerEditEnvironment.php:79
+#: ../include/forms/EpointPersonalTrainerEditDietObjective.php:79
+#: ../include/forms/EpointPersonalTrainerEditExercise.php:210
+#: ../include/forms/EpointPersonalTrainerEditPresetExercise.php:161
+#: ../include/forms/EpointPersonalTrainerEditTraining.php:237
+#: ../include/forms/EpointPersonalTrainerSettings.php:737
+#: ../include/forms/EpointPersonalTrainerEditPresetTraining.php:161
+#: ../include/forms/EpointPersonalTrainerEditExerciseCategory.php:46
+#: ../include/forms/EpointPersonalTrainerCloneExerciseAndAssign.php:262
+#: ../include/forms/EpointPersonalTrainerUserHabits.php:64
+#: ../include/forms/EpointPersonalTrainerAddUserFood.php:66
+#: ../include/forms/EpointPersonalTrainerTrainerValoration.php:52
+#: ../include/forms/EpointPersonalTrainerAddExerciseCategory.php:38
+#: ../include/forms/EpointPersonalTrainerMemberEvolutionPhotos.php:90
+#: ../include/forms/EpointPersonalTrainerAlertsSettings.php:362
+#: ../include/forms/EpointPersonalTrainerTrainerInfo.php:278
+#: ../include/forms/EpointPersonalTrainerTrainingCenterInfo.php:284
+msgid "Save"
+msgstr "Guardar"
+
+#: ../include/forms/EpointPersonalTrainerMemberCorporalMeasures.php:130
+#: ../include/forms/EpointPersonalTrainerMemberEvolutionPhotos.php:99
+msgid "Skip"
+msgstr "Saltar"
+
+#: ../include/forms/EpointPersonalTrainerMemberCorporalMeasures.php:248
+#: ../include/forms/EpointPersonalTrainerMemberPhysicalTest.php:238
+#: ../include/forms/templates/user-tracking-graph.php:22
+msgid "Date"
+msgstr "Fecha"
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:40
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:40
+#: ../include/forms/EpointPersonalTrainerRegisterUser.php:28
+msgid "Personal Data"
+msgstr "Datos personales"
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:46
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:46
+#: ../include/forms/EpointPersonalTrainerRegisterUser.php:34
+#: ../include/forms/EpointPersonalTrainerMembersFilter.php:33
+msgid "First name"
+msgstr "Nombre"
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:56
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:56
+#: ../include/forms/EpointPersonalTrainerRegisterUser.php:44
+#: ../include/forms/EpointPersonalTrainerMembersFilter.php:43
+msgid "Last name"
+msgstr "Apellidos"
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:66
+#: ../include/forms/EpointPersonalTrainerRegisterTrainer.php:83
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:66
+#: ../include/forms/EpointPersonalTrainerAlreadyTrainer.php:34
+#: ../include/forms/EpointPersonalTrainerRegisterUser.php:54
+#: ../include/forms/EpointPersonalTrainerMembersFilter.php:53
+msgid "Email"
+msgstr "Correo"
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:76
+msgid "Contraseña"
+msgstr "Contraseña"
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:86
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:76
+#: ../include/forms/EpointPersonalTrainerRegisterUser.php:63
+#: ../include/forms/EpointPersonalTrainerMembersFilter.php:62
+msgid "Phone"
+msgstr "Teléfono"
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:96
+#: ../include/forms/EpointPersonalTrainerRegisterTrainer.php:115
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:86
+#: ../include/forms/EpointPersonalTrainerRegisterUser.php:98
+msgid "User name"
+msgstr "Nombre de usuario"
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:107
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:97
+#: ../include/forms/EpointPersonalTrainerRegisterUser.php:73
+msgid "Fecha de nacimiento"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:122
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:112
+#: ../include/forms/EpointPersonalTrainerRegisterUser.php:87
+#: ../include/forms/EpointPersonalTrainerMembersFilter.php:81
+msgid "Mujer"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:129
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:119
+#: ../include/forms/EpointPersonalTrainerRegisterUser.php:91
+#: ../include/forms/EpointPersonalTrainerMembersFilter.php:85
+msgid "Varón"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:135
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:125
+msgid "Photos"
+msgstr "Fotos"
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:141
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:131
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:36
+#: ../include/forms/EpointPersonalTrainerMemberEvolutionPhotos.php:51
+msgid "Front photo"
+msgstr "Foto frontal"
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:143
+#: ../include/forms/EpointPersonalTrainerEditMember.php:156
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:133
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:146
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:38
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:51
+#: ../include/forms/EpointPersonalTrainerEditExercise.php:143
+#: ../include/forms/EpointPersonalTrainerEditExercise.php:159
+#: ../include/forms/EpointPersonalTrainerEditPresetExercise.php:108
+#: ../include/forms/EpointPersonalTrainerEditPresetExercise.php:124
+#: ../include/forms/EpointPersonalTrainerCloneExerciseAndAssign.php:159
+#: ../include/forms/EpointPersonalTrainerCloneExerciseAndAssign.php:177
+#: ../include/forms/EpointPersonalTrainerMemberEvolutionPhotos.php:53
+#: ../include/forms/EpointPersonalTrainerMemberEvolutionPhotos.php:66
+#: ../include/forms/EpointPersonalTrainerMemberEvolutionPhotos.php:79
+msgid ".jpg, or .png files (Max: 6MB)"
+msgstr "Archivos .jpg o .png (Max: 6MB)"
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:154
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:144
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:49
+#: ../include/forms/EpointPersonalTrainerMemberEvolutionPhotos.php:64
+msgid "Profile photo"
+msgstr "Foto perfil"
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:173
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:164
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:62
+msgid "¿Objetivos por los cuales decides hacer deporte?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:190
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:181
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:130
+msgid "¿Has tenido alguna lesión?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:198
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:189
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:148
+msgid "¿Tienes alguna patología o enfermedad?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:208
+msgid "¿Estás tomando alguna mediación y para qué?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:218
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:227
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:218
+msgid "¿Tu tesión es...?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:223
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:232
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:223
+msgid "Baja"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:227
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:237
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:228
+msgid "Media"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:231
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:242
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:233
+msgid "Alta"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:239
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:251
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:242
+msgid "¿Prácticas deporte actualmente?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:246
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:259
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:250
+msgid "¿Que deporte practicas?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:267
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:281
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:271
+msgid "Concreta el deporte"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:278
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:292
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:282
+msgid "¿Cuánto tiempo llevas practicándolo?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:288
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:302
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:292
+msgid "¿Con qué frecuencia?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:298
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:312
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:302
+msgid "¿Cuántos días podrías entrenar a la semana?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:310
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:324
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:314
+msgid "¿De cuántas horas dispones al día?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:322
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:336
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:326
+msgid "¿Actualmente trabajas o estudias?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:327
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:341
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:331
+msgid "Trabajo"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:331
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:346
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:336
+msgid "Estudio"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:338
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:354
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:349
+msgid "¿Tu trabajo es activo o sedentario?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:343
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:359
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:354
+#: ../include/forms/EpointPersonalTrainerMembersFilter.php:153
+msgid "Activo"
+msgstr "Activo"
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:347
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:364
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:359
+#: ../include/forms/EpointPersonalTrainerMembersFilter.php:157
+msgid "Sedentario"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:354
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:372
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:367
+msgid "¿Cuántas horas duermes al día?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:366
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:384
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:379
+msgid "¿Llevas una buena alimentación?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:374
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:393
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:388
+msgid "¿Cuántas veces comes al día?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:393
+msgid "Save and add new"
+msgstr "Guardar y añadir nuevo"
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:461
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:550
+msgid "There was an error creating the user account."
+msgstr "Hubo un error mientras se creaba la cuenta de usuario."
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:471
+#: ../include/forms/EpointPersonalTrainerRegisterTrainer.php:225
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:560
+#: ../include/forms/EpointPersonalTrainerRegisterUser.php:217
+msgid "Given user name is already in use."
+msgstr "El nombre de usuario dado ya está en uso."
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:479
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:568
+msgid "Given user email is already in use."
+msgstr "El correo electrónico dado ya está en uso."
+
+#: ../include/forms/EpointPersonalTrainerEditMember.php:561
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:623
+msgid "The user does not exists."
+msgstr "El usuario no existe."
+
+#: ../include/forms/EpointPersonalTrainerEditFood.php:58
+#: ../include/forms/EpointPersonalTrainerAddUserFood.php:50
+msgid "Category"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditFood.php:112
+msgid "You can not edit this food."
+msgstr "No puedes editar este alimento."
+
+#: ../include/forms/EpointPersonalTrainerEditFood.php:137
+#: ../include/forms/EpointPersonalTrainerAddUserFood.php:92
+msgid "The food could not be created."
+msgstr "La comida no pudo ser creada."
+
+#: ../include/forms/EpointPersonalTrainerEditFood.php:156
+msgid "The food can not be edited."
+msgstr "La comida no puede ser editata."
+
+#: ../include/forms/EpointPersonalTrainerEditFood.php:169
+msgid "The food could not be saved."
+msgstr "La comida no puede ser guardada."
+
+#: ../include/forms/EpointPersonalTrainerEditFood.php:185
+#: ../include/forms/EpointPersonalTrainerEditDietRestriction.php:140
+#: ../include/forms/EpointPersonalTrainerEditEvolutionMagnitude.php:166
+#: ../include/forms/EpointPersonalTrainerLoads.php:136
+#: ../include/forms/EpointPersonalTrainerEditObjective.php:140
+#: ../include/forms/EpointPersonalTrainerEditEnvironment.php:140
+#: ../include/forms/EpointPersonalTrainerEditDietObjective.php:140
+msgid "Hubo un error."
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerRegisterTrainer.php:28
+msgid "Personal data"
+msgstr "Datos personales"
+
+#: ../include/forms/EpointPersonalTrainerRegisterTrainer.php:44
+msgid "First surname"
+msgstr "Primer apellido"
+
+#: ../include/forms/EpointPersonalTrainerRegisterTrainer.php:54
+msgid "Last surname"
+msgstr "Segundo Apellido"
+
+#: ../include/forms/EpointPersonalTrainerRegisterTrainer.php:64
+msgid "NIF"
+msgstr "NIF"
+
+#: ../include/forms/EpointPersonalTrainerRegisterTrainer.php:73
+msgid "Mobile"
+msgstr "Móvil"
+
+#: ../include/forms/EpointPersonalTrainerRegisterTrainer.php:88
+msgid "Site data"
+msgstr "Datos del sitio"
+
+#: ../include/forms/EpointPersonalTrainerRegisterTrainer.php:94
+msgid "Site domain name"
+msgstr "Nombre del dominio del sitio"
+
+#: ../include/forms/EpointPersonalTrainerRegisterTrainer.php:95
+msgid "Utilice solo letras minúsculas"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerRegisterTrainer.php:105
+msgid "Site name"
+msgstr "Nombre del sitio"
+
+#: ../include/forms/EpointPersonalTrainerRegisterTrainer.php:125
+#: ../include/forms/EpointPersonalTrainerAlreadyTrainer.php:43
+#: ../include/forms/EpointPersonalTrainerRegisterUser.php:108
+msgid "Password"
+msgstr "Contraseña"
+
+#: ../include/forms/EpointPersonalTrainerRegisterTrainer.php:134
+#: ../include/forms/EpointPersonalTrainerRegisterUser.php:117
+msgid "Confirm password"
+msgstr "Confirmar contraseña"
+
+#: ../include/forms/EpointPersonalTrainerRegisterTrainer.php:147
+#, php-format
+msgid ""
+"I have read the %s and I give my consent for the automatic processing of my "
+"data."
+msgstr ""
+"Confirmo que he leído la %s y consiento el tratamiento automatizado de mis "
+"datos."
+
+#: ../include/forms/EpointPersonalTrainerRegisterTrainer.php:157
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:399
+msgid "Send"
+msgstr "Enviar"
+
+#: ../include/forms/EpointPersonalTrainerRegisterTrainer.php:193
+msgid "Invalid site domain name."
+msgstr "Nombre de dominio inválido."
+
+#: ../include/forms/EpointPersonalTrainerRegisterTrainer.php:202
+#: ../include/forms/EpointPersonalTrainerRegisterUser.php:194
+msgid "Password does not match password confirmation."
+msgstr "La contraseña no coincide con su confirmación."
+
+#: ../include/forms/EpointPersonalTrainerRegisterTrainer.php:215
+#: ../include/forms/EpointPersonalTrainerRegisterUser.php:207
+msgid "There was an error creating your user account. Contact us please."
+msgstr ""
+"Hubo un error mientras se creaba tu cuenta de usuario. Contacte con "
+"nosotros, por favor."
+
+#: ../include/forms/EpointPersonalTrainerRegisterTrainer.php:235
+msgid "This account has a different user name."
+msgstr "Esta cuenta tiene un nombre de usuario diferente."
+
+#: ../include/forms/EpointPersonalTrainerRegisterTrainer.php:257
+msgid "This site domain name already exists. Chose another name please."
+msgstr "El dominio de sitio ya existe. Escoja otro, por favor."
+
+#: ../include/forms/EpointPersonalTrainerRegisterTrainer.php:270
+msgid "This site name already exists. Chose another name please."
+msgstr "El nombre del sitio ya existe. Escoja otro, por favor."
+
+#: ../include/forms/EpointPersonalTrainerRegisterTrainer.php:280
+msgid "There was an error creating your site. Contact us please."
+msgstr "Hubo un error creando su sitio. Contacte con nosotros, por favor."
+
+#: ../include/forms/EpointPersonalTrainerEditDietRestriction.php:88
+msgid "You can not edit this restriction."
+msgstr "No puedes editar esta restricción."
+
+#: ../include/forms/EpointPersonalTrainerEditDietRestriction.php:109
+msgid "The restriction could not be created."
+msgstr "La restricción no pudo ser creada."
+
+#: ../include/forms/EpointPersonalTrainerEditDietRestriction.php:121
+msgid "The restriction can not be edited."
+msgstr "La restricción no pudo ser editada."
+
+#: ../include/forms/EpointPersonalTrainerEditDietRestriction.php:133
+msgid "The restriction could not be saved."
+msgstr "La restricción no pudo ser guardada."
+
+#: ../include/forms/EpointPersonalTrainerAddFoodCategory.php:50
+#: ../include/forms/EpointPersonalTrainerAddExerciseCategory.php:50
+msgid "Category name already exists."
+msgstr "El nombre de categoría dado ya está en uso."
+
+#: ../include/forms/EpointPersonalTrainerAddFoodCategory.php:70
+#: ../include/forms/EpointPersonalTrainerEditFoodCategory.php:87
+#: ../include/forms/EpointPersonalTrainerEditExerciseCategory.php:86
+#: ../include/forms/EpointPersonalTrainerAddExerciseCategory.php:69
+msgid "There was an error creating the category."
+msgstr "Hubo un error creando la categoría."
+
+#: ../include/forms/EpointPersonalTrainerEditEvolutionMagnitude.php:87
+msgid "Unidad"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditEvolutionMagnitude.php:107
+msgid "You can not edit this magnitude."
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditEvolutionMagnitude.php:133
+msgid "The magnitude could not be created."
+msgstr "No se pudo crear la magnitud."
+
+#: ../include/forms/EpointPersonalTrainerEditEvolutionMagnitude.php:145
+msgid "The magnitude can not be edited."
+msgstr "La magnitud no pudo ser editada."
+
+#: ../include/forms/EpointPersonalTrainerEditEvolutionMagnitude.php:159
+msgid "The magnitude could not be saved."
+msgstr "La magnitud no pudo ser guardada."
+
+#: ../include/forms/EpointPersonalTrainerSearchTrainer.php:34
+msgid "Nombre"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerSearchTrainer.php:72
+msgid "No se encontro el sitio indicado."
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditDiet.php:128
+#: ../include/forms/EpointPersonalTrainerCreateUserDiet.php:107
+msgid "Restricciones"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditDiet.php:184
+#: ../include/forms/EpointPersonalTrainerCreateUserDiet.php:131
+#: ../include/forms/EpointPersonalTrainerEditExercise.php:129
+#: ../include/forms/EpointPersonalTrainerEditPresetExercise.php:94
+#: ../include/forms/EpointPersonalTrainerEditTraining.php:199
+#: ../include/forms/EpointPersonalTrainerCloneExerciseAndAssign.php:128
+msgid "Video"
+msgstr "Vídeo"
+
+#: ../include/forms/EpointPersonalTrainerEditDiet.php:207
+#: ../include/forms/EpointPersonalTrainerCreateUserDiet.php:150
+#: ../include/forms/EpointPersonalTrainerUserHabits.php:56
+msgid "Observaciones"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditDiet.php:277
+#: ../include/forms/EpointPersonalTrainerCreateUserDiet.php:215
+msgid "Editar toma"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditDiet.php:291
+#: ../include/forms/EpointPersonalTrainerCreateUserDiet.php:227
+msgid ""
+"Si desea que se genere un duplicado de esta dieta y se archive en \"Mis "
+"Plantillas\" dentro de su galería de dietas para usar en otras ocasiones, "
+"marque el recuadro. Este duplicado podrá ser modificado desde su zona de "
+"creación sin que se vea afectada la dieta original."
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditDiet.php:377
+msgid "You can not edit this diet."
+msgstr "No puede editar esta dieta."
+
+#: ../include/forms/EpointPersonalTrainerEditDiet.php:450
+#: ../include/forms/EpointPersonalTrainerCreateUserDiet.php:373
+msgid "The diet could not be created."
+msgstr "La dieta no pudo ser creada."
+
+#: ../include/forms/EpointPersonalTrainerEditDiet.php:495
+msgid "The diet can not be edited."
+msgstr "La dieta no puede ser editada."
+
+#: ../include/forms/EpointPersonalTrainerEditDiet.php:514
+msgid "The diet could not be saved."
+msgstr "La dieta no pudo ser guardada."
+
+#: ../include/forms/EpointPersonalTrainerEditDiet.php:568
+#: ../include/forms/EpointPersonalTrainerEditExercise.php:493
+#: ../include/forms/EpointPersonalTrainerEditPresetExercise.php:282
+#: ../include/forms/EpointPersonalTrainerEditTraining.php:604
+#: ../include/forms/EpointPersonalTrainerEditPresetTraining.php:279
+#: ../include/forms/EpointPersonalTrainerCloneExerciseAndAssign.php:675
+#: ../include/forms/EpointPersonalTrainerTrainerValoration.php:62
+#: ../include/forms/EpointPersonalTrainerAlertsSettings.php:390
+msgid "There was an error."
+msgstr "Hubo un error."
+
+#: ../include/forms/EpointPersonalTrainerEditFoodCategory.php:59
+#: ../include/forms/EpointPersonalTrainerEditExerciseCategory.php:59
+msgid "Category does not exists."
+msgstr "La categoría no existe."
+
+#: ../include/forms/EpointPersonalTrainerEditFoodCategory.php:66
+#: ../include/forms/EpointPersonalTrainerEditExerciseCategory.php:66
+msgid "Another category is using this name."
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerCreateUserDiet.php:133
+#: ../include/forms/EpointPersonalTrainerEditExercise.php:132
+#: ../include/forms/EpointPersonalTrainerEditTraining.php:202
+msgid "Pega aquí el enlace que aparece en \"Compartir\""
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerCreateUserDiet.php:236
+msgid "Asignar"
+msgstr "Asignar"
+
+#: ../include/forms/EpointPersonalTrainerEditObjective.php:88
+#: ../include/forms/EpointPersonalTrainerEditDietObjective.php:88
+msgid "You can not edit this objective."
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditObjective.php:109
+#: ../include/forms/EpointPersonalTrainerEditDietObjective.php:109
+msgid "The objective could not be created."
+msgstr "No se pudo crear el objetivo."
+
+#: ../include/forms/EpointPersonalTrainerEditObjective.php:121
+#: ../include/forms/EpointPersonalTrainerEditDietObjective.php:121
+msgid "The objective can not be edited."
+msgstr "El objetivo no pudo ser editado."
+
+#: ../include/forms/EpointPersonalTrainerEditObjective.php:133
+#: ../include/forms/EpointPersonalTrainerEditDietObjective.php:133
+msgid "The objective could not be saved."
+msgstr "El objetivo no pudo ser guardado."
+
+#: ../include/forms/EpointPersonalTrainerFoodQuestionnaire.php:255
+msgid "Invalid food data."
+msgstr "Datos de alimento inválidos."
+
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:198
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:157
+msgid "¿Qué enfermedades tienes?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:208
+msgid "¿Está tomando alguna mediación?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:217
+msgid "¿Qué medicaciones toma y para qué?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:405
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:186
+msgid "¿Tomas suplementos alimenticios?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:413
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:194
+msgid "¿Que suplementos tomas?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:426
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:207
+msgid "Concreta que suplemento"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:491
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:444
+msgid "Debes especificar cuando practicas deporte."
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:497
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:450
+msgid "Debes especificar con que frecuencia practicas deporte."
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:506
+msgid "Debes especificar cual es el otro deporte que práctica."
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:515
+msgid "Debes especificar que enfermedades tiene."
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditMemberFull.php:524
+msgid "Debes especificar que medicamentos toma."
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:138
+msgid "¿Qué lesiones has tenido?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:167
+msgid "¿Estás tomando alguna mediación?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:176
+msgid "¿Qué medicaciones tomas y para qué?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:341
+msgid "Ambas"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:429
+#: ../include/forms/EpointPersonalTrainerTrainerInfo.php:288
+#: ../include/forms/EpointPersonalTrainerTrainingCenterInfo.php:294
+msgid "You are not member of this site."
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:459
+msgid "Debes especificar que enfermedades tienes."
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:468
+msgid "Debes especificar que medicamentos tomas."
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerPersonalQuestionnaire.php:507
+msgid "Saved successfully"
+msgstr "Guardado satisfactoriamente."
+
+#: ../include/forms/EpointPersonalTrainerEditEnvironment.php:88
+msgid "You can not edit this environment."
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditEnvironment.php:109
+msgid "The environment could not be created."
+msgstr "No se pudo crear el entorno."
+
+#: ../include/forms/EpointPersonalTrainerEditEnvironment.php:121
+msgid "The environment can not be edited."
+msgstr "El entorno no pudo ser editado."
+
+#: ../include/forms/EpointPersonalTrainerEditEnvironment.php:133
+msgid "The environment could not be saved."
+msgstr "El entorno no pudo ser guardado."
+
+#: ../include/forms/EpointPersonalTrainerEditExercise.php:140
+#: ../include/forms/EpointPersonalTrainerEditPresetExercise.php:105
+#: ../include/forms/EpointPersonalTrainerCloneExerciseAndAssign.php:156
+msgid "Start photo"
+msgstr "Foto inicial"
+
+#: ../include/forms/EpointPersonalTrainerEditExercise.php:156
+#: ../include/forms/EpointPersonalTrainerEditPresetExercise.php:121
+#: ../include/forms/EpointPersonalTrainerCloneExerciseAndAssign.php:174
+msgid "End photo"
+msgstr "Foto final"
+
+#: ../include/forms/EpointPersonalTrainerEditExercise.php:171
+#: ../include/forms/EpointPersonalTrainerEditPresetExercise.php:136
+#: ../include/forms/EpointPersonalTrainerEditTraining.php:186
+#: ../include/forms/EpointPersonalTrainerEditPresetTraining.php:149
+#: ../include/forms/EpointPersonalTrainerCloneExerciseAndAssign.php:222
+msgid "Description"
+msgstr "Descripción"
+
+#: ../include/forms/EpointPersonalTrainerEditExercise.php:217
+msgid "Guardar y añadir nuevo"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditExercise.php:315
+#: ../include/forms/EpointPersonalTrainerCloneExerciseAndAssign.php:432
+msgid "You can not edit this exercise."
+msgstr "No puede editar este ejercicio."
+
+#: ../include/forms/EpointPersonalTrainerEditExercise.php:356
+#: ../include/forms/EpointPersonalTrainerCloneExerciseAndAssign.php:485
+msgid "You must assing one category at least."
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditExercise.php:394
+#: ../include/forms/EpointPersonalTrainerEditPresetExercise.php:219
+#: ../include/forms/EpointPersonalTrainerCloneExerciseAndAssign.php:542
+msgid "The exercise could not be created."
+msgstr "No se pudo crear el ejercicio."
+
+#: ../include/forms/EpointPersonalTrainerEditExercise.php:435
+#: ../include/forms/EpointPersonalTrainerEditPresetExercise.php:242
+msgid "The exercise can not be edited."
+msgstr "El ejercicio no pudo ser editado."
+
+#: ../include/forms/EpointPersonalTrainerEditExercise.php:455
+#: ../include/forms/EpointPersonalTrainerEditPresetExercise.php:262
+#: ../include/forms/EpointPersonalTrainerCloneExerciseAndAssign.php:620
+msgid "The exercise could not be saved."
+msgstr "El ejercicio no pudo ser guardado."
+
+#: ../include/forms/EpointPersonalTrainerEditPresetExercise.php:97
+#: ../include/forms/EpointPersonalTrainerCloneExerciseAndAssign.php:131
+msgid "Enter a YouTube ID"
+msgstr "Introduce un ID de YouTube"
+
+#: ../include/forms/EpointPersonalTrainerEditTraining.php:133
+#: ../include/forms/EpointPersonalTrainerEditPresetTraining.php:109
+msgid "Entorno"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditTraining.php:403
+msgid "You can not edit this training."
+msgstr "No puede editar este entrenamiento."
+
+#: ../include/forms/EpointPersonalTrainerEditTraining.php:492
+#: ../include/forms/EpointPersonalTrainerEditPresetTraining.php:212
+msgid "The training could not be created."
+msgstr "No se pudo crear el entrenamiento."
+
+#: ../include/forms/EpointPersonalTrainerEditTraining.php:519
+#: ../include/forms/EpointPersonalTrainerEditPresetTraining.php:235
+msgid "The training can not be edited."
+msgstr "El entrenamiento no pudo ser editado."
+
+#: ../include/forms/EpointPersonalTrainerEditTraining.php:558
+#: ../include/forms/EpointPersonalTrainerEditPresetTraining.php:259
+msgid "The training could not be saved."
+msgstr "El entrenamiento no pudo ser guardado."
+
+#: ../include/forms/EpointPersonalTrainerAlreadyTrainer.php:52
+msgid "Log in"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerAlreadyTrainer.php:67
+msgid "You are not registered yet."
+msgstr "Aun no estás registrado."
+
+#: ../include/forms/EpointPersonalTrainerAlreadyTrainer.php:75
+msgid "Invalid user or pasword."
+msgstr "Usuario o contraseña inválidos"
+
+#: ../include/forms/EpointPersonalTrainerAlreadyTrainer.php:85
+msgid "You have not a website registered."
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerSettings.php:23
+msgid "Main options"
+msgstr "Opciones principales"
+
+#: ../include/forms/EpointPersonalTrainerEditPresetTraining.php:80
+msgid "Volumen"
+msgstr "Volumen"
+
+#: ../include/forms/EpointPersonalTrainerEditPresetTraining.php:90
+msgid "Mantenimiento"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditPresetTraining.php:100
+msgid "Definición"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditPresetTraining.php:117
+msgid "Casa"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditPresetTraining.php:127
+msgid "Exterior"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerEditPresetTraining.php:137
+msgid "Gimnasio"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerCloneExerciseAndAssign.php:443
+msgid "Previous exercise does not exist."
+msgstr "El ejercicio previo no existe."
+
+#: ../include/forms/EpointPersonalTrainerTrainerValoration.php:74
+msgid "Valoración guardada."
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerRegisterUser.php:154
+msgid "Register"
+msgstr "Registrar"
+
+#: ../include/forms/EpointPersonalTrainerMembersFilter.php:77
+#: ../include/forms/EpointPersonalTrainerMembersFilter.php:148
+msgid "Cualquiera"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerMembersFilter.php:92
+msgid "Fecha de nacimiento (desde)"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerMembersFilter.php:100
+msgid "Fecha de nacimiento (hasta)"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerMembersFilter.php:108
+msgid "¿Objetivos por los cuales hace deporte?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerMembersFilter.php:122
+msgid "Deporte practicado"
+msgstr "Deporte practicado"
+
+#: ../include/forms/EpointPersonalTrainerMembersFilter.php:164
+msgid "Horas de sueño diarias"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerMembersFilter.php:176
+msgid "¿Lleva una buena alimentación?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerMembersFilter.php:190
+msgid "Número de comidas diarias"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerMembersFilter.php:202
+msgid "¿Toma suplementos alimenticios?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerMembersFilter.php:215
+msgid "¿Qué suplementos toma?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerMembersFilter.php:275
+msgid "Filter"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerMemberEvolutionPhotos.php:77
+msgid "Back photo"
+msgstr "Foto trasera"
+
+#: ../include/forms/EpointPersonalTrainerAlertsSettings.php:30
+msgid "Alertas hacia el entrenador"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerAlertsSettings.php:207
+msgid "Alertas hacia el cliente"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerAlertsSettings.php:521
+msgid "Cambios guardados satisfactoriamente."
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerTrainerInfo.php:40
+msgid ""
+"Esta foto se utilizará para promocionar tu sitio en nuestro sitio principal. "
+"Es recomendable utilizar una foto con el fondo transparente. Utilice "
+"archivos jpg, o .png (Máx: 6MB)"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerTrainerInfo.php:139
+msgid "Años de experiencia"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerTrainerInfo.php:180
+#: ../include/forms/EpointPersonalTrainerTrainingCenterInfo.php:178
+msgid "Dietética"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerTrainerInfo.php:239
+#: ../include/forms/EpointPersonalTrainerTrainingCenterInfo.php:237
+msgid "¿En que deportes estás especializado?"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerTrainerInfo.php:332
+#: ../include/forms/EpointPersonalTrainerTrainingCenterInfo.php:339
+msgid "Saved successfully. Now you can use your site."
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerTrainingCenterInfo.php:39
+msgid "Logo o foto del centro"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerTrainingCenterInfo.php:41
+msgid ""
+"Esta foto se utilizará para promocionar tu sitio en nuestro sitio principal. "
+"Es recomendable utilizar una foto con el fondo transparente. Utilice "
+"archivos jpg, o .png (Máx: 15MB)"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerTrainingCenterInfo.php:100
+msgid "Superficie del centro"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerTrainingCenterInfo.php:131
+msgid "Parking privado"
+msgstr ""
+
+#: ../include/forms/EpointPersonalTrainerTrainingCenterInfo.php:149
+msgid "Aire acondicionado"
+msgstr ""
+
+#: ../include/forms/templates/user-tracking-graph.php:5
+msgid "Progress graphics"
+msgstr ""
+
+#: ../include/forms/templates/user-tracking-graph.php:7
+#, php-format
+msgid ""
+"Graphs will be available when you have introduced your tracking data %d "
+"times or more."
+msgstr ""
+
+#: ../include/forms/templates/user-tracking-graph.php:18
+msgid "Previous data"
+msgstr "Datos previos"
+
+#: ../include/forms/templates/user-tracking-graph.php:23
+msgid "Weight (kg)"
+msgstr "Peso (kg)"
+
+#: ../include/forms/templates/user-tracking-graph.php:24
+msgid "Biceps (cm)"
+msgstr "Biceps (cm)"
+
+#: ../include/forms/templates/user-tracking-graph.php:25
+msgid "Shoulder (cm)"
+msgstr "Hombros (cm)"
+
+#: ../include/forms/templates/user-tracking-graph.php:26
+msgid "Chest (cm)"
+msgstr "Pecho (cm)"
+
+#: ../include/forms/templates/user-tracking-graph.php:27
+msgid "Waist (cm)"
+msgstr "Cintura (cm)"
+
+#: ../include/forms/templates/user-tracking-graph.php:28
+msgid "Hip (cm)"
+msgstr "Cadera (cm)"
+
+#: ../include/forms/templates/user-tracking-graph.php:29
+msgid "Thigh (cm)"
+msgstr "Muslo (cm)"
+
+#: ../include/forms/templates/user-tracking-graph.php:30
+msgid "Leg (cm)"
+msgstr "Pierna (cm)"
+
+#: ../include/forms/templates/user-tracking-graph.php:31
+msgid "Calf (cm)"
+msgstr "Pantorrilla (cm)"
+
+#: ../include/forms/templates/user-tracking-graph.php:48
+msgid "Observations:"
+msgstr "Observaciones:"
+
+#: ../templates/import-joomla/import-food.php:4
+#: ../templates/import-joomla/food.php:4
+msgid "Import food from Joomla"
+msgstr ""
+
+#: ../templates/import-joomla/import-food.php:8
+#, php-format
+msgid "There are %d food elements."
+msgstr ""
+
+#: ../templates/import-joomla/import-food.php:9
+#: ../templates/import-joomla/import-exercises.php:9
+#, php-format
+msgid "Categories created: %s"
+msgstr ""
+
+#: ../templates/import-joomla/import-food.php:10
+#: ../templates/import-joomla/import-exercises.php:10
+#, php-format
+msgid "Failed categories: %s"
+msgstr ""
+
+#: ../templates/import-joomla/import-food.php:11
+#: ../templates/import-joomla/import-exercises.php:11
+#, php-format
+msgid "Omitted categories: %s"
+msgstr ""
+
+#: ../templates/import-joomla/import-food.php:16
+#, php-format
+msgid "Food %d imported as food %d"
+msgstr ""
+
+#: ../templates/import-joomla/import-food.php:18
+#, php-format
+msgid "Food %d has not been imported"
+msgstr ""
+
+#: ../templates/import-joomla/import-food.php:22
+#: ../templates/import-joomla/food.php:22
+msgid "No food found"
+msgstr "No se encontraron alimentos."
+
+#: ../templates/import-joomla/food.php:8
+#, php-format
+msgid "There are %d food items."
+msgstr ""
+
+#: ../templates/import-joomla/food.php:9
+#: ../templates/import-joomla/diets.php:9
+#: ../templates/import-joomla/exercises.php:9
+msgid "Import all"
+msgstr ""
+
+#: ../templates/import-joomla/import-diets.php:4
+#: ../templates/import-joomla/diets.php:4
+msgid "Import diets from Joomla"
+msgstr ""
+
+#: ../templates/import-joomla/import-diets.php:8
+#: ../templates/import-joomla/diets.php:8
+#, php-format
+msgid "There are %d diets."
+msgstr ""
+
+#: ../templates/import-joomla/import-diets.php:13
+#, php-format
+msgid "Diet %d imported as diet %d"
+msgstr ""
+
+#: ../templates/import-joomla/import-diets.php:15
+#, php-format
+msgid "Diet %d has not been imported"
+msgstr ""
+
+#: ../templates/import-joomla/import-diets.php:19
+#: ../templates/import-joomla/diets.php:21
+msgid "No diets found"
+msgstr "No se encontraron dietas."
+
+#: ../templates/import-joomla/import-exercises.php:4
+#: ../templates/import-joomla/exercises.php:4
+msgid "Import exercises from Joomla"
+msgstr ""
+
+#: ../templates/import-joomla/import-exercises.php:8
+#: ../templates/import-joomla/exercises.php:8
+#, php-format
+msgid "There are %d exercises."
+msgstr ""
+
+#: ../templates/import-joomla/import-exercises.php:16
+#, php-format
+msgid "Exercise %d imported as exercise %d"
+msgstr ""
+
+#: ../templates/import-joomla/import-exercises.php:18
+#, php-format
+msgid "Exercise %d has not been imported"
+msgstr "El ejercicio %d no ha sido importado"
+
+#: ../templates/import-joomla/import-exercises.php:21
+#, php-format
+msgid "%d of %d exercises imported successfuly."
+msgstr ""
+
+#: ../templates/import-joomla/import-exercises.php:23
+msgid "No exercise found"
+msgstr "No se encontraron ejercicios."
+
+#: ../templates/import-joomla/exercises.php:38
+msgid "No exercises found"
+msgstr "No se encontraron ejercicios."
+
+#: ../templates/import-joomla/main.php:4
+msgid "Import from Joomla"
+msgstr ""
+
+#: ../templates/import-joomla/main.php:7
+msgid "Import food"
+msgstr ""
+
+#: ../templates/import-joomla/main.php:8
+msgid "Import diets"
+msgstr ""
+
+#: ../templates/import-joomla/main.php:9
+msgid "Import exercises"
+msgstr ""
+
+#, fuzzy
+#~ msgid ".jpg, or .png files (Max: 10MB)"
+#~ msgstr "Archivos .jpg o .png (Max: 0.5MB)"
+
+#~ msgid "Agent"
+#~ msgstr "Agente"
+
+#~ msgid "Pending"
+#~ msgstr "Pendiente"
+
+#~ msgid "Ready"
+#~ msgstr "Preparado"
+
+#~ msgid "Approved"
+#~ msgstr "Aprobado"
+
+#~ msgid "Denied"
+#~ msgstr "Denegado"
+
+#~ msgid "Firmed"
+#~ msgstr "Firmado"
+
+#~ msgid "E-mail"
+#~ msgstr "Correo electrónico"
+
+#~ msgid "SMS"
+#~ msgstr "SMS"
+
+#~ msgid "URL"
+#~ msgstr "URL"
+
+#~ msgid "Married"
+#~ msgstr "Casado"
+
+#~ msgid "Divorced"
+#~ msgstr "Divorciado"
+
+#~ msgid "Not set (legal entity)"
+#~ msgstr "Sin estado (persona jurídica)"
+
+#~ msgid "Separated without legal document"
+#~ msgstr "Separado sin documento legal"
+
+#~ msgid "Single"
+#~ msgstr "Soltero"
+
+#~ msgid "Close couple without legal document"
+#~ msgstr "Unidos sin documento legal"
+
+#~ msgid "Widower"
+#~ msgstr "Viudo"
+
+#~ msgid "Alava"
+#~ msgstr "Álava"
+
+#~ msgid "Albacete"
+#~ msgstr "Albacete"
+
+#~ msgid "Alicante"
+#~ msgstr "Alicante"
+
+#~ msgid "Almeria"
+#~ msgstr "Almería"
+
+#~ msgid "Asturias"
+#~ msgstr "Asturias"
+
+#~ msgid "Avila"
+#~ msgstr "Ávila"
+
+#~ msgid "Badajoz"
+#~ msgstr "Badajoz"
+
+#~ msgid "Baleares"
+#~ msgstr "Baleares"
+
+#~ msgid "Barcelona"
+#~ msgstr "Barcelona"
+
+#~ msgid "Burgos"
+#~ msgstr "Burgos"
+
+#~ msgid "Caceres"
+#~ msgstr "Cáceres"
+
+#~ msgid "Cadiz"
+#~ msgstr "Cádiz"
+
+#~ msgid "Cantabria"
+#~ msgstr "Cantabria"
+
+#~ msgid "Castellon"
+#~ msgstr "Castellón"
+
+#~ msgid "Ceuta"
+#~ msgstr "Ceuta"
+
+#~ msgid "Ciudad Real"
+#~ msgstr "Ciudad Real"
+
+#~ msgid "Cordoba"
+#~ msgstr "Córdoba"
+
+#~ msgid "Cuenca"
+#~ msgstr "Cuenca"
+
+#~ msgid "Gerona"
+#~ msgstr "Gerona"
+
+#~ msgid "Granada"
+#~ msgstr "Granada"
+
+#~ msgid "Guadalajara"
+#~ msgstr "Guadalajara"
+
+#~ msgid "Guipuzcoa"
+#~ msgstr "Guipúzcoa"
+
+#~ msgid "Huelva"
+#~ msgstr "Huelva"
+
+#~ msgid "Huesca"
+#~ msgstr "Huesca"
+
+#~ msgid "Jaen"
+#~ msgstr "Jaén"
+
+#~ msgid "La Coruña"
+#~ msgstr "La Coruña"
+
+#~ msgid "La Rioja"
+#~ msgstr "La Rioja"
+
+#~ msgid "Las Palmas"
+#~ msgstr "Las Palmas"
+
+#~ msgid "Leon"
+#~ msgstr "León"
+
+#~ msgid "Lerida"
+#~ msgstr "Lerida"
+
+#~ msgid "Lugo"
+#~ msgstr "Lugo"
+
+#~ msgid "Madrid"
+#~ msgstr "Madrid"
+
+#~ msgid "Malaga"
+#~ msgstr "Málaga"
+
+#~ msgid "Melilla"
+#~ msgstr "Melilla"
+
+#~ msgid "Murcia"
+#~ msgstr "Murcia"
+
+#~ msgid "Navarra"
+#~ msgstr "Navarra"
+
+#~ msgid "Orense"
+#~ msgstr "Orense"
+
+#~ msgid "Palencia"
+#~ msgstr "Palencia"
+
+#~ msgid "Pontevedra"
+#~ msgstr "Pontevedra"
+
+#~ msgid "Occidental Sahara"
+#~ msgstr "Sahara Occidental"
+
+#~ msgid "Salamanca"
+#~ msgstr "Salamanca"
+
+#~ msgid "Santa Cruz de Tenerife"
+#~ msgstr "Santa Cruz de Tenerife"
+
+#~ msgid "Segovia"
+#~ msgstr "Segovia"
+
+#~ msgid "Sevilla"
+#~ msgstr "Sevilla"
+
+#~ msgid "Soria"
+#~ msgstr "Soria"
+
+#~ msgid "Tarragona"
+#~ msgstr "Tarragona"
+
+#~ msgid "Teruel"
+#~ msgstr "Teruel"
+
+#~ msgid "Toledo"
+#~ msgstr "Toledo"
+
+#~ msgid "Valencia"
+#~ msgstr "Valencia"
+
+#~ msgid "Valladolid"
+#~ msgstr "Valladolid"
+
+#~ msgid "Vizcaya"
+#~ msgstr "Vizcaya"
+
+#~ msgid "Zamora"
+#~ msgstr "Zamora"
+
+#~ msgid "Zaragoza"
+#~ msgstr "Zaragoza"
+
+#~ msgid "Foreign country"
+#~ msgstr "País extranjero"
+
+#~ msgid "Servant"
+#~ msgstr "Funcionario"
+
+#~ msgid "Serviceman"
+#~ msgstr "Militar"
+
+#~ msgid "Fixed employee"
+#~ msgstr "Empleado fijo"
+
+#~ msgid "Unemployed without subsidy"
+#~ msgstr "Desempleado sin subsidio"
+
+#~ msgid "Temporary employee"
+#~ msgstr "Empleado temporal"
+
+#~ msgid "Freelancer"
+#~ msgstr "Empresario autónomo"
+
+#~ msgid "Company partner"
+#~ msgstr "Socio de empresa"
+
+#~ msgid "Person of independent/private means"
+#~ msgstr "Rentista"
+
+#~ msgid "Widow's pension"
+#~ msgstr "Pensión de viudedad"
+
+#~ msgid "Fixed discontinous"
+#~ msgstr "Fijo discontinuo"
+
+#~ msgid "Preretired"
+#~ msgstr "Prejubilado"
+
+#~ msgid "Disability pension"
+#~ msgstr "Pensión de invalidez"
+
+#~ msgid "IRPF"
+#~ msgstr "IRPF"
+
+#~ msgid "IRPF / Patrimony"
+#~ msgstr "IRPF / Patrimonio"
+
+#~ msgid "Payroll / Pension receipt / Subsidy receipt"
+#~ msgstr "Nómina / Justificante pensión / Justificante subsidio"
+
+#~ msgid "Product rent data"
+#~ msgstr "Datos de alquiler del producto"
+
+#~ msgid "Deposit page"
+#~ msgstr "Página de fianza"
+
+#~ msgid "Personal data info page"
+#~ msgstr "Página de información sobre datos personales"
+
+#~ msgid "Solicitude page"
+#~ msgstr "Página de solicitud"
+
+#~ msgid "Scoring page"
+#~ msgstr "Página de Scoring"
+
+#~ msgid "Firm page"
+#~ msgstr "Página de firma"
+
+#~ msgid "Solicitudes"
+#~ msgstr "Solicitudes"
+
+#~ msgid "Solicitude unavailable."
+#~ msgstr "Solicitud no disponible."
+
+#~ msgid "None"
+#~ msgstr "Ninguno"
+
+#~ msgid "Solicitude not available"
+#~ msgstr "Solicitud no disponible"
+
+#~ msgid "Your solicitude has been approved. Now firm the contract at %s."
+#~ msgstr "Su solicitud ha sido aprobada. Ahora firme el contrato en %s."
+
+#~ msgid "This solicitude has been denied."
+#~ msgstr "Su solicitud ha sido denegada."
+
+#~ msgid "This solicitude has been already firmed."
+#~ msgstr "Esta solicitud ya está firmada."
+
+#~ msgid ""
+#~ "The deposit period has been expired, so this contract will not be valid. "
+#~ "Try to make a new solicitude."
+#~ msgstr ""
+#~ "El plazo de la fianza ha expirado, por lo que el contrato no sera válido. "
+#~ "Intente hacer una nueva solicitud."
+
+#~ msgid "The contract has been firmed."
+#~ msgstr "El contrato ha sido firmado."
+
+#~ msgid "page"
+#~ msgstr "página"
+
+#~ msgid "This solicitude does not require a deposit."
+#~ msgstr "Esta solicitud no requiere fianza."
+
+#~ msgid "The deposit for this solicitude is already paid."
+#~ msgstr "La fianza de esta solicitud ya está pagada."
+
+#~ msgid "The pay limit for this contract has been exceeded."
+#~ msgstr "El límite de pago para este contrato ha sido excedido."
+
+#~ msgid "Solicitude pending"
+#~ msgstr "Solicitud pendiente"
+
+#~ msgid ""
+#~ "The user %s (%s - %s) has required a scoring solicitude.\\n\\nNow in "
+#~ "development, the client can access the scoring form without administrator "
+#~ "permission.\\n\\nSee the solicitude at %s."
+#~ msgstr ""
+#~ "El usuario %s (%s - %s) ha realizado una solicitud para pasar al proceso "
+#~ "de scoring.\n"
+#~ "\n"
+#~ "En este momento del desarrollo, el cliente puede acceder al formulario de "
+#~ "scoring sin necesidad de aprobación por parte del administrador.\n"
+#~ "\n"
+#~ "Ver la solicitud en %s."
+
+#~ msgid "Admin Panel"
+#~ msgstr "Panel de administración"
+
+#~ msgid "Solicitude ready"
+#~ msgstr "Solicitud lista"
+
+#~ msgid "Go to %s"
+#~ msgstr "Ir a %s"
+
+#~ msgid "Bank connection required"
+#~ msgstr "Se requiere conectar con el banco"
+
+#~ msgid ""
+#~ "To score your solicitude you must log in your bank account. Visit %s to "
+#~ "continue the process."
+#~ msgstr ""
+#~ "Para valorar su solicitud debe iniciar sesión en su cuenta bancaria. "
+#~ "Visite %s para continuar el proceso."
+
+#~ msgid "Our bank connection page"
+#~ msgstr "Nuestra página de conexión con el banco"
+
+#~ msgid "Bank connection fulfilled"
+#~ msgstr "Conexión con el banco realizada"
+
+#~ msgid ""
+#~ "The client has connected with his bank. Manage his scoring process at %s"
+#~ msgstr ""
+#~ "El cliente ha conectado con su banco. Administre el proceso de scoring en "
+#~ "%s"
+
+#~ msgid "Control panel"
+#~ msgstr "Panel de control"
+
+#~ msgid "Scoring solicitude approved"
+#~ msgstr "¡Solicitud de scoring aprobada!"
+
+#~ msgid ""
+#~ "The scoring solicitude from %s has been approved. Manage his scoring "
+#~ "process at %s"
+#~ msgstr ""
+#~ "La solicitud de scoring de %s ha sido aprobada. Administre el proceso de "
+#~ "scoring en %s"
+
+#~ msgid "Scoring solicitude approved with deposit"
+#~ msgstr "Solicitud de scoring aprobada con fianza"
+
+#~ msgid ""
+#~ "The scoring solicitude from %s has been approved, but a deposit is "
+#~ "required. Manage his scoring process at %s"
+#~ msgstr ""
+#~ "La solicitud de scoring de %s ha sido aprobada. pero se requiere una "
+#~ "fianza. Administre el proceso de scoring en %s"
+
+#~ msgid ""
+#~ "Your solicitude has been approved, but you must pay a deposit to validate "
+#~ "the contract (pay %s before %d days). Visit %s to continue the process."
+#~ msgstr ""
+#~ "Su solicitud ha sido aprobada, pero debe pagar una fianza para validar el "
+#~ "contrato (pague %s antes de %d días). Visite %s para continuar el proceso."
+
+#~ msgid "here"
+#~ msgstr "aquí"
+
+#~ msgid "Our firm contract page"
+#~ msgstr "Nuestra página de firma de contrato"
+
+#~ msgid "Scoring solicitude denied"
+#~ msgstr "Solicitud de scoring denegada."
+
+#~ msgid ""
+#~ "The scoring solicitude from %s has been denied. Manage his scoring "
+#~ "process at %s"
+#~ msgstr ""
+#~ "La solicitud de scoring de %s ha sido denegada. Administre el proceso en "
+#~ "%s"
+
+#~ msgid "Contract firmed!"
+#~ msgstr "¡Contrato firmado!"
+
+#~ msgid "The user %s has firmed the contract. View his solicitude at %s"
+#~ msgstr "El usuario %s ha firmado el contrato. Vea su solicitud en %s"
+
+#~ msgid "The user %s has paid the deposit. View his solicitude at %s"
+#~ msgstr "El usuario %s ha pagado la fianza. Vea su solicitud en %s"
+
+#~ msgid "Deposit failed!"
+#~ msgstr "¡Fianza fallida!"
+
+#~ msgid ""
+#~ "The user %s has paid the deposit, but data was not written to server. "
+#~ "View his solicitude at %s and check the TPV control panel."
+#~ msgstr ""
+#~ "El usuario %s ha pagado la fianza, pero los datos no fueron escritos en "
+#~ "el servidor. Vea la solicitud en %s y compruebe el panel de control del "
+#~ "TPV."
+
+#~ msgid "Deposit ignored!"
+#~ msgstr "¡Fianza ignorada!"
+
+#~ msgid ""
+#~ "An user has paid a deposit, but data was ignored because is not linked to "
+#~ "a valid solicitude. Check your TPV control panel."
+#~ msgstr ""
+#~ "Un usuario ha pagado una fianza, pero los datos han sido ignorados porque "
+#~ "no está enlazada con un solicitud válida. Compruebe el panel de control "
+#~ "de su TPV."
+
+#~ msgid "Solicitude"
+#~ msgstr "Solicitud"
+
+#~ msgid "DNI"
+#~ msgstr "DNI"
+
+#~ msgid "Status"
+#~ msgstr "Estado"
+
+#~ msgid "Not required"
+#~ msgstr "No requerido"
+
+#~ msgid "Paid"
+#~ msgstr "Pagado"
+
+#~ msgid "Firm pending"
+#~ msgstr "Firma pendiente"
+
+#~ msgid "Out of date"
+#~ msgstr "Fuera de plazo"
+
+#~ msgid "Solicitude deleted."
+#~ msgstr "Solicitud eliminada."
+
+#~ msgid "%s solicitude deleted."
+#~ msgid_plural "%s solicitudes deleted."
+#~ msgstr[0] "%s solicitud eliminada"
+#~ msgstr[1] "%s solicitudes eliminadas"
+
+#~ msgid "Months"
+#~ msgstr "Meses"
+
+#~ msgid "%s month"
+#~ msgid_plural "%s months"
+#~ msgstr[0] "%s mes"
+#~ msgstr[1] "%s meses"
+
+#~ msgid "Kilometers"
+#~ msgstr "Kilómetros"
+
+#~ msgid "%s km/year"
+#~ msgstr "%s km/año"
+
+#~ msgid "Reserve now"
+#~ msgstr "Reserva ahora"
+
+#~ msgid "%s &euro; / month"
+#~ msgstr "%s &euro; / mes"
+
+#~ msgid "IVA and taxes included"
+#~ msgstr "IVA e impuestos incluidos"
+
+#~ msgid "Solicitude is not ready for scoring"
+#~ msgstr "Su solicitud no está preparada para el scoring."
+
+#~ msgid ""
+#~ "Your scoring solicitude has been approved, but you must pay a %s &euro; "
+#~ "deposit before %d days after sign the contract."
+#~ msgstr ""
+#~ "Su solicitud de scoring ha sido aprobada, pero debe pagar una fianza de "
+#~ "%s &euro; antes de %d días tras la firma del contrato."
+
+#~ msgid ""
+#~ "Congratulations %s! Your solicitude has been aproved and now you only "
+#~ "have to sign the contract. But first we need some documents:"
+#~ msgstr ""
+#~ "¡Felicidades %s! Su solicitud ha sido aprobada y ahora solo tiene que "
+#~ "firmar el contrato. Pero antes necesitaremos los siguientes documentos:"
+
+#~ msgid "IBAN"
+#~ msgstr "IBAN"
+
+#~ msgid "Bank receipt"
+#~ msgstr "Justificante bancario"
+
+#~ msgid "DNI front"
+#~ msgstr "Parte frontal del DNI"
+
+#~ msgid "DNI back"
+#~ msgstr "Parte trasera del DNI"
+
+#~ msgid "Vehicle delivery address"
+#~ msgstr "Dirección de entrega del vehículo"
+
+#~ msgid "Click %s to use your address as delivery address."
+#~ msgstr ""
+#~ "Haga clic %s para usar su dirección como dirección de entrega del "
+#~ "vehículo."
+
+#~ msgid "Street"
+#~ msgstr "Calle"
+
+#~ msgid "Number"
+#~ msgstr "Número"
+
+#~ msgid "Floor"
+#~ msgstr "Piso"
+
+#~ msgid "Door"
+#~ msgstr "Puerta"
+
+#~ msgid "Postcode"
+#~ msgstr "Código postal"
+
+#~ msgid "City"
+#~ msgstr "Ciudad"
+
+#~ msgid "Invalid payroll file."
+#~ msgstr "Archivo de nómina inválido."
+
+#~ msgid "Invalid bank receipt file."
+#~ msgstr "Justificante bancario inválido."
+
+#~ msgid "Invalid DNI front file."
+#~ msgstr "Parte frontal del DNI inválida."
+
+#~ msgid "Invalid DNI back file."
+#~ msgstr "Parte trasera del DNI inválida."
+
+#~ msgid "This solicitude is pending of firm in Signaturit."
+#~ msgstr "Su solicitud está pendiente de firma en Signaturit."
+
+#~ msgid "Invalid delivery address."
+#~ msgstr "Dirección de entrega inválida."
+
+#~ msgid "Error while setting delivery address."
+#~ msgstr "Error al establecer la dirección de entrega."
+
+#~ msgid "Birthday"
+#~ msgstr "Fecha de nacimiento"
+
+#~ msgid "Birth province"
+#~ msgstr "Provincia de nacimiento"
+
+#~ msgid "Marital status"
+#~ msgstr "Estado civil"
+
+#~ msgid "Job type"
+#~ msgstr "Tipo de empleo"
+
+#~ msgid "Working since"
+#~ msgstr "Trabajando desde"
+
+#~ msgid "Provided data does not match any solicitude."
+#~ msgstr "Los datos introducidos no concuerdan con ninguna solicitud."
+
+#~ msgid "We need to verify your identity before continue."
+#~ msgstr "Necesitamos comprobar su identidad antes de continuar."
+
+#~ msgid ""
+#~ "Only numbers, not include either spaces or any other character. Eg: "
+#~ "666666666"
+#~ msgstr "Solo número, no incluya espacios ni otros caracteres. Ej: 666666666"
+
+#~ msgid "Verify"
+#~ msgstr "Verificar"
+
+#~ msgid "This solicitude is not available."
+#~ msgstr "Esta solicitud no está disponible."
+
+#~ msgid "Invalid user data. Please try again"
+#~ msgstr "Datos de usuario inválidos. Por favor, inténtelo de nuevo."
+
+#~ msgid ""
+#~ "Your already have a solicitude ready for fill. Check your email to get "
+#~ "the link."
+#~ msgstr ""
+#~ "Ya tiene una solicitud lista para completar. Compruebe su correo para "
+#~ "obtener el enlace."
+
+#~ msgid ""
+#~ "This is an invalid solicitude. Please check the current URL or contact us."
+#~ msgstr ""
+#~ "Esta es una solicitud inválida. Por favor, compruebe la URL actual o "
+#~ "contacte con nosotros."
+
+#~ msgid "This vehicle is not available now. Please select a new vehiche."
+#~ msgstr ""
+#~ "El vehículo no esta disponible ahora. Por favor, seleccione un vehículo "
+#~ "nuevo."
+
+#~ msgid "Client:"
+#~ msgstr "Cliente:"
+
+#~ msgid "Deposit amount:"
+#~ msgstr "Importe de la fianza:"
+
+#~ msgid "Pay the deposit"
+#~ msgstr "Pague la fianza"
+
+#~ msgid "Please check your data before continue"
+#~ msgstr "Por favor, compruebe sus datos antes de continuar."
+
+#~ msgid "Contact data"
+#~ msgstr "Datos de contacto"
+
+#~ msgid "Client address"
+#~ msgstr "Dirección del cliente"
+
+#~ msgid "Invoiced"
+#~ msgstr "Facturado"
+
+#~ msgid "Net yield"
+#~ msgstr "Rendimiento neto"
+
+#~ msgid "Payroll"
+#~ msgstr "Nómina"
+
+#~ msgid ""
+#~ "If you need to modify your data click %s, else connect to your bank in "
+#~ "the form below:"
+#~ msgstr ""
+#~ "Si necesita modificar sus datos haga clic %s, si no es el caso, ya puede "
+#~ "conectarse con su banco en el siguiente formulario:"
+
+#~ msgid ""
+#~ "To score your solicitude without connecting to your bank account, click "
+#~ "the next button (is less probably to approve your solicitude):"
+#~ msgstr ""
+#~ "Para valorar su solicitud sin conectar con su cuenta bancaria, haga clic "
+#~ "en el siguiente botón (de este modo, es menos probable que su solicitud "
+#~ "sea aprobada):"
+
+#~ msgid "Score without bank connection"
+#~ msgstr "Valorar sin conectar con el banco"
+
+#~ msgid "Impossible to score your solicitude. Try again later please."
+#~ msgstr "Imposible valor su solicitud. Por favor, inténtelo más tarde."
+
+#~ msgid "Solicitude denied."
+#~ msgstr "Solicitud denegada."
+
+#~ msgid "Update"
+#~ msgstr "Actualizar"
+
+#~ msgid "Solicitude updated."
+#~ msgstr "Solicitud actualizada."
+
+#~ msgid "The status change has been notified to the user."
+#~ msgstr "El cambio de estado ha sido notificado al usuario."
+
+#~ msgid "Download"
+#~ msgstr "Descargar"
+
+#~ msgid "The contract is not firmed yet."
+#~ msgstr "El contrato no está firmado aun."
+
+#~ msgid "Contract is not firmed yet."
+#~ msgstr "Contrato no firmado aun."
+
+#~ msgid "Documents path is not writable."
+#~ msgstr "El directorio de los documentos no se puede escribir."
+
+#~ msgid "Documents are already downloaded."
+#~ msgstr "Los documentos ya están descargados."
+
+#~ msgid "Audit trail is already downloaded."
+#~ msgstr "La auditoría ya está descargada."
+
+#~ msgid "Audit trail has been downloaded successfully."
+#~ msgstr "La auditoría se ha descargado satisfactoriamente."
+
+#~ msgid "Audit trail can not be downloaded."
+#~ msgstr "La auditoría no se puede descargar."
+
+#~ msgid "Signed document is already downloaded."
+#~ msgstr "Documento firmado ya está descargado."
+
+#~ msgid "Signed document has been downloaded successfully."
+#~ msgstr "El documento firmado ha sido descargado satisfactoriamente."
+
+#~ msgid "Signed document can not be downloaded."
+#~ msgstr "El documento firmado no ha podido ser descargado."
+
+#~ msgid "The mail will be sent to %s."
+#~ msgstr "El correo será enviado a %s."
+
+#~ msgid "There is not a valid email address for sending contract register."
+#~ msgstr ""
+#~ "No hay una dirección de correo válida para enviar el registro del "
+#~ "contrato."
+
+#~ msgid "Invalid register contract email address."
+#~ msgstr "Dirección de registro de contrato inválida."
+
+#~ msgid "The email has been sent."
+#~ msgstr "El correo ha sido enviado."
+
+#~ msgid "View"
+#~ msgstr "Ver"
+
+#~ msgid "Files path can not be accessed. Check your files directory settings."
+#~ msgstr ""
+#~ "No se puede acceder al directorio. Compruebe los ajustes de archivos del "
+#~ "directorio."
+
+#~ msgid "Signed document"
+#~ msgstr "Documento firmado"
+
+#~ msgid "Audit trail"
+#~ msgstr "Auditoría"
+
+#~ msgid "DNI Front"
+#~ msgstr "Parte frontal del DNI"
+
+#~ msgid "DNI Back"
+#~ msgstr "Parte trasera del DNI"
+
+#~ msgid "Deposit receipt"
+#~ msgstr "Comprobante de fianza"
+
+#~ msgid "Documents path is not readable."
+#~ msgstr "El directorio de documentos no es legible."
+
+#~ msgid "Document %s is not readable."
+#~ msgstr "Documento %s no es legible."
+
+#~ msgid "Renting data"
+#~ msgstr "Datos del renting"
+
+#~ msgid "Renting time"
+#~ msgstr "Duración del renting"
+
+#~ msgid "%s months"
+#~ msgstr "%s meses"
+
+#~ msgid "Km / year"
+#~ msgstr "Km / año"
+
+#~ msgid "%s &euro;/month"
+#~ msgstr "%s &euro;/ mes"
+
+#~ msgid "IVA included"
+#~ msgstr "IVA incluido"
+
+#~ msgid "Invalid client address."
+#~ msgstr "Dirección del cliente inválida."
+
+#~ msgid "Error while setting client address."
+#~ msgstr "Error al establecer la dirección del cliente."
+
+#~ msgid "A link to sign the document has been sent to %s."
+#~ msgstr "Se ha enviado un enlace para firmar el documento a %s."
+
+#~ msgid "Form not available. Try again later please."
+#~ msgstr "Formulario no disponible. Por favor, inténtelo más tarde."
+
+#~ msgid "Solicitude not available."
+#~ msgstr "Solicitud no disponible."
+
+#~ msgid "Your solicitude is pending of approval."
+#~ msgstr "Su solicitud está pendiente de aprobación."
+
+#~ msgid "Your solicitude is pending of scoring."
+#~ msgstr "Su solicitud está pendiente del scoring."
+
+#~ msgid "Your solicitude is denied."
+#~ msgstr "Su solicitud está denegada."
+
+#~ msgid "Your solicitude is already firmed."
+#~ msgstr "Su solicitud ya está firmada"
+
+#~ msgid "Deposit receipt file"
+#~ msgstr "Archivo de comprobante de fianza"
+
+#~ msgid "Upload file"
+#~ msgstr "Subir archivo"
+
+#~ msgid "Product post type"
+#~ msgstr "Tipo de post del producto"
+
+#~ msgid "Elements of this type will be considered as products for renting."
+#~ msgstr ""
+#~ "Los elementos de este tipo sera considerados como productos para alquilar."
+
+#~ msgid "Tax percentage"
+#~ msgstr "Porcentaje impuesto"
+
+#~ msgid "Remember to set a percentage but not include percentage sign."
+#~ msgstr "Recuerde establecer un porcentaje, pero no el símbolo de porcentaje"
+
+#~ msgid "Deposit amount"
+#~ msgstr "Importe de fianza"
+
+#~ msgid "Deposit time limit"
+#~ msgstr "Tiempo límite de fianza"
+
+#~ msgid "Set in minutes. %d by default (%d days)."
+#~ msgstr "Establecer en minutos. %d por defecto (%d días)."
+
+#~ msgid "Email addresses"
+#~ msgstr "Direcciones de correo electrónico"
+
+#~ msgid "Notification addresses"
+#~ msgstr "Direcciones de notificación"
+
+#~ msgid "Contact address"
+#~ msgstr "Dirección de contacto"
+
+#~ msgid "This address will be used as sender in emails for clients."
+#~ msgstr ""
+#~ "Está dirección será utilizada como remitente en los emails para los "
+#~ "clientes."
+
+#~ msgid "Contract register address"
+#~ msgstr "Dirección de registro de contrato"
+
+#~ msgid "After sign a contract, this will be sent to this address."
+#~ msgstr "Tras firmar el contrato, éste será enviado a esta dirección."
+
+#~ msgid "Internal pages"
+#~ msgstr "Páginas internas"
+
+#~ msgid "Solicitude form page"
+#~ msgstr "Página del formulario de solicitud"
+
+#~ msgid "Scoring form page"
+#~ msgstr "Página del formulario de scoring"
+
+#~ msgid "Firm form page"
+#~ msgstr "Página del formulario de firma"
+
+#~ msgid "Deposit form page"
+#~ msgstr "Página del formulario de fianza"
+
+#~ msgid "Equifax options"
+#~ msgstr "Opciones de Equifax"
+
+#~ msgid "Equifax Mode"
+#~ msgstr "Modo de Equifax"
+
+#~ msgid "UAT (User acceptance test)"
+#~ msgstr "UAT (Pruebas de aceptación del usuario)"
+
+#~ msgid "Production"
+#~ msgstr "Producción"
+
+#~ msgid "InterConnect user"
+#~ msgstr "Usuario de InterConnect"
+
+#~ msgid "InterConnect organization code"
+#~ msgstr "Código de organización de InterConnect"
+
+#~ msgid "InterConnect orchestration code"
+#~ msgstr "Código de orquestación de InterConnect"
+
+#~ msgid "InterConnect channel"
+#~ msgstr "Canal de InterConnect"
+
+#~ msgid "Force scoring result"
+#~ msgstr "Forzar resultado del scoring"
+
+#~ msgid ""
+#~ "Leave blank for real result, else the result will be the given character."
+#~ msgstr ""
+#~ "Dejar en blanco para el resultado real, si no el resultado será el "
+#~ "carácter introducido."
+
+#~ msgid "Instantor options"
+#~ msgstr "Opciones de Instantor"
+
+#~ msgid "Instantor script URL"
+#~ msgstr "URL del script de Instantor"
+
+#~ msgid "Instantor client ID"
+#~ msgstr "ID cliente de Instantor"
+
+#~ msgid "Instantor system ID"
+#~ msgstr "ID sistema de Instantor"
+
+#~ msgid "Signaturit options"
+#~ msgstr "Opciones de Signaturit"
+
+#~ msgid "Signaturit token"
+#~ msgstr "Token de Signaturit"
+
+#~ msgid "Use Signaturit in production mode"
+#~ msgstr "Usar Signaturit en modo de producción"
+
+#~ msgid "Signature delivery type"
+#~ msgstr "Modo de reparto de Signaturit"
+
+#~ msgid "Signaturit callback page"
+#~ msgstr "Página de vuelta de Signaturit"
+
+#~ msgid ""
+#~ "Signaturit will redirect the client to this page after sign the contract. "
+#~ "None to no redirect."
+#~ msgstr ""
+#~ "Signaturit redirigirña al cliente a esta página tras firmar el contrato. "
+#~ "No seleccionar ninguna para no redirigir."
+
+#~ msgid "Signaturit events page"
+#~ msgstr "Página de eventos de Signaturit"
+
+#~ msgid "Signaturit will send events to this page."
+#~ msgstr "Signaturit enviará eventos a esta página."
+
+#~ msgid "Signaturit document template"
+#~ msgstr "Plantilla de documento de Signaturit"
+
+#~ msgid "Signaturit mail subject"
+#~ msgstr "Asunto de los correos de Signaturit"
+
+#~ msgid "Signaturit mail body"
+#~ msgstr "Cuerpo de los correos de Signaturit"
+
+#~ msgid "Enable a password in the document that will be sent as an SMS."
+#~ msgstr ""
+#~ "Habilitar una contraseña en el documento que será enviada en un SMS."
+
+#~ msgid "Enable a code acceptance that will be sent as an SMS."
+#~ msgstr "Habilitar un código de aceptación que será enviado como un SMS."
+
+#~ msgid "Uploaded documents path"
+#~ msgstr "Directorio para documentos subidos"
+
+#~ msgid "Commercializer data"
+#~ msgstr "Datos del comercializador"
+
+#~ msgid "CIF"
+#~ msgstr "CIF"
+
+#~ msgid "Mail"
+#~ msgstr "Correo"
+
+#~ msgid "Web"
+#~ msgstr "Web"
+
+#~ msgid "Address"
+#~ msgstr "Dirección"
+
+#~ msgid "State / Province"
+#~ msgstr "Estado / Provincia"
+
+#~ msgid "Contract code"
+#~ msgstr "Código de contrato"
+
+#~ msgid "Company ID"
+#~ msgstr "ID empresa"
+
+#~ msgid "A single digit"
+#~ msgstr "Un único dígito"
+
+#~ msgid "Contract number start from:"
+#~ msgstr "Número de contrato empieza desde:"
+
+#~ msgid ""
+#~ "Useful if the database has been reset. In this case set the last contract "
+#~ "number plus 1, else set 0."
+#~ msgstr ""
+#~ "Útil si se ha restablecido la base de datos. En este caso introduzca el "
+#~ "último número de contrato más 1, si no, introduzca 0."
+
+#~ msgid "Redsys"
+#~ msgstr "Redsys"
+
+#~ msgid "API Version"
+#~ msgstr "Versión de la API"
+
+#~ msgid "Test URL"
+#~ msgstr "URL de prueba"
+
+#~ msgid "Production URL"
+#~ msgstr "URL de Producción"
+
+#~ msgid "Mode"
+#~ msgstr "Modo"
+
+#~ msgid "Test"
+#~ msgstr "Prueba"
+
+#~ msgid "Merchant identifier (FUC code)"
+#~ msgstr "Identificador de comercio (código FUC)"
+
+#~ msgid "Terminal number"
+#~ msgstr "Número de terminal"
+
+#~ msgid "Currency"
+#~ msgstr "Moneda"
+
+#~ msgid "978 for euros."
+#~ msgstr "978 para euros."
+
+#~ msgid "Online notification page"
+#~ msgstr "Página de notificación online"
+
+#~ msgid "Callbak OK page"
+#~ msgstr "Página de retorno OK"
+
+#~ msgid "Callbak KO page"
+#~ msgstr "Página de retorno KO"
+
+#~ msgid "Secret encription key"
+#~ msgstr "Clave secreta de encriptación"
+
+#~ msgid "Country name"
+#~ msgstr "Nombre del país"
+
+#~ msgid "Country phone prefix"
+#~ msgstr "Prefijo telefónico del país"
+
+#~ msgid "Only numbers. Do not include plus symbol (+)."
+#~ msgstr "Solo números. No incluya el símbolo de suma (+)."
+
+#~ msgid "Delivery address"
+#~ msgstr "Dirección de entrega"
+
+#~ msgid "Account"
+#~ msgstr "Cuenta"
+
+#~ msgid ""
+#~ "Your already have a solicitude ready for fill. Visit this %s to update "
+#~ "your solicitude."
+#~ msgstr ""
+#~ "Ya tiene una solicitud lista para completar. Visite este %s para "
+#~ "actualizar su solicitud."
+
+#~ msgid "link"
+#~ msgstr "enlace"
+
+#~ msgid "You must select an offer before."
+#~ msgstr "Debe seleccionar una oferta antes."
+
+#~ msgid "This solicitude has been approved."
+#~ msgstr "Su solicitud ha sido aprobada."
+
+#~ msgid "Now you only have to sign the contract."
+#~ msgstr "Ahora solo queda firmar el contrato."
+
+#~ msgid "Sign contract"
+#~ msgstr "Firmar contrato"
+
+#~ msgid "Attended process"
+#~ msgstr "Proceso asistido"
+
+#~ msgid "Select"
+#~ msgstr "Seleccionar"
+
+#~ msgid "No available products found."
+#~ msgstr "No se encontraron productos disponibles."
+
+#~ msgid "Start new process"
+#~ msgstr "Empezar nuevo proceso"
+
+#~ msgid "Include as available product"
+#~ msgstr "Incluir como un producto disponible."
+
+#~ msgid "Prices (tax included)"
+#~ msgstr "Precios (impuestos incluidos)"
+
+#~ msgid "km / months"
+#~ msgstr "km / meses"
+
+#~ msgid "Brand"
+#~ msgstr "Marca"
+
+#~ msgid "Model"
+#~ msgstr "Modelo"
+
+#~ msgid "Color"
+#~ msgstr "Color"
+
+#~ msgid "Code"
+#~ msgstr "Código"
+
+#~ msgid "Scoring."
+#~ msgstr "Scoring"
+
+#~ msgid "Select the offer"
+#~ msgstr "Seleccionar oferta"
+
+#~ msgid "Create the scoring solicitude."
+#~ msgstr "Crear una solicitud de scoring."
+
+#~ msgid "Bubblefish - Scoring and firm"
+#~ msgstr "Bubblefish - Scoring and firm"
+
+#~ msgid "Solicitude from %s (%s - %s) at %s"
+#~ msgstr "Solicitud de %s (%s - %s) el %s"
+
+#~ msgid "Solicitude URL info"
+#~ msgstr "Información URL solicitud"
+
+#~ msgid "Solicitude info"
+#~ msgstr "Información de la solicitud"
+
+#~ msgid "Offer info"
+#~ msgstr "Información de la oferta"
+
+#~ msgid "Price"
+#~ msgstr "Precio"
+
+#~ msgid "Second surname"
+#~ msgstr "Segundo Apellido"
+
+#~ msgid "Swift"
+#~ msgstr "Swift"
+
+#~ msgid "Country"
+#~ msgstr "País"
+
+#~ msgid "Upload deposit receipt"
+#~ msgstr "Subir comprobante de fianza"
+
+#~ msgid "Signature ID:"
+#~ msgstr "ID de firma:"
+
+#~ msgid "Downloaded Signaturit documents"
+#~ msgstr "Descargar documentos de Signaturit"
+
+#~ msgid "Send contract register email"
+#~ msgstr "Enviar correo registro de contrato"
+
+#~ msgid "Equifax requests log"
+#~ msgstr "Registro de peticiones de Equifax"
+
+#~ msgid "Instantor transaction ID"
+#~ msgstr "ID transacción Instantor"
+
+#~ msgid "Interconnect transaction ID"
+#~ msgstr "ID transacción Interconnect"
+
+#~ msgid "Final decision"
+#~ msgstr "Decisión final"
+
+#~ msgid "Error code"
+#~ msgstr "Código de error"
+
+#~ msgid "Error text"
+#~ msgstr "Texto de error"
+
+#~ msgid "Firm."
+#~ msgstr "Firmar."
+
+#~ msgid "The contract %s has been firmed successfully."
+#~ msgstr "El contrato %s ha sido firmado correctamente."
+
+#~ msgid "Name:"
+#~ msgstr "Nombre:"
+
+#~ msgid "Delivery address:"
+#~ msgstr "Dirección de entrega:"
+
+#~ msgid "Brand:"
+#~ msgstr "Marca:"
+
+#~ msgid "Model:"
+#~ msgstr "Modelo:"
+
+#~ msgid "Color:"
+#~ msgstr "Color:"
+
+#~ msgid "Deposit:"
+#~ msgstr "Fianza:"
+
+#~ msgid "Information not available"
+#~ msgstr "Información no disponible"
+
+#~ msgid "Liberal profession"
+#~ msgstr "Profesión liberal"
+
+#~ msgid "Housewife"
+#~ msgstr "Ama de casa"
+
+#~ msgid "Unemployed with subsidy"
+#~ msgstr "Desempleado con subsidio"
+
+#~ msgid "Student"
+#~ msgstr "Estudiante"
+
+#~ msgid "FIAT employee"
+#~ msgstr "Empleado de FIAT"
+
+#~ msgid "Concessionary employee"
+#~ msgstr "Empleado de concesionario"
+
+#~ msgid "SWIFT"
+#~ msgstr "SWIFT"
+
+#~ msgid "Pending solicitudes"
+#~ msgstr "Solicitudes pendientes"
+
+#~ msgid "Invalid solicitude."
+#~ msgstr "Solicitud inválida."
+
+#~ msgid "There is not valid info associated to this URL."
+#~ msgstr "No hay información válida asociada a esta URL."
+
+#~ msgid "Pending solicitude"
+#~ msgstr "Solicitud pendiente"
+
+#~ msgid "No pending solicitudes found."
+#~ msgstr "No se encontraron solicitudes pendientes."
+
+#~ msgid "State"
+#~ msgstr "Estado"
+
+#~ msgid "Data validated. Now log in your bank account."
+#~ msgstr "Datos validados. Ahora puede iniciar sesión en su cuenta bancaria."
+
+#~ msgid "Provided data does not match requested solicitude."
+#~ msgstr "Los datos introducidos no concuerdan con ninguna solicitud."
+
+#~ msgid "Our agents will contact you to finish the process."
+#~ msgstr "Nuestros agentes contactarán con usted para finalizar el proceso."
+
+#~ msgid "Invalid solicitude"
+#~ msgstr "Solicitud inválida."
+
+#~ msgid "Hi %s %s!"
+#~ msgstr "¡Hola %s %s!"
+
+#~ msgid "Insert data provided to us before to verify your identity."
+#~ msgstr ""
+#~ "Introduzca los datos que nos ha dado previamente para verificar su "
+#~ "identidad."
+
+#~ msgid "The user already has a solicitude ready for fill. %s"
+#~ msgstr "El usuario ya tiene una solicitud preparada para completar. %s"
+
+#~ msgid "View this solicitude"
+#~ msgstr "Ver esta solicitud"
+
+#~ msgid "Solicitude approved!"
+#~ msgstr "¡Solicitud aprobada!"
+
+#~ msgid "The client must log in his bank."
+#~ msgstr "El cliente debe iniciar sesión en su banco."
+
+#~ msgid "Link for the client: %s"
+#~ msgstr "Enlace para el cliente: %s"
+
+#~ msgid "The client must introduce next data before log in:"
+#~ msgstr ""
+#~ "El cliente deberá introducir los siguientes datos antes de iniciar sesión:"
+
+#~ msgid "A valid product must be selected before starting the process."
+#~ msgstr "Se debe seleccionar un producto válido antes de empezar el proceso."
+
+#~ msgid ""
+#~ "Your solicitude has been sent. We will contact you as soon as possible."
+#~ msgstr ""
+#~ "Su solicitud ha sido enviada satisfactoriamente. Contactaremos con usted "
+#~ "lo antes posible."
+
+#~ msgid "Form not available. The Signaturit token is not configured."
+#~ msgstr ""
+#~ "Formulario no disponible. El token de Signaturit no ha sido configurado."
+
+#~ msgid "This solicitude is pending of approval."
+#~ msgstr "Su solicitud está pendiente de aprobación."
+
+#~ msgid "This solicitude is pending of scoring."
+#~ msgstr "Su solicitud está pendiente del scoring."
+
+#~ msgid "This solicitude is denied."
+#~ msgstr "Esta solicitud está denegada."
+
+#~ msgid "Scoring pending."
+#~ msgstr "Scoring pendiente."
+
+#~ msgid "Bubblefish"
+#~ msgstr "Bubblefish"
+
+#~ msgid "New contact"
+#~ msgstr "Nuevo contacto"
+
+#~ msgid "Reserves"
+#~ msgstr "Reservas"
+
+#~ msgid ""
+#~ "The user %s (%s) has reserved %d places.n\\n\\nYou can manage it at %s."
+#~ msgstr ""
+#~ "El usuario %s (%s) ha reservado %d plazas.\n"
+#~ "\n"
+#~ "Puede administrarlo en %s."
+
+#~ msgid "Reserve confirmation"
+#~ msgstr "Confirmación de reserva"
+
+#~ msgid ""
+#~ "Hi %s,\\n\\nyour reserve has been made successfully.\\n\\n<b>Event:</b> %s"
+#~ "\\n\\n<b>Date:</b> %s\\n\\n<b>Location:</b> %s\\n\\n<b>Address:</b> %s\\n"
+#~ "\\n<b>Reserved places:</b> %d\\n\\nSee you!"
+#~ msgstr ""
+#~ "Hola %s,\n"
+#~ "\n"
+#~ "se ha realizado tu reserva correctamente.\n"
+#~ "\n"
+#~ "<b>Evento:</b> %s\n"
+#~ "\n"
+#~ "<b>Fecha:</b> %s\n"
+#~ "\n"
+#~ "<b>Localización:</b> %s\n"
+#~ "\n"
+#~ "<b>Dirección:</b> %s\n"
+#~ "\n"
+#~ "<b>Plazas reservadas:</b> %d\n"
+#~ "\n"
+#~ "¡Nos vemos!"
+
+#~ msgid "Reserve confimation"
+#~ msgstr "Confirmación de reserva"
+
+#~ msgid "Assistants"
+#~ msgstr "Asistentes"
+
+#~ msgid "Confirm reserve"
+#~ msgstr "Confirmar reserva"
+
+#~ msgid "Privacy policy short"
+#~ msgstr "Política de privacidad resumida"
+
+#~ msgid "This text will appear below the contact form."
+#~ msgstr "Este texto aparecerá bajo el formulario de contacto."
+
+#~ msgid "Use AJAX form"
+#~ msgstr "Usar formulario AJAX"
+
+#~ msgid "Thanks page"
+#~ msgstr "Página de gracias."
+
+#~ msgid "Contact Addresses"
+#~ msgstr "Dirección de contacto"
+
+#~ msgid "GTAG event conversion"
+#~ msgstr "gtag del Evento de conversión"
+
+#~ msgid "Reserve from %s (%s) for %d places"
+#~ msgstr "Reserva de %s (%s) de %d plazas"
+
+#~ msgid "Subject"
+#~ msgstr "Asunto"
+
+#~ msgid "Message"
+#~ msgstr "Mensaje"
+
+#~ msgid ""
+#~ "I have read and accept the <a href=\"%s\" rel=\"bookmark\" target=\"_blank"
+#~ "\">Privacy Policy</a>"
+#~ msgstr ""
+#~ "He leído y acepto la <a href=\"%s\" rel=\"bookmark\" target=\"_blank"
+#~ "\">Política de Privacidad</a>"
+
+#~ msgid "I have read and accept the Privacy Policy"
+#~ msgstr "He leído y acepto la Política de Privacidad"
+
+#~ msgid "JLC Custom Forms"
+#~ msgstr "JLC Formulario personalizables"
+
+#~ msgid "Forms"
+#~ msgstr "Formularios"
+
+#~ msgid "Upload file size limit exceeded."
+#~ msgstr "Tamaño límite de subida de archivo excedido."
+
+#~ msgid "Upload file format is invalid."
+#~ msgstr "El formato del archivo subido es inválido."
+
+#~ msgid "Form"
+#~ msgstr "Formulario"
+
+#~ msgid "Directory"
+#~ msgstr "Directorio"
+
+#~ msgid "File"
+#~ msgstr "Archivo"
+
+#~ msgid "From"
+#~ msgstr "Desde"
+
+#~ msgid "JLC Custom Form Help"
+#~ msgstr "Ayuda de Formularios Personalizables JLC"
+
+#~ msgid "Remove"
+#~ msgstr "Quitar"
+
+#~ msgid "Field %s contains invalid data."
+#~ msgstr "El campo %s contiene datos inválidos."
+
+#~ msgid "Selection in %s is not valid."
+#~ msgstr "La selección en %s no es válida."
+
+#~ msgid "The field %s must contain a valid selection."
+#~ msgstr "El campo %s debe contener una selección válida."
+
+#~ msgid "You must check the checkbox %s."
+#~ msgstr "Debe marcar la casilla %s."
+
+#~ msgid "An option in %s must be selected."
+#~ msgstr "Debe seleccionar una opción en %s."
+
+#~ msgid "Field %s is required."
+#~ msgstr "El campo %s es obligatorio."
+
+#~ msgid "Separate email addresses with %s"
+#~ msgstr "Separe las direcciones de correo electrónico con %s"
+
+#~ msgid "Invalid number provied in field %s."
+#~ msgstr "Número inválido en el campo %s."
+
+#~ msgid "Field %s must not be greater than %s."
+#~ msgstr "El campo %s no debe ser mayor que %s."
+
+#~ msgid "Field %s must not be smaller than %s."
+#~ msgstr "El campo %s no debe ser mayor que %s."
+
+#~ msgid "Field %s must be not greater than %d characters"
+#~ msgstr "El campo %s no debe tener más de %d caracteres"
+
+#~ msgid "Longitude"
+#~ msgstr "Longitud"
+
+#~ msgid "Latidude"
+#~ msgstr "Latitud"
+
+#~ msgid "New city"
+#~ msgstr "Nueva ciudad"
+
+#~ msgid "New postcode"
+#~ msgstr "Nuevo código postal"
+
+#~ msgid "New state"
+#~ msgstr "Nuevo estado"
+
+#~ msgid "In º (e.g. 4.567531)"
+#~ msgstr "En º (ej: 4.567531)"
+
+#~ msgid "In º (e.g. 10.23145"
+#~ msgstr "En º (ej: 10.23145)"
+
+#~ msgid "New email"
+#~ msgstr "Nuevo correo electrónico"
+
+#~ msgid "New phone"
+#~ msgstr "Nuevo teléfono"
+
+#~ msgid "Add"
+#~ msgstr "Añadir"
+
+#~ msgid "Registered forms"
+#~ msgstr "Formularios registrados"
+
+#~ msgid "Help"
+#~ msgstr "Ayuda"
+
+#~ msgid "Consultation"
+#~ msgstr "Consulta"
+
+#~ msgid "User"
+#~ msgstr "Usuario"
+
+#~ msgid "Question"
+#~ msgstr "Pregunta"
+
+#~ msgid "Answer"
+#~ msgstr "Respuesta"
+
+#~ msgid "Specialist"
+#~ msgstr "Especialista"
+
+#~ msgid "Asked"
+#~ msgstr "Preguntado"
+
+#~ msgid "Answered"
+#~ msgstr "Respondido"
+
+#~ msgid "View consultation"
+#~ msgstr "Ver consulta"
+
+#~ msgid "Introduce a valid email address please."
+#~ msgstr "Introduzca una dirección de correo válida."
+
+#~ msgid "Your email"
+#~ msgstr "Su dirección de correo"
+
+#~ msgid "Your message"
+#~ msgstr "Su mensaje"
+
+#~ msgid "Close"
+#~ msgstr "Cerrar"
+
+#~ msgid "Consultation by <strong>%s</strong> for <strong>%s</strong>"
+#~ msgstr "Consulta por <strong>%s</strong> para <strong>%s</strong>"
+
+#~ msgid "Consultation at %s"
+#~ msgstr "Consultado el %s"
+
+#~ msgid "Answered at %s"
+#~ msgstr "Respondido el %s"
+
+#~ msgid "No answered"
+#~ msgstr "Sin responder"
+
+#~ msgid "Administrators"
+#~ msgstr "Administradores"
+
+#~ msgid "Creating the first specialist"
+#~ msgstr "Crear el primer especialista"
+
+#~ msgid "To create an specialist, you just need to do two things:"
+#~ msgstr "Para crear un especialista solo necesita hacer dos cosas:"
+
+#~ msgid "Create a new user and assign the \"Specialist\" role to it."
+#~ msgstr "Crear un nuevo usuario y asignarle el rol \"Especialista\"."
+
+#~ msgid "Fill the \"Speciality\" field and save."
+#~ msgstr "Rellenar el campo \"Especialidad\" y guardar."
+
+#~ msgid ""
+#~ "This new user is ready to start answering questions from site users. He "
+#~ "can access the admin panel to answer questions and will be notified when "
+#~ "an user has made a consultation to him."
+#~ msgstr ""
+#~ "Este nuevo usuario está preparado para empezar a responder preguntas de "
+#~ "los usuario del sitio. Puede acceder al panel de administración para "
+#~ "responder preguntas y será notificado cuando un usuario haya hecho una "
+#~ "consulta para él."
+
+#~ msgid "Specialists"
+#~ msgstr "Especialistas"
+
+#~ msgid "Answering questions"
+#~ msgstr "Respondiendo preguntas"
+
+#~ msgid ""
+#~ "You can answer all the questions asked to you in &quot;Questions&quote; "
+#~ "section. After answer the question, a mail will be automatically sent to "
+#~ "the user."
+#~ msgstr ""
+#~ "Puede responder todas las preguntas hechas para usted en la sección &quot;"
+#~ "Preguntas&quot;. Tras contestar la pregunta, se enviará un correo al "
+#~ "usuario automáticamente."
+
+#~ msgid "Developers"
+#~ msgstr "Desarrolladores"
+
+#~ msgid "Including contact form in your theme"
+#~ msgstr "Incluir el formulario de contacto en su tema."
+
+#~ msgid ""
+#~ "To include the contact form in your theme code, you only have to include:"
+#~ msgstr ""
+#~ "Para incluir el formulario de contacto en el código de su tema, solo "
+#~ "tiene que incluir:"
+
+#~ msgid ""
+#~ "You can change the form appearence in your theme using your own "
+#~ "templates. Available templates to override are:"
+#~ msgstr ""
+#~ "Puede cambiar la apariencia del formulario en su tema usando sus propias "
+#~ "plantillas. Las plantillas sobrescribibles son:"
+
+#~ msgid ""
+#~ "Put the new templates in <code><i>your_theme_dir</i>/jlc-specialists/</"
+#~ "code>."
+#~ msgstr ""
+#~ "Ponga las nuevas plantillas en <code><i>directorio_del_tema</i>/jlc-"
+#~ "specialists/</code>"
+
+#~ msgid "Specialist information"
+#~ msgstr "Información del especialista"
+
+#~ msgid "Speciality"
+#~ msgstr "Especialidad"
+
+#~ msgid "Questions"
+#~ msgstr "Preguntas"
+
+#~ msgid "Contact email"
+#~ msgstr "Email de contacto"
+
+#~ msgid "If checked, form response will be shown in form page as a message."
+#~ msgstr ""
+#~ "Si marca esta casilla, la respuesta se mostrará en la misma página del "
+#~ "formulario sin necesidad de recarga."
+
+#~ msgid ""
+#~ "For non ajax method: If a page is selected, user will be redirected after "
+#~ "form submission. On the contraty, response will be shown in form page."
+#~ msgstr ""
+#~ "Para el método sin AJAX, si hay ninguna página seleccionada, el usuarios "
+#~ "será redirigida a esta tras enviar el formulario. Si no, la respuesta se "
+#~ "mostrará en la misma página del formulario."
+
+#~ msgid "The string {privacy_policy} will be replaced by Privacy Page URL."
+#~ msgstr ""
+#~ "La cadena {privacy_policy} será sustituida por la URL de la página de "
+#~ "Política de Privacidad"
+
+#~ msgid "Consultation by <strong>%s</strong>"
+#~ msgstr "Consulta por <strong>%s</strong>"
+
+#~ msgid "Answer here:"
+#~ msgstr "Responda aquí:"
+
+#~ msgid "Send answer"
+#~ msgstr "Enviar respuesta"
+
+#~ msgid "My speciality: %s"
+#~ msgstr "Mi especialidad: %s"
+
+#~ msgid "You have answered %d of %d questions"
+#~ msgstr "Ha respondido %d de %d preguntas."
+
+#~ msgid "Answer from our specialist"
+#~ msgstr "Respuesta de nuestro especialista"
+
+#~ msgid ""
+#~ "<b>Hi %s\n"
+#~ "\n"
+#~ "Our specialist has answered your question:</b>\n"
+#~ "\n"
+#~ "%s\n"
+#~ "\n"
+#~ "<b>Specialist answer:</b>\n"
+#~ "\n"
+#~ "%s\n"
+#~ "\n"
+#~ "<b>Thanks for use our services.</b>\n"
+#~ "%s"
+#~ msgstr ""
+#~ "<b>Hola %s\n"
+#~ "\n"
+#~ "Nuestro especialista ha respondido su pregunta:</b>\n"
+#~ "\n"
+#~ "%s\n"
+#~ "\n"
+#~ "<b>Respuesta del especialista:</b>\n"
+#~ "\n"
+#~ "%s\n"
+#~ "\n"
+#~ "<b>Gracias por usar nuestros servicios.</b>\n"
+#~ "%s"
+
+#~ msgid "Specialists service"
+#~ msgstr "Servicio de especialistas"
+
+#~ msgid "Unassigned"
+#~ msgstr "Sin asignar"
+
+#~ msgid "New consultation for you"
+#~ msgstr "Nueva consulta para usted"

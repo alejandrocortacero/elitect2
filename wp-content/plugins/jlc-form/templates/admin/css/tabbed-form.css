@@ -1,0 +1,8 @@
+.jlc-custom-form-tab-layer
+{
+	display:none;
+}
+.jlc-custom-form-tab-layer.active
+{
+	display:block;
+}

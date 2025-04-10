@@ -1,0 +1,11 @@
+.jlc-custom-form-upload-private-image-wrapper
+{
+}
+
+.jlc-custom-form-upload-private-image-wrapper .jlc-custom-form-upload-private-image-preview img
+{
+	width:auto;
+	height:auto;
+	max-width:200px;
+	max-height:200px;
+}

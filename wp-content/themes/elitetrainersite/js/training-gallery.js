@@ -1,0 +1,30 @@
+"use strict";
+
+(function($){
+
+
+$(document).ready(function(){
+	$('#training-gallery-tabs > li > a').click(function(evt){
+		var tab = $(evt.currentTarget);
+		var selected = tab.attr('href');
+
+		var cookieName = EliteTrainerSiteTrainingGalleryNS.trainingTabCookie;
+
+		var d = new Date();
+		d.setTime(d.getTime() + (24*60*60*1000));
+		document.cookie = cookieName + "=" + selected + "; expires=" + d.toUTCString() + "; path=/";
+
+	});	
+
+	var trainingTabCookieValue = EliteThemeNavigation.getCookie(EliteTrainerSiteTrainingGalleryNS.trainingTabCookie);
+	if( trainingTabCookieValue != '' )
+	{
+		//$('#training-gallery-tabs > li > a').removeClass('active');
+		$('#training-gallery-tabs > li > a[href="' + trainingTabCookieValue + '"]').tab('show');
+
+		//$('#training-gallery-tabs-content ' + trainingTabCookieValue).addClass('av
+	}
+});
+
+})(jQuery);
+

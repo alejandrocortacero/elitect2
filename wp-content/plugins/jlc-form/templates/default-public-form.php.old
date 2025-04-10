@@ -1,0 +1,170 @@
+<?php defined( 'ABSPATH' ) or die( 'Wrong Access' ); ?>
+<?php if( !$hide_messages ) echo $this->print_public_notices(); ?>
+<form
+	method="<?php echo !empty( $this->method ) ? $this->method : 'POST'; ?>"
+	<?php if( $this->wordpress_method ) : ?>
+		<?php if( !$this->ajax ) : ?>
+			action="<?php echo admin_url( 'admin-post.php' ); ?>"
+		<?php else : ?>
+			action="<?php echo admin_url( 'admin-ajax.php' ); ?>"
+		<?php endif; ?>
+	<?php else : ?>
+		action="<?php echo $this->action; ?>"
+	<?php endif; ?>
+	<?php if( !empty( $this->enctype ) ) : ?>enctype="<?php echo $this->enctype; ?>"<?php endif; ?>
+	<?php if( !empty( $this->id ) ) : ?>id="<?php echo $this->id; ?>"<?php endif; ?>
+	<?php if( !empty( $this->class ) ) : ?>class="<?php echo $this->class; ?>"<?php endif; ?>
+>
+	<input type="hidden" name="jlc_custom_form" value="<?php echo $this->internal_id; ?>" />
+<?php if( $this->wordpress_method ) : ?>
+	<input type="hidden" name="action" value="<?php echo $this->action; ?>" />
+	<?php if( $this->return_url_changed ) : ?>
+		<input type="hidden" name="return_url" value="<?php echo $this->return_url; ?>" />
+	<?php endif; ?>
+<?php endif; ?>
+<?php foreach( $this->fields as $key => $field ) : ?>
+	<?php switch( $field->type ) : ?><?php case 'hidden': ?>
+			<input
+				type="hidden"
+				value="<?php echo $field->value; ?>"
+				id="<?php echo $key; ?>"
+				name="<?php echo $key; ?>"
+				<?php if( $field->required ) : ?>required="required"<?php endif; ?>
+			/>
+		<?php break; ?>
+		<?php case 'text': ?>
+		<?php case 'number': ?>
+		<?php case 'email': ?>
+		<?php case 'date': ?>
+		<div class="form-group">
+			<label for="<?php echo $key; ?>"><?php echo $field->label; ?><?php if( $field->required ) : ?> *<?php endif; ?></label>
+			<input
+				type="<?php echo $field->type; ?>"
+				value="<?php echo $field->value; ?>"
+				class="form-control"
+				id="<?php echo $key; ?>"
+				name="<?php echo $key; ?>"
+				<?php if( !empty( $field->placeholder ) ) : ?>placeholder="<?php echo $field->placeholder; ?>"<?php endif; ?>
+				<?php if( $field->required ) : ?>required="required"<?php endif; ?>
+				<?php if( $field->disabled ) : ?>disabled="disabled"<?php endif; ?>
+				<?php if( $field->readonly ) : ?>readonly="readonly"<?php endif; ?>
+			/>
+			<?php if( !empty( $field->help ) ) : ?>
+				<p class="help-block"><?php echo $field->help; ?></p>
+			<?php endif; ?>
+		</div>
+		<?php break; ?>
+		<?php case 'textarea': ?>
+		<div class="form-group">
+			<label for="<?php echo $key; ?>"><?php echo $field->label; ?><?php if( $field->required ) : ?> *<?php endif; ?></label>
+			<textarea
+				class="form-control"
+				id="<?php echo $key; ?>"
+				name="<?php echo $key; ?>"
+				rows="5"
+				<?php if( !empty( $field->placeholder ) ) : ?>placeholder="<?php echo $field->placeholder; ?>"<?php endif; ?>
+				<?php if( $field->required ) : ?>required="required"<?php endif; ?>
+				<?php if( $field->disabled ) : ?>disabled="disabled"<?php endif; ?>
+				<?php if( $field->readonly ) : ?>readonly="readonly"<?php endif; ?>
+			><?php echo wp_kses_post( $field->value ); ?></textarea>
+			<?php if( !empty( $field->help ) ) : ?>
+				<p class="help-block"><?php echo $field->help; ?></p>
+			<?php endif; ?>
+		</div>
+		<?php break; ?>
+		<?php case 'upload_image': ?>
+		<div class="form-group">
+			<input
+				class="upload-image-input"
+				type="file"
+				name="<?php echo $key; ?>"
+				id="<?php echo $key; ?>"
+				<?php if( $field->required ) : ?>required="required"<?php endif; ?>
+				<?php if( $field->disabled ) : ?>disabled="disabled"<?php endif; ?>
+				<?php if( $field->readonly ) : ?>readonly="readonly"<?php endif; ?>
+			/>
+			<label for="<?php echo $key; ?>" class="upload-image-label"><span class="label-text"><?php echo $field->label; ?><?php if( $field->required ) : ?> *<?php endif; ?></span><span class="file-name"><?php echo esc_html( $field->placeholder ); ?></span></label>
+		</div>
+		<?php break; ?>
+		<?php case 'checkbox': ?>
+		<div class="checkbox">
+			<label>
+				<input
+					type="checkbox"
+					value="<?php echo $field->value; ?>"
+					name="<?php echo $key; ?>"
+					id="<?php echo $key; ?>"
+					<?php if( $field->value ) : ?>checked="checked"<?php endif; ?>
+					<?php if( $field->required ) : ?>required="required"<?php endif; ?>
+					<?php if( $field->disabled ) : ?>disabled="disabled"<?php endif; ?>
+					<?php if( $field->readonly ) : ?>readonly="readonly"<?php endif; ?>
+				/> <?php echo $field->label; ?>
+			</label>
+		</div>
+		<?php break; ?>
+		<?php case 'radio_group': ?>
+			<div class="radio-group">
+				<label><?php echo $field->label; ?></label>
+				<br />
+				<?php foreach( $field->options as $opt_id => $option ) : ?>
+					<label class="radio-inline">
+						<input
+							type="radio"
+							name="<?php echo $key; ?>"
+							id="<?php echo $key . '_' . $opt_id; ?>"
+							value="<?php echo $option->value; ?>"
+							<?php if( $field->value == $option->value ) : ?>checked="checked"<?php endif; ?>
+							<?php if( $option->required ) : ?>required="required"<?php endif; ?>
+							<?php if( $option->disabled ) : ?>disabled="disabled"<?php endif; ?>
+							<?php if( $option->readonly ) : ?>readonly="readonly"<?php endif; ?>
+						/> <?php echo $option->label; ?>
+					</label>
+				<?php endforeach; ?>
+				<br />
+				<br />
+			</div>
+		<?php break; ?>
+		<?php case 'checkbox_group': ?>
+			<label><?php echo $field->label; ?></label>
+			<br />
+			<?php foreach( $field->options as $opt_name => $option ) : ?>
+				<label class="checkbox-inline">
+					<input
+						type="checkbox"
+						name="<?php echo $opt_name; ?>"
+						id="<?php echo $opt_name; ?>"
+						value="<?php echo $option->value; ?>"
+						<?php if( $option->checked ) : ?>checked="checked"<?php endif; ?>
+					/> <?php echo $option->label; ?>
+				</label>
+			<?php endforeach; ?>
+			<br />
+			<br />
+		<?php break; ?>
+		<?php case 'submit_button': ?>
+			<button
+				type="submit"
+				class="btn btn-primary"
+				id="<?php echo $key; ?>"
+				name="<?php echo $key; ?>"
+				<?php if( $field->required ) : ?>required="required"<?php endif; ?>
+				<?php if( $field->disabled ) : ?>disabled="disabled"<?php endif; ?>
+			><?php echo $field->value; ?></button>
+		<?php break; ?>
+		<?php case 'submit': ?>
+			<input
+				type="submit"
+				class="btn btn-primary"
+				id="<?php echo $key; ?>"
+				name="<?php echo $key; ?>"
+				value="<?php echo $field->value; ?>"
+				<?php if( $field->required ) : ?>required="required"<?php endif; ?>
+				<?php if( $field->disabled ) : ?>disabled="disabled"<?php endif; ?>
+			/>
+		<?php break; ?>
+		<?php default: ?>
+		<p><?php echo $field->type; ?></p>
+	<?php endswitch; ?>
+<?php endforeach; ?>
+</form>
+

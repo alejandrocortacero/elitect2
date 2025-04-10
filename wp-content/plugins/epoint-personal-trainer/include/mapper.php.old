@@ -1,0 +1,2802 @@
+<?php defined( 'ABSPATH' ) or die ( 'Wrong Access' );
+
+class EpointPersonalTrainingBusinessMapper
+{
+	const FOOD_TABLE = 'epoint_personal_training_food';
+	const CAT_FOOD_TABLE = 'epoint_personal_training_cat_food';
+	const CAT_FOOD_FOOD_TABLE = 'epoint_personal_training_cat_food_food';
+
+	const CAT_EXERCISE_TABLE = 'epoint_personal_training_cat_exercise';
+	const EXERCISE_TABLE = 'epoint_personal_training_exercise';
+	const EXERCISE_CORRECTION_TABLE = 'epoint_personal_training_exercise_correction';
+	const CAT_EXERCISE_EXERCISE_TABLE = 'epoint_personal_training_cat_exercise_exercise';
+
+	const DIET_TABLE = 'epoint_personal_training_diet';
+	const DIET_INTERVAL_TABLE = 'epoint_personal_training_diet_interval';
+	const DIET_INTERVAL_FOOD_TABLE = 'epoint_personal_training_diet_interval_food';
+
+	const TRAINING_TABLE = 'epoint_personal_training_training';
+	const TRAINING_EXERCISE_TABLE = 'epoint_personal_training_training_exercise';
+
+	const STUDENTS_TABLE = 'epoint_personal_training_students';
+	const STUDENT_INFO_TABLE = 'epoint_personal_training_student_info';
+	const STUDENT_FOOD_TABLE = 'epoint_personal_training_student_food';
+	const STUDENT_MEALS_TABLE = 'epoint_personal_training_student_meals';
+	const STUDENT_MEAL_INTERVALS_TABLE = 'epoint_personal_training_student_meal_intervals';
+	const STUDENT_TRACKING_TABLE = 'epoint_personal_training_student_tracking';
+
+	const TRAINERS_TABLE = 'epoint_personal_training_trainers';
+
+	const MAILING_TABLE = 'epoint_personal_training_mailing';
+
+	const USER_UPDATE_MAX_DAYS = 30;
+
+	public static function install()
+	{
+		global $wpdb;
+		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+
+		$charset_collate = $wpdb->get_charset_collate();
+
+		$cat_food_table_name = $wpdb->prefix . self::CAT_FOOD_TABLE;
+
+		$sql = 'CREATE TABLE IF NOT EXISTS ' . $cat_food_table_name . ' (';
+		$sql .= '`ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,';
+		$sql .= '`name` VARCHAR(100) NOT NULL,';
+		$sql .= '`position` int(11) NOT NULL,';
+		$sql .= '`active` tinyint(1) NOT NULL,';
+		$sql .= 'PRIMARY KEY (`ID`)';
+		$sql .= ') ' . $charset_collate;
+
+		dbDelta( $sql );
+
+		$food_table_name = $wpdb->prefix . self::FOOD_TABLE;
+
+		$sql = 'CREATE TABLE IF NOT EXISTS ' . $food_table_name . ' (';
+		$sql .= '`ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,';
+		$sql .= '`name` VARCHAR(100) NOT NULL,';
+		$sql .= '`position` int(11) NOT NULL,';
+		$sql .= '`active` tinyint(1) NOT NULL,';
+		$sql .= '`user` bigint(20) unsigned DEFAULT NULL,';
+		$sql .= 'PRIMARY KEY (`ID`),';
+		$sql .= 'FOREIGN KEY (`user`) REFERENCES ' . $wpdb->users . ' (`ID`) ON DELETE CASCADE';
+		$sql .= ') ' . $charset_collate;
+
+		dbDelta( $sql );
+
+		$cat_food_food_table_name = $wpdb->prefix . self::CAT_FOOD_FOOD_TABLE;
+
+		$sql = 'CREATE TABLE IF NOT EXISTS ' . $cat_food_food_table_name . ' (';
+		$sql .= '`food_id` bigint(20) unsigned NOT NULL,';
+		$sql .= '`cat_food_id` bigint(20) unsigned NOT NULL,';
+		$sql .= 'PRIMARY KEY (`food_id`,`cat_food_id`),';
+		$sql .= 'FOREIGN KEY (`food_id`) REFERENCES ' . $food_table_name . ' (`ID`) ON DELETE CASCADE,';
+		$sql .= 'FOREIGN KEY (`cat_food_id`) REFERENCES ' . $cat_food_table_name . ' (`ID`) ON DELETE CASCADE';
+		$sql .= ') ' . $charset_collate;
+
+		dbDelta( $sql );
+
+		$cat_exercise_table_name = $wpdb->prefix . self::CAT_EXERCISE_TABLE;
+
+		$sql = 'CREATE TABLE IF NOT EXISTS ' . $cat_exercise_table_name . ' (';
+		$sql .= '`ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,';
+		$sql .= '`name` VARCHAR(100) NOT NULL,';
+		$sql .= '`position` int(11) NOT NULL,';
+		$sql .= '`active` tinyint(1) NOT NULL,';
+		$sql .= 'PRIMARY KEY (`ID`)';
+		$sql .= ') ' . $charset_collate;
+
+		dbDelta( $sql );
+
+		$exercise_table_name = $wpdb->prefix . self::EXERCISE_TABLE;
+
+		$sql = 'CREATE TABLE IF NOT EXISTS ' . $exercise_table_name . ' (';
+		$sql .= '`ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,';
+		$sql .= '`name` VARCHAR(100) NOT NULL,';
+		$sql .= '`position` int(11) NOT NULL,';
+		$sql .= '`active` tinyint(1) NOT NULL,';
+		$sql .= '`video` VARCHAR(200),';
+		$sql .= '`image_start` BIGINT(20) UNSIGNED,';
+		$sql .= '`image_end` BIGINT(20) UNSIGNED,';
+		$sql .= '`description` TEXT,';
+		$sql .= 'PRIMARY KEY (`ID`)';
+		$sql .= ') ' . $charset_collate;
+
+		dbDelta( $sql );
+
+		$exercise_correction_table_name = $wpdb->prefix . self::EXERCISE_CORRECTION_TABLE;
+
+		$sql = 'CREATE TABLE IF NOT EXISTS ' . $exercise_correction_table_name . ' (';
+		$sql .= '`ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,';
+		$sql .= '`description` TEXT NOT NULL,';
+		$sql .= '`position` int(11) NOT NULL,';
+		$sql .= '`active` tinyint(1) NOT NULL,';
+		$sql .= '`image_well` BIGINT(20) UNSIGNED,';
+		$sql .= '`image_bad` BIGINT(20) UNSIGNED,';
+		$sql .= '`exercise_id` bigint(20) unsigned NOT NULL,';
+		$sql .= 'FOREIGN KEY (`exercise_id`) REFERENCES ' . $exercise_table_name . ' (`ID`) ON DELETE CASCADE,';
+		$sql .= 'PRIMARY KEY (`ID`)';
+		$sql .= ') ' . $charset_collate;
+
+		dbDelta( $sql );
+
+		$cat_exercise_exercise_table_name = $wpdb->prefix . self::CAT_EXERCISE_EXERCISE_TABLE;
+
+		$sql = 'CREATE TABLE IF NOT EXISTS ' . $cat_exercise_exercise_table_name . ' (';
+		$sql .= '`exercise_id` bigint(20) unsigned NOT NULL,';
+		$sql .= '`cat_exercise_id` bigint(20) unsigned NOT NULL,';
+		$sql .= 'PRIMARY KEY (`exercise_id`,`cat_exercise_id`),';
+		$sql .= 'FOREIGN KEY (`exercise_id`) REFERENCES ' . $exercise_table_name . ' (`ID`) ON DELETE CASCADE,';
+		$sql .= 'FOREIGN KEY (`cat_exercise_id`) REFERENCES ' . $cat_exercise_table_name . ' (`ID`) ON DELETE CASCADE';
+		$sql .= ') ' . $charset_collate;
+
+		dbDelta( $sql );
+
+		$diets_table_name = $wpdb->prefix . self::DIET_TABLE;
+
+		$sql = 'CREATE TABLE IF NOT EXISTS ' . $diets_table_name . ' (';
+		$sql .= '`ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,';
+		$sql .= '`name` VARCHAR(100) NOT NULL,';
+		$sql .= '`position` int(11) NOT NULL,';
+		$sql .= '`active` tinyint(1) NOT NULL,';
+		$sql .= '`description` TEXT DEFAULT NULL,';
+		$sql .= '`start` DATE DEFAULT NULL,';
+		$sql .= '`end` DATE DEFAULT NULL,';
+		$sql .= '`user` bigint(20) unsigned,';
+		$sql .= 'PRIMARY KEY (`ID`),';
+		$sql .= 'FOREIGN KEY (`user`) REFERENCES ' . $wpdb->users . ' (`ID`) ON DELETE CASCADE';
+		$sql .= ') ' . $charset_collate;
+
+		dbDelta( $sql );
+
+		$diets_intervals_table_name = $wpdb->prefix . self::DIET_INTERVAL_TABLE;
+
+		$sql = 'CREATE TABLE IF NOT EXISTS ' . $diets_intervals_table_name . ' (';
+		$sql .= '`diet_id` bigint(20) unsigned NOT NULL,';
+		$sql .= '`interval` int(2) unsigned NOT NULL,';
+		$sql .= '`description` TEXT DEFAULT NULL,';
+		$sql .= 'PRIMARY KEY (`diet_id`,`interval`),';
+		$sql .= 'FOREIGN KEY (`diet_id`) REFERENCES ' . $diets_table_name . ' (`ID`) ON DELETE CASCADE';
+		$sql .= ') ' . $charset_collate;
+
+		dbDelta( $sql );
+
+		$diet_interval_food_table_name = $wpdb->prefix . self::DIET_INTERVAL_FOOD_TABLE;
+
+		$sql = 'CREATE TABLE IF NOT EXISTS ' . $diet_interval_food_table_name . ' (';
+		$sql .= '`diet_id` bigint(20) unsigned NOT NULL,';
+		$sql .= '`interval` int(2) unsigned NOT NULL,';
+		$sql .= '`food_id` bigint(20) unsigned NOT NULL,';
+		$sql .= 'PRIMARY KEY (`diet_id`,`interval`,`food_id`),';
+		$sql .= 'FOREIGN KEY (`diet_id`,`interval`) REFERENCES ' . $diets_intervals_table_name . ' (`diet_id`,`interval`) ON DELETE CASCADE,';
+		$sql .= 'FOREIGN KEY (`food_id`) REFERENCES ' . $food_table_name . ' (`ID`) ON DELETE CASCADE';
+		$sql .= ') ' . $charset_collate;
+
+		dbDelta( $sql );
+
+		$training_table_name = $wpdb->prefix . self::TRAINING_TABLE;
+
+		$sql = 'CREATE TABLE IF NOT EXISTS ' . $training_table_name . ' (';
+		$sql .= '`ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,';
+		$sql .= '`name` VARCHAR(100) NOT NULL,';
+		$sql .= '`position` int(11) NOT NULL,';
+		$sql .= '`active` tinyint(1) NOT NULL,';
+		$sql .= '`description` TEXT DEFAULT NULL,';
+		$sql .= '`start` DATE DEFAULT NULL,';
+		$sql .= '`end` DATE DEFAULT NULL,';
+		$sql .= '`objective_volume` TINYINT(1) NOT NULL DEFAULT 0,';
+		$sql .= '`objective_maintenance` TINYINT(1) NOT NULL DEFAULT 0,';
+		$sql .= '`objective_definition` TINYINT(1) NOT NULL DEFAULT 0,';
+		$sql .= '`environment_house` TINYINT(1) NOT NULL DEFAULT 0,';
+		$sql .= '`environment_outdoors` TINYINT(1) NOT NULL DEFAULT 0,';
+		$sql .= '`environment_gym` TINYINT(1) NOT NULL DEFAULT 0,';
+		$sql .= '`user` bigint(20) unsigned,';
+		$sql .= 'PRIMARY KEY (`ID`),';
+		$sql .= 'FOREIGN KEY (`user`) REFERENCES ' . $wpdb->users . ' (`ID`) ON DELETE CASCADE';
+		$sql .= ') ' . $charset_collate;
+
+		dbDelta( $sql );
+
+		$training_exercise_table_name = $wpdb->prefix . self::TRAINING_EXERCISE_TABLE;
+
+		$sql = 'CREATE TABLE IF NOT EXISTS ' . $training_exercise_table_name . ' (';
+		$sql .= '`training_id` bigint(20) unsigned NOT NULL,';
+		$sql .= '`exercise_id` bigint(20) unsigned NOT NULL,';
+		$sql .= '`saved` DATETIME NOT NULL,';
+		$sql .= '`description` TEXT DEFAULT NULL,';
+		$sql .= '`series` VARCHAR(100) NOT NULL,';
+		$sql .= '`repetitions` VARCHAR(100) NOT NULL,';
+		$sql .= '`loads` VARCHAR(100) NOT NULL,';
+		$sql .= 'PRIMARY KEY (`training_id`,`exercise_id`,`saved`),';
+		$sql .= 'FOREIGN KEY (`training_id`) REFERENCES ' . $training_table_name . ' (`ID`) ON DELETE CASCADE,';
+		$sql .= 'FOREIGN KEY (`exercise_id`) REFERENCES ' . $exercise_table_name . ' (`ID`) ON DELETE CASCADE';
+		$sql .= ') ' . $charset_collate;
+
+		dbDelta( $sql );
+
+		$trainers_table = $wpdb->prefix . self::TRAINERS_TABLE;
+
+		$sql = 'CREATE TABLE IF NOT EXISTS ' . $trainers_table . ' (';
+		$sql .= '`ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,';
+		$sql .= '`user` BIGINT(20) UNSIGNED NOT NULL,';
+		$sql .= '`slug` VARCHAR(100) NOT NULL,';
+		$sql .= '`requested` DATETIME NOT NULL,';
+		$sql .= '`registered` DATETIME,';
+		$sql .= '`active` TINYINT(1) NOT NULL DEFAULT 1,';
+		$sql .= 'PRIMARY KEY (`ID`),';
+		$sql .= 'UNIQUE (`slug`),';
+		$sql .= 'FOREIGN KEY (`user`) REFERENCES ' . $wpdb->users . ' (`ID`) ON DELETE CASCADE';
+		$sql .= ') ' . $charset_collate;
+
+		dbDelta( $sql );
+
+		$students_table = $wpdb->prefix . self::STUDENTS_TABLE;
+
+		$sql = 'CREATE TABLE IF NOT EXISTS ' . $students_table . ' (';
+		$sql .= '`ID` bigint(20) unsigned NOT NULL AUTO_INCREMENT,';
+		$sql .= '`email` VARCHAR(100) NOT NULL,';
+		$sql .= '`order` bigint(20) unsigned NOT NULL,';
+		$sql .= '`product` bigint(20) unsigned NOT NULL,';
+		$sql .= '`registered` DATETIME NOT NULL,';
+		$sql .= '`renewed` DATETIME DEFAULT NULL,';
+		$sql .= '`active` TINYINT(1) NOT NULL DEFAULT 1,';
+		$sql .= 'PRIMARY KEY (`ID`),';
+		$sql .= 'UNIQUE (`email`,`order`)';
+		$sql .= ') ' . $charset_collate;
+
+		dbDelta( $sql );
+
+		$student_info_table = $wpdb->prefix . self::STUDENT_INFO_TABLE;
+
+		$sql = 'CREATE TABLE IF NOT EXISTS ' . $student_info_table . ' (';
+		$sql .= '`student_id`  bigint(20) UNSIGNED NOT NULL,';
+		$sql .= '`saved` DATETIME NOT NULL,';
+		$sql .= '`weight` DECIMAL(5,2) NOT NULL,';
+		$sql .= '`male` TINYINT(1) unsigned NOT NULL,';
+		$sql .= '`birthday` DATE NOT NULL,';
+		$sql .= '`obj_health` TINYINT(1) UNSIGNED NOT NULL,';
+		$sql .= '`obj_remove_stress` TINYINT(1) UNSIGNED NOT NULL,';
+		$sql .= '`obj_improve_physically` TINYINT(1) UNSIGNED NOT NULL,';
+		$sql .= '`obj_strength` TINYINT(1) UNSIGNED NOT NULL,';
+		$sql .= '`obj_injury_recover` TINYINT(1) UNSIGNED NOT NULL,';
+		$sql .= '`obj_examination` TINYINT(1) UNSIGNED NOT NULL,';
+		$sql .= '`obj_loss_fat` TINYINT(1) UNSIGNED NOT NULL,';
+		$sql .= '`obj_improve_postural` TINYINT(1) UNSIGNED NOT NULL,';
+		$sql .= '`obj_gain_mass` TINYINT(1) UNSIGNED NOT NULL,';
+		$sql .= '`obj_loss_volume` TINYINT(1) UNSIGNED NOT NULL,';
+		$sql .= '`obj_improve_resistance` TINYINT(1) UNSIGNED NOT NULL,';
+		$sql .= '`obj_other` TINYINT(1) UNSIGNED NOT NULL,';
+		$sql .= '`injuries` VARCHAR(300) NOT NULL,';
+		$sql .= '`diseases` VARCHAR(300) NOT NULL,';
+		$sql .= '`medications` VARCHAR(300) NOT NULL,';
+		$sql .= '`blood_preasure` TINYINT(1) NOT NULL,';
+		$sql .= '`sport_currently` TINYINT(1) NOT NULL,';
+		$sql .= '`sport` VARCHAR(100) DEFAULT NULL,';
+		$sql .= '`sport_frequency` TINYINT(1) NOT NULL,';
+		$sql .= '`sport_days` TINYINT(1) DEFAULT NULL,';
+		$sql .= '`training_days` TINYINT(1) NOT NULL,';
+		$sql .= '`work` TINYINT(1) NOT NULL,';
+		$sql .= '`active_work` TINYINT(1) NOT NULL,';
+		$sql .= '`sleep_hours` TINYINT(2) UNSIGNED NOT NULL,';
+		$sql .= '`diet` VARCHAR(300) NOT NULL,';
+		$sql .= '`meals` TINYINT(1) UNSIGNED NOT NULL,';
+		$sql .= 'PRIMARY KEY (`student_id`,`saved`),';
+		$sql .= 'FOREIGN KEY (`student_id`) REFERENCES ' . $students_table . ' (`ID`) ON DELETE CASCADE';
+		$sql .= ') ' . $charset_collate;
+
+		dbDelta( $sql );
+
+		$student_food_table_name = $wpdb->prefix . self::STUDENT_FOOD_TABLE;
+
+		$sql = 'CREATE TABLE IF NOT EXISTS ' . $student_food_table_name . ' (';
+		$sql .= '`student_id`  bigint(20) UNSIGNED NOT NULL,';
+		$sql .= '`food_id`  bigint(20) UNSIGNED NOT NULL,';
+		$sql .= '`saved` DATETIME NOT NULL,';
+		$sql .= '`frequent` TINYINT(1) unsigned NOT NULL,';
+		$sql .= '`valuation` TINYINT(2) UNSIGNED NOT NULL,';
+		$sql .= 'PRIMARY KEY (`student_id`,`food_id`,`saved`),';
+		$sql .= 'FOREIGN KEY (`student_id`) REFERENCES ' . $students_table . ' (`ID`) ON DELETE CASCADE,';
+		$sql .= 'FOREIGN KEY (`food_id`) REFERENCES ' . $food_table_name . ' (`ID`) ON DELETE CASCADE';
+		$sql .= ') ' . $charset_collate;
+
+		dbDelta( $sql );
+
+		$student_meals_table_name = $wpdb->prefix . self::STUDENT_MEALS_TABLE;
+
+		$sql = 'CREATE TABLE IF NOT EXISTS ' . $student_meals_table_name . ' (';
+		$sql .= '`student_id`  bigint(20) UNSIGNED NOT NULL,';
+		$sql .= '`saved` DATETIME NOT NULL,';
+		$sql .= '`observations` TEXT DEFAULT NULL,';
+		$sql .= 'PRIMARY KEY (`student_id`,`saved`),';
+		$sql .= 'FOREIGN KEY (`student_id`) REFERENCES ' . $students_table . ' (`ID`) ON DELETE CASCADE';
+		$sql .= ') ' . $charset_collate;
+
+		dbDelta( $sql );
+
+		$student_meal_intervals_table_name = $wpdb->prefix . self::STUDENT_MEAL_INTERVALS_TABLE;
+
+		$sql = 'CREATE TABLE IF NOT EXISTS ' . $student_meal_intervals_table_name . ' (';
+		$sql .= '`student_id`  bigint(20) UNSIGNED NOT NULL,';
+		$sql .= '`saved` DATETIME NOT NULL,';
+		$sql .= '`interval` int(2) unsigned NOT NULL,';
+		$sql .= '`tasks` VARCHAR(300) DEFAULT NULL,';
+		$sql .= 'PRIMARY KEY (`student_id`,`saved`,`interval`),';
+		$sql .= 'FOREIGN KEY (`student_id`,`saved`) REFERENCES ' . $student_meals_table_name . ' (`student_id`,`saved`) ON DELETE CASCADE';
+		$sql .= ') ' . $charset_collate;
+
+		dbDelta( $sql );
+
+		$student_evolution_table_name = $wpdb->prefix . self::STUDENT_TRACKING_TABLE;
+
+		$sql = 'CREATE TABLE IF NOT EXISTS ' . $student_evolution_table_name . ' (';
+		$sql .= '`student_id`  bigint(20) UNSIGNED NOT NULL,';
+		$sql .= '`saved` DATETIME NOT NULL,';
+		$sql .= '`weight` DECIMAL(5,2) UNSIGNED NOT NULL,';
+		$sql .= '`biceps` TINYINT(3) UNSIGNED NOT NULL,';
+		$sql .= '`shoulder` TINYINT(3) UNSIGNED NOT NULL,';
+		$sql .= '`chest` TINYINT(3) UNSIGNED NOT NULL,';
+		$sql .= '`waist` TINYINT(3) UNSIGNED NOT NULL,';
+		$sql .= '`hip` TINYINT(3) UNSIGNED NOT NULL,';
+		$sql .= '`thigh` TINYINT(3) UNSIGNED NOT NULL,';
+		$sql .= '`leg` TINYINT(3) UNSIGNED NOT NULL,';
+		$sql .= '`calf` TINYINT(3) UNSIGNED NOT NULL,';
+		$sql .= '`observations` TEXT NOT NULL,';
+		$sql .= 'PRIMARY KEY (`student_id`,`saved`),';
+		$sql .= 'FOREIGN KEY (`student_id`) REFERENCES ' . $students_table . ' (`ID`) ON DELETE CASCADE';
+		$sql .= ') ' . $charset_collate;
+
+		dbDelta( $sql );
+
+		$alerts_table = $wpdb->prefix . self::MAILING_TABLE;
+
+		$sql = 'CREATE TABLE IF NOT EXISTS ' . $student_meal_intervals_table_name . ' (';
+		$sql .= '`ID` BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,';
+		$sql .= '`student_id`  bigint(20) UNSIGNED NOT NULL,';
+		$sql .= '`data` VARCHAR(100) NOT NULL,';
+		$sql .= '`sent` DATETIME NOT NULL,';
+		$sql .= 'PRIMARY KEY (`ID`),';
+		$sql .= 'FOREIGN KEY (`student_id`) REFERENCES ' . $students_table . ' (`ID`) ON DELETE CASCADE';
+		$sql .= ') ' . $charset_collate;
+
+		dbDelta( $sql );
+	}
+
+	public static function uninstall()
+	{
+		global $wpdb;
+/*
+		$training_exercise_table_name = $wpdb->prefix . self::TRAINING_EXERCISE_TABLE;
+		$sql = 'DROP TABLE IF EXISTS ' . $training_exercise_table_name;
+		$wpdb->query( $sql );
+*/
+/*
+		$table_name = $wpdb->prefix . self::CAT_FOOD_FOOD_TABLE;
+		$sql = 'DROP TABLE IF EXISTS ' . $table_name;
+		$wpdb->query( $sql );
+
+		$table_name = $wpdb->prefix . self::CAT_FOOD_TABLE;
+		$sql = 'DROP TABLE IF EXISTS ' . $table_name;
+		$wpdb->query( $sql );
+
+		$table_name = $wpdb->prefix . self::FOOD_TABLE;
+		$sql = 'DROP TABLE IF EXISTS ' . $table_name;
+		$wpdb->query( $sql );
+*/
+	}
+
+	//////////////////////////////////////
+	// CAT FOOD
+	//////////////////////////////////////
+
+	public static function get_food_categories_count()
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::CAT_FOOD_TABLE;
+
+		return $wpdb->get_var( "SELECT count(*) FROM $table_name");
+	}
+
+	public static function get_food_categories( $results = null, $offset = null, $order_by = null, $order = null )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::CAT_FOOD_TABLE;
+
+		if( $order || $order_by || $results || $offset !== null )
+		{
+			if( $order !== 'desc' ) $order = 'asc';
+
+			if( !in_array( $order_by, array( 'name', 'position', 'active' ), true ) )
+				$order_by = 'ID';
+
+			if( !is_integer( $offset ) )
+				$offset = 0;
+
+			if( !is_integer( $results ) )
+				return $wpdb->get_results( "SELECT * FROM $table_name ORDER BY $order_by $order" );
+			else
+				return $wpdb->get_results( "SELECT * FROM $table_name ORDER BY $order_by $order LIMIT $results OFFSET $offset" );
+		}
+		else
+		{
+			return $wpdb->get_results( "SELECT * FROM $table_name ORDER BY position ASC");
+		}
+	}
+
+	public static function get_food_category( $id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::CAT_FOOD_TABLE;
+
+		$sql = $wpdb->prepare( "SELECT * FROM $table_name WHERE `ID` = %d", $id );
+
+		return $wpdb->get_row( $sql );
+	}
+
+	public static function get_food_category_by_name( $name )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::CAT_FOOD_TABLE;
+
+		$sql = $wpdb->prepare( "SELECT * FROM $table_name WHERE `name` = %s", $name );
+
+		return $wpdb->get_row( $sql );
+	}
+
+	public static function get_last_food_category()
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::CAT_FOOD_TABLE;
+
+		$sql = "SELECT * FROM $table_name ORDER BY position DESC, ID DESC LIMIT 1";
+
+		return $wpdb->get_row( $sql );
+	}
+
+	public static function create_food_category( $name, $position, $active )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::CAT_FOOD_TABLE;
+		$insertion = $wpdb->insert(
+			$table_name,
+			array(
+				'name' => $name,
+				'position' => (int)$position,
+				'active' => $active ? 1 : 0
+			),
+			array( '%s', '%d', '%d' )
+		);
+
+		if( false === $insertion )
+			return false;
+
+		return $wpdb->insert_id;
+	}
+
+	public static function update_food_category( $id, $name, $position, $active )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::CAT_FOOD_TABLE;
+		$result = $wpdb->update(
+			$table_name,
+			array(
+				'name' => $name,
+				'position' => (int)$position,
+				'active' => $active ? 1 : 0
+			),
+			array(
+				'ID' => (int)$id
+			),
+			array( '%s', '%d', '%d' ),
+			array( '%d' )
+		);
+
+		return $result;
+	}
+ 
+	public static function delete_food_category( $cat_food_id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::CAT_FOOD_TABLE;
+
+		return $wpdb->delete(
+			$table_name,
+			array( 'ID' => (int)$cat_food_id ),
+			array( '%d' )
+		);
+	}
+
+
+	//////////////////////////////////////
+	// FOOD
+	//////////////////////////////////////
+
+	public static function get_food_count()
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::FOOD_TABLE;
+
+		return $wpdb->get_var( "SELECT count(*) FROM $table_name");
+	}
+
+	public static function get_food_items( $results = null, $offset = null, $order_by = null, $order = null, $food_category = null, $user = null )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::FOOD_TABLE;
+		$cat_table = $wpdb->prefix . self::CAT_FOOD_FOOD_TABLE;
+
+		$cat_cond = '';
+		if( is_numeric( $food_category ) )
+			$cat_cond = " WHERE `ID` IN ( SELECT DISTINCT `food_id` FROM $cat_table WHERE `cat_food_id` = " . (int)$food_category . " ) ";
+
+		if( $user )
+		{
+			if( empty( $cat_cond ) )
+				$cat_cond = " WHERE `user` IS NULL OR `user` = $user ";
+			else
+				$cat_cond .= " AND ( `user` IS NULL OR `user` = $user ) ";
+		}
+
+		if( $order || $order_by || $results || $offset !== null )
+		{
+			if( $order !== 'desc' ) $order = 'asc';
+
+			if( !in_array( $order_by, array( 'name', 'position' ), true ) )
+				$order_by = 'ID';
+
+			if( !is_integer( $offset ) )
+				$offset = 0;
+
+			if( !is_integer( $results ) )
+				return $wpdb->get_results( "SELECT * FROM $table_name $cat_cond ORDER BY $order_by $order" );
+			else
+				return $wpdb->get_results( "SELECT * FROM $table_name $cat_cond ORDER BY $order_by $order LIMIT $results OFFSET $offset" );
+		}
+		else
+		{
+			return $wpdb->get_results( "SELECT * FROM $table_name $cat_cond ORDER BY position ASC");
+		}
+	}
+
+	public static function get_food_items_grouped_by_category( $active = null, $user = null )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::FOOD_TABLE;
+		$cat_table_name = $wpdb->prefix . self::CAT_FOOD_TABLE;
+		$cat_food_table_name = $wpdb->prefix . self::CAT_FOOD_FOOD_TABLE;
+
+		if( $active !== null )
+			$sql = $wpdb->prepare( "SELECT * FROM $cat_table_name WHERE `active` = %d ORDER BY `position` ASC", $active ? 1 : 0 );
+		else
+			$sql = "SELECT * FROM $cat_table_name ORDER BY `position` ASC";
+
+		$categories = $wpdb->get_results( $sql );
+		if( !is_array( $categories ) )
+			return false;
+
+		foreach( $categories as $category )
+		{
+			if( !$user )
+				$category->food = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $table_name WHERE `ID` IN (SELECT `food_id` FROM $cat_food_table_name WHERE `cat_food_id` = %d ) ORDER BY `position` ASC", $category->ID ) );  
+			else
+				$category->food = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $table_name WHERE ( `user` IS NULL OR `user` = %d ) AND `ID` IN (SELECT `food_id` FROM $cat_food_table_name WHERE `cat_food_id` = %d ) ORDER BY `position` ASC", $user, $category->ID ) );  
+		}
+
+		return $categories;
+	}
+
+	public static function get_food( $id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::FOOD_TABLE;
+
+		$sql = $wpdb->prepare( "SELECT * FROM $table_name WHERE `ID` = %d", $id );
+
+		return $wpdb->get_row( $sql );
+	}
+
+	public static function get_last_food()
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::FOOD_TABLE;
+
+		$sql = "SELECT * FROM $table_name ORDER BY position DESC, ID DESC LIMIT 1";
+
+		return $wpdb->get_row( $sql );
+	}
+
+	public static function create_food( $name, $position, $active, $categories = array(), $user = null )
+	{
+		global $wpdb;
+
+		if( !is_array( $categories ) )
+			return false;
+
+		$cat_table_name = $wpdb->prefix . self::CAT_FOOD_TABLE;
+		$categories_count = count( $categories );
+		if( $categories_count )
+		{
+			$cat_string = '(' . implode( ',', $categories ) . ')';
+			$sql = "SELECT count(distinct ID) = $categories_count FROM $cat_table_name WHERE ID IN $cat_string";
+			if( !$wpdb->get_var( $sql ) )
+				return false;
+		}
+
+		$table_name = $wpdb->prefix . self::FOOD_TABLE;
+		$insertion = $wpdb->insert(
+			$table_name,
+			array(
+				'name' => $name,
+				'position' => (int)$position,
+				'active' => $active ? 1 : 0,
+				'user' => $user
+			),
+			array( '%s', '%d', '%d', '%d' )
+		);
+
+		if( false === $insertion )
+			return false;
+
+		$food_id = $wpdb->insert_id;
+
+		$table_name = $wpdb->prefix . self::CAT_FOOD_FOOD_TABLE;
+		foreach( $categories as $category )
+			if( false === $wpdb->insert(
+				$table_name,
+				array(
+					'food_id' => $food_id,
+					'cat_food_id' => $category
+				),
+				array( '%d', '%d' )
+			) )
+				return false;
+
+		return $food_id;
+	}
+
+	public static function update_food( $id, $name, $position, $active, $categories = array() )
+	{
+		global $wpdb;
+
+		$map_table_name = $wpdb->prefix . self::CAT_FOOD_FOOD_TABLE;
+
+		if( !empty( $categories ) )
+		{
+			$cat_string = '(' . implode( ',', $categories ) . ')';
+			$sql = $wpdb->prepare( "DELETE FROM $map_table_name WHERE `food_id` = %d AND `cat_food_id` NOT IN $cat_string", $id );
+			$wpdb->query( $sql );
+
+			$pairs = array();
+			foreach( $categories as $category )
+				$pairs[] = "($id, $category)";
+			$pairs_string = implode( ',', $pairs );
+			$sql = "INSERT INTO $map_table_name (`food_id`,`cat_food_id`) VALUES $pairs_string ON DUPLICATE KEY UPDATE `food_id` = `food_id`, `cat_food_id` = `cat_food_id`";
+			$wpdb->query( $sql );
+		}
+		else
+		{
+			$sql = $wpdb->prepare( "DELETE FROM $map_table_name WHERE `food_id` = %d", $id );
+			$wpdb->query( $sql );
+		}
+
+		$table_name = $wpdb->prefix . self::FOOD_TABLE;
+		$result = $wpdb->update(
+			$table_name,
+			array(
+				'name' => $name,
+				'position' => (int)$position,
+				'active' => $active ? 1 : 0
+			),
+			array(
+				'ID' => (int)$id
+			),
+			array( '%s', '%d', '%d' ),
+			array( '%d' )
+		);
+
+		return $result;
+	}
+ 
+	public static function delete_food( $food_id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::FOOD_TABLE;
+
+		return $wpdb->delete(
+			$table_name,
+			array( 'ID' => (int)$food_id ),
+			array( '%d' )
+		);
+	}
+
+	public static function get_food_related_categories( $food_id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::CAT_FOOD_FOOD_TABLE;
+
+		return $wpdb->get_results( $wpdb->prepare( "SELECT cat_food_id FROM $table_name WHERE food_id = %d", $food_id ) );
+	}
+
+	public static function get_food_related_categories_names( $food_id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::CAT_FOOD_FOOD_TABLE;
+		$cat_table_name = $wpdb->prefix . self::CAT_FOOD_TABLE;
+
+		return $wpdb->get_results( $wpdb->prepare( "SELECT cf.name AS 'name' FROM $table_name cff INNER JOIN $cat_table_name cf ON cff.cat_food_id = cf.ID WHERE cff.food_id = %d", $food_id ) );
+	}
+
+	//////////////////////////////////////
+	// EXERCISES
+	//////////////////////////////////////
+
+	public static function get_exercise_count()
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::EXERCISE_TABLE;
+
+		return $wpdb->get_var( "SELECT count(*) FROM $table_name");
+	}
+
+	public static function get_exercise_search_results( $name, $category, $excluded )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::EXERCISE_TABLE;
+		$cat_table = $wpdb->prefix . self::CAT_EXERCISE_EXERCISE_TABLE;
+
+		$where = 'WHERE `active` = 1';
+		if( !empty( $name ) && is_string( $name ) )
+		{
+			if( mb_strlen( $name ) < 3 )
+				$name = $name . '%';
+			else
+				$name = '%' . $name . '%';
+
+			$where .= $wpdb->prepare( " AND `name` LIKE %s", $name );
+		}
+
+		if( !empty( $category ) && is_integer( $category ) )
+			$where .= $wpdb->prepare( " AND `ID` IN ( SELECT DISTINCT `exercise_id` FROM $cat_table WHERE `cat_exercise_id` = %d)", $category );
+
+		if( !empty( $excluded ) && is_array( $excluded ) )
+		{
+			$cad = '(' . implode( ',', $excluded ) . ')';
+			$where .= " AND `ID` NOT IN $cad";
+		}
+
+		$sql = "SELECT * FROM $table_name $where ORDER BY position ASC";
+//echo $sql;die();
+		return $wpdb->get_results( $sql );
+	}
+
+	public static function get_exercises( $results = null, $offset = null, $order_by = null, $order = null )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::EXERCISE_TABLE;
+
+		if( $order || $order_by || $results || $offset !== null )
+		{
+			if( $order !== 'desc' ) $order = 'asc';
+
+			if( !in_array( $order_by, array( 'name', 'position', 'strong' ), true ) )
+				$order_by = 'ID';
+
+			if( !is_integer( $offset ) )
+				$offset = 0;
+
+			if( !is_integer( $results ) )
+				return $wpdb->get_results( "SELECT * FROM $table_name ORDER BY $order_by $order" );
+			else
+				return $wpdb->get_results( "SELECT * FROM $table_name ORDER BY $order_by $order LIMIT $results OFFSET $offset" );
+		}
+		else
+		{
+			return $wpdb->get_results( "SELECT * FROM $table_name ORDER BY position ASC");
+		}
+	}
+
+	public static function get_exercise( $id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::EXERCISE_TABLE;
+
+		$sql = $wpdb->prepare( "SELECT * FROM $table_name WHERE `ID` = %d", $id );
+
+		return $wpdb->get_row( $sql );
+	}
+
+	public static function get_exercise_by_name( $id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::EXERCISE_TABLE;
+
+		$sql = $wpdb->prepare( "SELECT * FROM $table_name WHERE `name` = %s", $id );
+
+		return $wpdb->get_row( $sql );
+	}
+
+	public static function get_last_exercise()
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::EXERCISE_TABLE;
+
+		$sql = "SELECT * FROM $table_name ORDER BY position DESC, ID DESC LIMIT 1";
+
+		return $wpdb->get_row( $sql );
+	}
+
+	public static function create_exercise( $name, $position, $active, $description = null, $video = null, $image_start = null, $image_end = null, $categories = array(), $corrections = array() )
+	{
+		global $wpdb;
+
+		if( !is_array( $categories ) )
+			return false;
+
+		$cat_table_name = $wpdb->prefix . self::CAT_EXERCISE_TABLE;
+		$categories_count = count( $categories );
+		if( $categories_count )
+		{
+			$cat_string = '(' . implode( ',', $categories ) . ')';
+			$sql = $wpdb->prepare( "SELECT count(distinct ID) = %d FROM $cat_table_name WHERE ID IN $cat_string", $categories_count );
+			if( !$wpdb->get_var( $sql ) )
+				return false;
+		}
+
+		$table_name = $wpdb->prefix . self::EXERCISE_TABLE;
+		$insertion = $wpdb->insert(
+			$table_name,
+			array(
+				'name' => $name,
+				'position' => (int)$position,
+				'active' => $active ? 1 : 0,
+				'description' => $description,
+				'video' => $video,
+				'image_start' => $image_start,
+				'image_end' => $image_end
+			),
+			array( '%s', '%d', '%d', '%s', '%s', '%d', '%d' )
+		);
+
+		if( false === $insertion )
+			return false;
+
+		$exercise_id = $wpdb->insert_id;
+
+		$table_name = $wpdb->prefix . self::CAT_EXERCISE_EXERCISE_TABLE;
+		foreach( $categories as $category )
+			if( false === $wpdb->insert(
+				$table_name,
+				array(
+					'exercise_id' => $exercise_id,
+					'cat_exercise_id' => $category
+				),
+				array( '%d', '%d' )
+			) )
+				return false;
+
+		$table_name = $wpdb->prefix . self::EXERCISE_CORRECTION_TABLE;
+		foreach( $corrections as $correction )
+			if( false === $wpdb->insert(
+				$table_name,
+				array(
+					'description' => $correction['description'],
+					'position' => $correction['position'],
+					'active' => $correction['active'],
+					'image_well' => $correction['image_well'],
+					'image_bad' => $correction['image_bad'],
+					'exercise_id' => $exercise_id
+				),
+				array( '%s', '%d', '%d', '%d', '%d', '%d'  )
+			) )
+				return false;
+
+		return $exercise_id;
+	}
+
+	public static function update_exercise( $id, $name, $position, $active, $description = null, $video = null, $image_start = null, $image_end = null, $categories = array(), $corrections = array() )
+	{
+		global $wpdb;
+
+		$map_table_name = $wpdb->prefix . self::CAT_EXERCISE_EXERCISE_TABLE;
+
+		if( !empty( $categories ) )
+		{
+			$cat_string = '(' . implode( ',', $categories ) . ')';
+			$sql = $wpdb->prepare( "DELETE FROM $map_table_name WHERE `exercise_id` = %d AND `cat_exercise_id` NOT IN $cat_string", $id );
+			$wpdb->query( $sql );
+
+			$pairs = array();
+			foreach( $categories as $category )
+				$pairs[] = "($id, $category)";
+			$pairs_string = implode( ',', $pairs );
+			$sql = "INSERT INTO $map_table_name (`exercise_id`,`cat_exercise_id`) VALUES $pairs_string ON DUPLICATE KEY UPDATE `exercise_id` = `exercise_id`, `cat_exercise_id` = `cat_exercise_id`";
+			$wpdb->query( $sql );
+		}
+		else
+		{
+			$sql = $wpdb->prepare( "DELETE FROM $map_table_name WHERE `exercise_id` = %d", $id );
+			$wpdb->query( $sql );
+		}
+
+		$corrections_table = $wpdb->prefix . self::EXERCISE_CORRECTION_TABLE;
+
+		if( !empty( $corrections ) )
+		{
+			$id_corrections = array();
+			$no_id_corrections = array();
+			foreach( $corrections as $correction )
+				if( !empty( $correction['ID'] ) && is_numeric( $correction['ID'] ) && (int)$correction['ID'] > 0 )
+					$id_corrections[(int)$correction['ID']] = $correction;
+				else
+					$no_id_corrections[] = $correction;
+
+			
+			if( !empty( $id_corrections ) )
+			{
+				$ides_string = '(' . implode( ',', array_keys( $id_corrections ) ) . ')';
+				$sql = $wpdb->prepare( "DELETE FROM $corrections_table WHERE `exercise_id` = %d AND `ID` NOT IN $ides_string", $id );
+				$wpdb->query( $sql );
+
+				foreach( $id_corrections as $correction_id => $correction )
+				{
+					if( false === $wpdb->update(
+						$corrections_table,
+						array(
+							'description' => $correction['description'],
+							'position' => $correction['position'],
+							'active' => $correction['active'],
+							'image_well' => $correction['image_well'],
+							'image_bad' => $correction['image_bad'],
+						),
+						array(
+							'ID' => (int)$correction_id,
+							'exercise_id' => (int)$id,
+						),
+						array( '%s', '%d', '%d', '%d', '%d' ),
+						array( '%d', '%d' )
+					) )
+						return false;
+				}
+			}
+
+			if( !empty( $no_id_corrections ) )
+			{
+				foreach( $no_id_corrections as $correction )
+					if( false === $wpdb->insert(
+						$corrections_table,
+						array(
+							'description' => $correction['description'],
+							'position' => $correction['position'],
+							'active' => $correction['active'],
+							'image_well' => $correction['image_well'],
+							'image_bad' => $correction['image_bad'],
+							'exercise_id' => (int)$id
+						),
+						array( '%s', '%d', '%d', '%d', '%d', '%d'  )
+					) )
+						return false;
+			}
+		}
+		else
+		{
+			$sql = $wpdb->prepare( "DELETE FROM $corrections_table WHERE `exercise_id` = %d", $id );
+			$wpdb->query( $sql );
+		}
+
+		$table_name = $wpdb->prefix . self::EXERCISE_TABLE;
+		$result = $wpdb->update(
+			$table_name,
+			array(
+				'name' => $name,
+				'position' => (int)$position,
+				'active' => $active ? 1 : 0,
+				'description' => $description,
+				'video' => $video,
+				'image_start' => $image_start,
+				'image_end' => $image_end
+			),
+			array(
+				'ID' => (int)$id
+			),
+			array( '%s', '%d', '%d', '%s', '%s', '%d', '%d' ),
+			array( '%d' )
+		);
+
+		return $result;
+	}
+ 
+	public static function delete_exercise( $exercise_id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::EXERCISE_TABLE;
+
+		return $wpdb->delete(
+			$table_name,
+			array( 'ID' => (int)$exercise_id ),
+			array( '%d' )
+		);
+	}
+
+	public static function get_exercise_related_categories( $exercise_id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::CAT_EXERCISE_EXERCISE_TABLE;
+
+		return $wpdb->get_results( $wpdb->prepare( "SELECT cat_exercise_id FROM $table_name WHERE exercise_id = %d", $exercise_id ) );
+	}
+
+	public static function get_exercise_related_categories_names( $exercise_id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::CAT_EXERCISE_EXERCISE_TABLE;
+		$cat_table_name = $wpdb->prefix . self::CAT_EXERCISE_TABLE;
+
+		return $wpdb->get_results( $wpdb->prepare( "SELECT cf.name AS 'name' FROM $table_name cff INNER JOIN $cat_table_name cf ON cff.cat_exercise_id = cf.ID WHERE cff.exercise_id = %d", $exercise_id ) );
+	}
+
+	public static function get_exercise_corrections( $exercise_id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::EXERCISE_CORRECTION_TABLE;
+
+		return $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $table_name WHERE exercise_id = %d", $exercise_id ) );
+	}
+
+
+	//////////////////////////////////////
+	// CAT EXERCISES
+	//////////////////////////////////////
+
+	public static function get_exercise_categories_count()
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::CAT_EXERCISE_TABLE;
+
+		return $wpdb->get_var( "SELECT count(*) FROM $table_name");
+	}
+
+	public static function get_exercise_categories( $results = null, $offset = null, $order_by = null, $order = null )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::CAT_EXERCISE_TABLE;
+
+		if( $order || $order_by || $results || $offset !== null )
+		{
+			if( $order !== 'desc' ) $order = 'asc';
+
+			if( !in_array( $order_by, array( 'name', 'position', 'active' ), true ) )
+				$order_by = 'ID';
+
+			if( !is_integer( $offset ) )
+				$offset = 0;
+
+			if( !is_integer( $results ) )
+				return $wpdb->get_results( "SELECT * FROM $table_name ORDER BY $order_by $order" );
+			else
+				return $wpdb->get_results( "SELECT * FROM $table_name ORDER BY $order_by $order LIMIT $results OFFSET $offset" );
+		}
+		else
+		{
+			return $wpdb->get_results( "SELECT * FROM $table_name ORDER BY position ASC");
+		}
+	}
+
+	public static function get_exercise_category( $id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::CAT_EXERCISE_TABLE;
+
+		$sql = $wpdb->prepare( "SELECT * FROM $table_name WHERE `ID` = %d", $id );
+
+		return $wpdb->get_row( $sql );
+	}
+
+	public static function get_exercise_category_by_name( $name )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::CAT_EXERCISE_TABLE;
+
+		$sql = $wpdb->prepare( "SELECT * FROM $table_name WHERE `name` = %s", $name );
+
+		return $wpdb->get_row( $sql );
+	}
+
+	public static function get_last_exercise_category()
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::CAT_EXERCISE_TABLE;
+
+		$sql = "SELECT * FROM $table_name ORDER BY position DESC, ID DESC LIMIT 1";
+
+		return $wpdb->get_row( $sql );
+	}
+
+	public static function create_exercise_category( $name, $position, $active )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::CAT_EXERCISE_TABLE;
+		$insertion = $wpdb->insert(
+			$table_name,
+			array(
+				'name' => $name,
+				'position' => (int)$position,
+				'active' => $active ? 1 : 0
+			),
+			array( '%s', '%d', '%d' )
+		);
+
+		if( false === $insertion )
+			return false;
+
+		return $wpdb->insert_id;
+	}
+
+	public static function update_exercise_category( $id, $name, $position, $active )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::CAT_EXERCISE_TABLE;
+		$result = $wpdb->update(
+			$table_name,
+			array(
+				'name' => $name,
+				'position' => (int)$position,
+				'active' => $active ? 1 : 0
+			),
+			array(
+				'ID' => (int)$id
+			),
+			array( '%s', '%d', '%d' ),
+			array( '%d' )
+		);
+
+		return $result;
+	}
+ 
+	public static function delete_exercise_category( $cat_exercise_id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::CAT_EXERCISE_TABLE;
+
+		return $wpdb->delete(
+			$table_name,
+			array( 'ID' => (int)$cat_exercise_id ),
+			array( '%d' )
+		);
+	}
+
+	//////////////////////////////////////
+	// DIETS
+	//////////////////////////////////////
+
+	public static function get_preset_diets_count()
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::DIET_TABLE;
+
+		return $wpdb->get_var( "SELECT count(*) FROM $table_name WHERE `user` IS NULL");
+	}
+
+	public static function get_diets( $results = null, $offset = null, $order_by = null, $order = null )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::DIET_TABLE;
+
+		if( $order || $order_by || $results || $offset !== null )
+		{
+			if( $order !== 'desc' ) $order = 'asc';
+
+			if( !in_array( $order_by, array( 'name', 'position' ), true ) )
+				$order_by = 'ID';
+
+			if( !is_integer( $offset ) )
+				$offset = 0;
+
+			if( !is_integer( $results ) )
+				return $wpdb->get_results( "SELECT * FROM $table_name ORDER BY $order_by $order" );
+			else
+				return $wpdb->get_results( "SELECT * FROM $table_name ORDER BY $order_by $order LIMIT $results OFFSET $offset" );
+		}
+		else
+		{
+			return $wpdb->get_results( "SELECT * FROM $table_name ORDER BY position ASC");
+		}
+	}
+
+	public static function get_preset_diets( $results = null, $offset = null, $order_by = null, $order = null )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::DIET_TABLE;
+
+		if( $order || $order_by || $results || $offset !== null )
+		{
+			if( $order !== 'desc' ) $order = 'asc';
+
+			if( !in_array( $order_by, array( 'name', 'position' ), true ) )
+				$order_by = 'ID';
+
+			if( !is_integer( $offset ) )
+				$offset = 0;
+
+			if( !is_integer( $results ) )
+				return $wpdb->get_results( "SELECT * FROM $table_name WHERE `user` IS NULL ORDER BY $order_by $order" );
+			else
+				return $wpdb->get_results( "SELECT * FROM $table_name WHERE `user` IS NULL ORDER BY $order_by $order LIMIT $results OFFSET $offset" );
+		}
+		else
+		{
+			return $wpdb->get_results( "SELECT * FROM $table_name ORDER BY position ASC");
+		}
+	}
+
+	public static function get_user_diets_count( $user_id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::DIET_TABLE;
+
+		return $wpdb->get_var( $wpdb->prepare( "SELECT count(*) FROM $table_name WHERE `user` = %d", $user_id ) );
+	}
+
+	public static function get_user_diets( $user_id, $results = null, $offset = null, $order_by = null, $order = null )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::DIET_TABLE;
+
+		if( $order || $order_by || $results || $offset !== null )
+		{
+			if( $order !== 'desc' ) $order = 'asc';
+
+			if( !in_array( $order_by, array( 'name', 'start', 'end' ), true ) )
+				$order_by = 'ID';
+
+			if( !is_integer( $offset ) )
+				$offset = 0;
+
+			if( !is_integer( $results ) )
+				return $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $table_name WHERE `user` = %d ORDER BY $order_by $order", $user_id ) );
+			else
+				return $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $table_name WHERE `user` = %d ORDER BY $order_by $order LIMIT $results OFFSET $offset", $user_id ) );
+		}
+		else
+		{
+			return $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $table_name WHERE `user` = %d ORDER BY position ASC", $user_id ) );
+		}
+	}
+
+	public static function get_diet_search_results( $user, $name, $preset = true )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::DIET_TABLE;
+		$diet_food_table = $wpdb->prefix . self::DIET_INTERVAL_FOOD_TABLE;
+		$student_food_table = $wpdb->prefix . self::STUDENT_FOOD_TABLE;
+
+		$where = 'WHERE `active` = 1';
+
+		if( $preset )
+			$where .= " AND `user` IS NULL";
+		else
+			$where .= " AND `user` IS NOT NULL";
+
+		if( !empty( $name ) && is_string( $name ) )
+		{
+			if( mb_strlen( $name ) < 3 )
+				$name = $name . '%';
+			else
+				$name = '%' . $name . '%';
+
+			$where .= $wpdb->prepare( " AND `name` LIKE %s", $name );
+		}
+
+		$sql = "SELECT `ID`, `name` FROM $table_name $where ORDER BY position ASC";
+
+		$diets = $wpdb->get_results( $sql );
+		if( !is_array( $diets ) )
+			return false;
+
+		for( $i = 1; $i < 11; $i++ )
+		{
+			$sql = $wpdb->prepare( "SELECT d.`ID`, count(sf.`valuation`) AS 'total' FROM ( $table_name d INNER JOIN $diet_food_table dif ON d.`ID` IN ( SELECT `ID` FROM $table_name $where ORDER BY position ASC ) AND d.`ID` = dif.`diet_id` ) LEFT JOIN $student_food_table sf ON sf.`student_id` = %d AND dif.`food_id` = sf.`food_id` AND sf.`saved` = ( SELECT MAX(`saved`) FROM $student_food_table WHERE `student_id` = %d ) AND sf.`valuation` = %d GROUP BY d.`ID`", $user, $user, $i );
+
+			$results = $wpdb->get_results( $sql );
+			foreach( $results as $result )
+			{
+				foreach( $diets as $diet )
+				{
+					if( $diet->ID == $result->ID )
+					{
+						$key = 'valuation_' . $i;
+						$diet->$key = $result->total;
+					}
+				}
+			}
+		}
+
+		return $diets;
+//SELECT d.`ID`, d.`name`, sf.`valuation` FROM ( wp_epoint_personal_training_diet d INNER JOIN wp_epoint_personal_training_diet_interval_food dif ON d.`ID` = dif.`diet_id` ) LEFT JOIN wp_epoint_personal_training_student_food sf ON sf.`student_id` = 1 AND dif.`food_id` = sf.`food_id`;
+//SELECT d.`ID`, d.`name`, count(sf.`valuation`) AS "COUNT" FROM ( wp_epoint_personal_training_diet d INNER JOIN wp_epoint_personal_training_diet_interval_food dif ON d.`ID` = dif.`diet_id` ) LEFT JOIN wp_epoint_personal_training_student_food sf ON sf.`student_id` = 1 AND dif.`food_id` = sf.`food_id` AND sf.`saved` = ( SELECT MAX(`saved`) FROM wp_epoint_personal_training_student_food WHERE `student_id` = 1 ) AND sf.`valuation` = 10 GROUP BY d.`ID`;
+	}
+
+	public static function get_diet( $id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::DIET_TABLE;
+
+		$sql = $wpdb->prepare( "SELECT * FROM $table_name WHERE `ID` = %d", $id );
+
+		return $wpdb->get_row( $sql );
+	}
+
+	public static function get_last_diet( $user_id = null )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::DIET_TABLE;
+
+		if( $user_id === null )
+			$sql = "SELECT * FROM $table_name ORDER BY position DESC, ID DESC LIMIT 1";
+		else
+			$sql = $wpdb->prepare( "SELECT * FROM $table_name WHERE `user`= %d ORDER BY `start` DESC, ID DESC LIMIT 1", $user_id );
+
+		return $wpdb->get_row( $sql );
+	}
+
+	public static function create_diet( $name, $position, $active, $description = null, $start = null, $end = null, $user = null, $intervals = array() )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::DIET_TABLE;
+		$insertion = $wpdb->insert(
+			$table_name,
+			array(
+				'name' => $name,
+				'position' => (int)$position,
+				'active' => $active ? 1 : 0,
+				'description' => $description,
+				'start' => $start,
+				'end' => $end,
+				'user' => $user
+			),
+			array( '%s', '%d', '%d', '%s', '%s', '%s', '%d' )
+		);
+
+		if( false === $insertion )
+			return false;
+
+		$diet_id = $wpdb->insert_id;
+
+		if( !empty( $intervals ) )
+		{
+			$intervals_table = $wpdb->prefix . self::DIET_INTERVAL_TABLE;
+			$interval_food_table = $wpdb->prefix . self::DIET_INTERVAL_FOOD_TABLE;
+			foreach( $intervals as $interval_id => $interval )
+			{
+				if( false === $wpdb->insert(
+					$intervals_table,
+					array(
+						'diet_id' => (int)$diet_id,
+						'interval' => (int)$interval_id,
+						'description' => $interval['description']
+					),
+					array( '%d', '%d', '%s' )
+				) )
+					return false;
+
+				if( !empty( $interval['food'] ) && is_array( $interval['food'] ) )
+					foreach( $interval['food'] as $food_id )
+						if( false === $wpdb->insert(
+							$interval_food_table,
+							array(
+								'diet_id' => (int)$diet_id,
+								'interval' => (int)$interval_id,
+								'food_id' => (int)$food_id
+							),
+							array( '%d', '%d', '%s' )
+						) )
+							return false;
+			}
+		}
+
+		return $diet_id;
+	}
+
+	public static function update_diet( $id, $name, $position, $active, $description = null, $start = null, $end = null, $user = null, $intervals = array() )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::DIET_TABLE;
+		$result = $wpdb->update(
+			$table_name,
+			array(
+				'name' => $name,
+				'position' => (int)$position,
+				'active' => $active ? 1 : 0,
+				'description' => $description,
+				'start' => $start,
+				'end' => $end,
+				'user' => $user
+			),
+			array(
+				'ID' => (int)$id
+			),
+			array( '%s', '%d', '%d', '%s', '%s', '%s', '%d' ),
+			array( '%d' )
+		);
+
+		if( $result === false )
+			return false;
+
+		$intervals_table = $wpdb->prefix . self::DIET_INTERVAL_TABLE;
+		$interval_food_table = $wpdb->prefix . self::DIET_INTERVAL_FOOD_TABLE;
+		if( !empty( $intervals ) )
+		{
+			$ides_string = '(' . implode( ',', array_keys( $intervals ) ) . ')';
+			$sql = $wpdb->prepare( "DELETE FROM $intervals_table WHERE `diet_id` = %d AND `interval` NOT IN $ides_string", $id );
+			if( false === $wpdb->query( $sql ) )
+				return false;
+
+			$cads = array();
+			foreach( $intervals as $interval_id => $interval )
+				$cads[] = '(' . implode( ',', array( $id, $interval_id, "'" . $interval['description'] . "'" ) ) . ')';
+			$values_string = implode( ',', $cads );
+			$sql = "INSERT INTO $intervals_table (`diet_id`,`interval`, `description`) VALUES $values_string ON DUPLICATE KEY UPDATE `diet_id` = `diet_id`, `interval` = `interval`, `description` = VALUES(`description`)";
+			if( false === $wpdb->query( $sql ) )
+				return false;
+
+			foreach( $intervals as $interval_id => $interval )
+			{
+				if( empty( $interval['food'] ) || !is_array( $interval['food'] ) )
+				{
+					$sql = $wpdb->prepare( "DELETE FROM $interval_food_table WHERE `diet_id` = %d AND `interval` = %d", $id, $interval_id );
+					if( false === $wpdb->query( $sql ) )
+						return false;
+				}
+				else
+				{
+					$ides_string = '(' . implode( ',', $interval['food'] ) . ')';
+					$sql = $wpdb->prepare( "DELETE FROM $interval_food_table WHERE `diet_id` = %d AND `interval` = %d AND `food_id` NOT IN $ides_string", $id, $interval_id );
+					if( false === $wpdb->query( $sql ) )
+						return false;
+				}
+			}
+
+			$cads = array();
+			foreach( $intervals as $interval_id => $interval )
+				if( !empty( $interval['food'] ) && is_array( $interval['food'] ) )
+					foreach( $interval['food'] as $food_id )
+						$cads[] = '(' . implode( ',', array( $id, $interval_id, $food_id ) ) . ')';
+
+			if( !empty( $cads ) )
+			{
+				$values_string = implode( ',', $cads );
+				$sql = "INSERT INTO $interval_food_table (`diet_id`,`interval`, `food_id`) VALUES $values_string ON DUPLICATE KEY UPDATE `diet_id` = `diet_id`, `interval` = `interval`, `food_id` = `food_id`";
+	//error_log( "SQLLLLLLLLLLLLLLLLLLLLLL:" . $sql );
+				if( false === $wpdb->query( $sql ) )
+					return false;
+			}
+
+		}
+		else
+		{
+			$sql = $wpdb->prepare( "DELETE FROM $intervals_table WHERE `diet_id` = %d", $id );
+			$wpdb->query( $sql );
+		}
+
+		return true;
+	}
+ 
+	public static function delete_diet( $diet_id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::DIET_TABLE;
+
+		return $wpdb->delete(
+			$table_name,
+			array( 'ID' => (int)$diet_id ),
+			array( '%d' )
+		);
+	}
+
+	public static function get_diet_intervals( $diet_id )
+	{
+		global $wpdb;
+
+		$diet_interval_name = $wpdb->prefix . self::DIET_INTERVAL_TABLE;
+		$diet_interval_food_name = $wpdb->prefix . self::DIET_INTERVAL_FOOD_TABLE;
+
+		$sql = $wpdb->prepare( "SELECT * FROM $diet_interval_name WHERE `diet_id` = %d", $diet_id );
+		$intervals = $wpdb->get_results( $sql );
+
+		if( !is_array( $intervals ) )
+			return array();
+
+		$ret = array();
+		foreach( $intervals as $interval )
+		{
+			$sql = $wpdb->prepare( "SELECT * FROM $diet_interval_food_name WHERE `diet_id` = %d AND `interval` = %d", $diet_id, $interval->interval );
+			$food_intervals = $wpdb->get_results( $sql );
+			$interval->food = array();
+			foreach( $food_intervals as $food_interval )
+				$interval->food[] = $food_interval->food_id;
+
+			$ret[$interval->interval] = $interval;
+		}
+
+		return $ret;
+	}
+
+	//////////////////////////////////////
+	// TRAINING
+	//////////////////////////////////////
+
+	public static function get_preset_training_count()
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::TRAINING_TABLE;
+
+		return $wpdb->get_var( "SELECT count(*) FROM $table_name WHERE `user` IS NULL");
+	}
+
+	public static function get_training_items( $results = null, $offset = null, $order_by = null, $order = null )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::TRAINING_TABLE;
+
+		if( $order || $order_by || $results || $offset !== null )
+		{
+			if( $order !== 'desc' ) $order = 'asc';
+
+			if( !in_array( $order_by, array( 'name', 'position' ), true ) )
+				$order_by = 'ID';
+
+			if( !is_integer( $offset ) )
+				$offset = 0;
+
+			if( !is_integer( $results ) )
+				return $wpdb->get_results( "SELECT * FROM $table_name ORDER BY $order_by $order" );
+			else
+				return $wpdb->get_results( "SELECT * FROM $table_name ORDER BY $order_by $order LIMIT $results OFFSET $offset" );
+		}
+		else
+		{
+			return $wpdb->get_results( "SELECT * FROM $table_name ORDER BY position ASC");
+		}
+	}
+
+	public static function get_preset_training_items( $results = null, $offset = null, $order_by = null, $order = null, $volume = false, $maintenance = false, $definition = false, $house = false, $outdoors = false, $gym = false )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::TRAINING_TABLE;
+
+		$conds = '';
+		if( $volume || $maintenance || $definition || $house || $outdoors || $gym )
+		{
+			$conds = array();
+			if( $volume ) $conds[] = ' `objective_volume` = 1 ';
+			if( $maintenance ) $conds[] = ' `objective_maintenance` = 1 ';
+			if( $definition ) $conds[] = ' `objective_definition` = 1 ';
+			if( $house ) $conds[] = ' `environment_house` = 1 ';
+			if( $outdoors ) $conds[] = ' `environment_outdoors` = 1 ';
+			if( $gym ) $conds[] = ' `environment_gym` = 1 ';
+
+			$conds = implode( 'AND', $conds );
+		}
+
+		if( $order || $order_by || $results || $offset !== null )
+		{
+			if( $order !== 'desc' ) $order = 'asc';
+
+			if( !in_array( $order_by, array( 'name', 'position' ), true ) )
+				$order_by = 'ID';
+
+			if( !is_integer( $offset ) )
+				$offset = 0;
+
+			if( !empty( $conds ) )
+				$conds = ' AND ' . $conds;
+
+			if( !is_integer( $results ) )
+				return $wpdb->get_results( "SELECT * FROM $table_name WHERE `user` IS NULL $conds ORDER BY $order_by $order" );
+			else
+				return $wpdb->get_results( "SELECT * FROM $table_name WHERE `user` IS NULL $conds ORDER BY $order_by $order LIMIT $results OFFSET $offset" );
+		}
+		else
+		{
+			if( !empty( $conds ) )
+				$conds = ' WHERE ' . $conds;
+			return $wpdb->get_results( "SELECT * FROM $table_name $conds $ORDER BY position ASC");
+		}
+	}
+
+	public static function get_user_training_count( $user_id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::TRAINING_TABLE;
+
+		return $wpdb->get_var( $wpdb->prepare( "SELECT count(*) FROM $table_name WHERE `user` = %d", $user_id ) );
+	}
+
+	public static function get_user_training_items( $user_id, $results = null, $offset = null, $order_by = null, $order = null )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::TRAINING_TABLE;
+
+		if( $order || $order_by || $results || $offset !== null )
+		{
+			if( $order !== 'desc' ) $order = 'asc';
+
+			if( !in_array( $order_by, array( 'name', 'position', 'start', 'end' ), true ) )
+				$order_by = 'ID';
+
+			if( !is_integer( $offset ) )
+				$offset = 0;
+
+			if( !is_integer( $results ) )
+				return $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $table_name WHERE `user` = %d ORDER BY $order_by $order", $user_id ) );
+			else
+				return $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $table_name WHERE `user` = %d ORDER BY $order_by $order LIMIT $results OFFSET $offset", $user_id ) );
+		}
+		else
+		{
+			return $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $table_name WHERE `user` = %d ORDER BY position ASC", $user_id ) );
+		}
+	}
+
+	public static function get_training_search_results( $user, $name, $preset = true )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::TRAINING_TABLE;
+
+		$where = 'WHERE `active` = 1';
+
+		if( $preset )
+			$where .= " AND `user` IS NULL";
+		else
+			$where .= " AND `user` IS NOT NULL";
+
+		if( !empty( $name ) && is_string( $name ) )
+		{
+			if( mb_strlen( $name ) < 3 )
+				$name = $name . '%';
+			else
+				$name = '%' . $name . '%';
+
+			$where .= $wpdb->prepare( " AND `name` LIKE %s", $name );
+		}
+
+		$sql = "SELECT `ID`, `name` FROM $table_name $where ORDER BY position ASC";
+
+		return $wpdb->get_results( $sql );
+	}
+
+	public static function get_training( $id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::TRAINING_TABLE;
+
+		$sql = $wpdb->prepare( "SELECT * FROM $table_name WHERE `ID` = %d", $id );
+
+		return $wpdb->get_row( $sql );
+	}
+
+	public static function get_last_training( $user_id = null )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::TRAINING_TABLE;
+
+		if( $user_id === null )
+			$sql = "SELECT * FROM $table_name ORDER BY position DESC, ID DESC LIMIT 1";
+		else
+			$sql = $wpdb->prepare( "SELECT * FROM $table_name WHERE `user`= %d ORDER BY `start` DESC, ID DESC LIMIT 1", $user_id );
+
+		return $wpdb->get_row( $sql );
+	}
+
+	public static function create_training(
+		$name,
+		$position,
+		$active,
+		$description = null,
+		$start = null,
+		$end = null,
+		$objective_volume = 0,
+		$objective_maintenance = 0,
+		$objective_definition = 0,
+		$environment_house = 0,
+		$environment_outdoors = 0,
+		$environment_gym = 0,
+		$user = null,
+		$exercises = array()
+	) {
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::TRAINING_TABLE;
+		$insertion = $wpdb->insert(
+			$table_name,
+			array(
+				'name' => $name,
+				'position' => (int)$position,
+				'active' => $active ? 1 : 0,
+				'description' => $description,
+				'start' => $start,
+				'end' => $end,
+				'objective_volume' => $objective_volume,
+				'objective_maintenance' => $objective_maintenance,
+				'objective_definition' => $objective_definition,
+				'environment_house' => $environment_house,
+				'environment_outdoors' => $environment_outdoors,
+				'environment_gym' => $environment_gym,
+				'user' => $user
+			), 
+			array( '%s', '%d', '%d', '%s', '%s', '%s', '%d', '%d', '%d', '%d', '%d', '%d', '%d' )
+		);
+
+		if( false === $insertion )
+			return false;
+
+		$training_id = $wpdb->insert_id;
+
+		if( !empty( $exercises ) )
+		{
+			$training_exercise_table = $wpdb->prefix . self::TRAINING_EXERCISE_TABLE;
+			foreach( $exercises as $exercise_id => $exercise )
+			{
+				$saved = date( 'Y-m-d H:i:s' );
+				if( false === $wpdb->insert(
+					$training_exercise_table,
+					array(
+						'training_id' => $training_id,
+						'exercise_id' => $exercise_id,
+						'saved' => $saved,
+						'description' => $exercise['description'],
+						'series' => $exercise['series'],
+						'repetitions' => $exercise['repetitions'],
+						'loads' => $exercise['loads']
+					),
+					array( '%d', '%d', '%s', '%s', '%s', '%s' )
+				) )
+					return false;
+
+			}
+		}
+
+		return $training_id;
+	}
+
+	public static function update_training(
+		$id,
+		$name,
+		$position,
+		$active,
+		$description = null,
+		$start = null,
+		$end = null,
+		$objective_volume = 0,
+		$objective_maintenance = 0,
+		$objective_definition = 0,
+		$environment_house = 0,
+		$environment_outdoors = 0,
+		$environment_gym = 0,
+		$user = null,
+		$exercises = array()
+	) {
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::TRAINING_TABLE;
+		$result = $wpdb->update(
+			$table_name,
+			array(
+				'name' => $name,
+				'position' => (int)$position,
+				'active' => $active ? 1 : 0,
+				'description' => $description,
+				'start' => $start,
+				'end' => $end,
+				'objective_volume' => $objective_volume,
+				'objective_maintenance' => $objective_maintenance,
+				'objective_definition' => $objective_definition,
+				'environment_house' => $environment_house,
+				'environment_outdoors' => $environment_outdoors,
+				'environment_gym' => $environment_gym,
+				'user' => $user
+			),
+			array(
+				'ID' => (int)$id
+			),
+			array( '%s', '%d', '%d', '%s', '%s', '%s', '%d', '%d', '%d', '%d', '%d', '%d', '%d' ),
+			array( '%d' )
+		);
+
+		if( $result === false )
+			return false;
+
+		$training_exercises_table = $wpdb->prefix . self::TRAINING_EXERCISE_TABLE;
+		if( empty( $exercises ) )
+		{
+			if( false === $wpdb->delete(
+				$training_exercises_table,
+				array( 'training_id' => (int)$id ),
+				array( '%d' )
+			) )
+				return false;
+		}
+		else
+		{
+			$ides_string = '(' . implode( ',', array_keys( $exercises ) ) . ')';
+			$sql = $wpdb->prepare( "DELETE FROM $training_exercises_table WHERE `training_id` = %d AND `exercise_id` NOT IN $ides_string", $id );
+			if( false === $wpdb->query( $sql ) )
+				return false;
+
+			$cads = array();
+			$saved = date( 'Y-m-d H:i:s' );
+			foreach( $exercises as $exercise_id => $exercise )
+				$cads[] = '(' . implode( ',', array( $id, $exercise_id, "'" . $saved . "'", "'" . $exercise['description'] . "'", "'" . $exercise['series'] . "'", "'" . $exercise['repetitions'] . "'", "'" . $exercise['loads'] . "'" ) ) . ')';
+			$values_string = implode( ',', $cads );
+			$sql = "INSERT INTO $training_exercises_table (`training_id`, `exercise_id`,`saved`,`description`, `series`, `repetitions`, `loads` ) VALUES $values_string ON DUPLICATE KEY UPDATE `training_id` = VALUES(`training_id`), `exercise_id` = VALUES(`exercise_id`), `saved` = VALUES(`saved`), `description` = VALUES(`description`), `series` = VALUES(`series`), `repetitions` = VALUES(`repetitions`), `loads` = VALUES(`loads`)";
+			if( false === $wpdb->query( $sql ) )
+				return false;
+		}
+
+
+		return true;
+	}
+ 
+	public static function delete_training( $training_id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::TRAINING_TABLE;
+
+		return $wpdb->delete(
+			$table_name,
+			array( 'ID' => (int)$training_id ),
+			array( '%d' )
+		);
+	}
+
+	public static function get_training_exercises( $training_id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::EXERCISE_TABLE;
+		$rel_table = $wpdb->prefix . self::TRAINING_EXERCISE_TABLE;
+
+		$sql = $wpdb->prepare( "SELECT e.ID as 'ID', e.`name` AS 'name', e.`image_start` AS 'image_start', e.`image_end` AS 'image_end', e.`description` AS  'description', te.`description` AS 'extradescription', e.`video` AS 'video', te.`series` AS 'series', te.`repetitions` AS 'repetitions', te.`loads` AS 'loads' FROM $table_name e INNER JOIN $rel_table te ON e.ID = te.`exercise_id` WHERE te.`training_id` = %d AND te.`saved` = (SELECT tee.`saved` FROM $rel_table tee WHERE tee.`training_id` = te.`training_id` AND tee.`exercise_id` = te.`exercise_id` ORDER BY tee.`saved` DESC LIMIT 1) GROUP BY te.`training_id`, te.`exercise_id`", $training_id );
+
+		return $wpdb->get_results( $sql );
+	}
+
+
+	public static function get_training_exercises_historial( $training_id, $exercise_id )
+	{
+		global $wpdb;
+
+		$rel_table = $wpdb->prefix . self::TRAINING_EXERCISE_TABLE;
+
+		$sql = $wpdb->prepare( "SELECT DISTINCT te.`series` AS 'series', te.`repetitions` AS 'repetitions', te.`loads` AS 'loads' FROM $rel_table te WHERE te.`training_id` = %d AND te.`exercise_id` = %d", $training_id, $exercise_id );
+
+		return $wpdb->get_results( $sql );
+	}
+
+	public static function exercise_belongs_to_training( $training_id, $exercise_id )
+	{
+		global $wpdb;
+
+		$rel_table = $wpdb->prefix . self::TRAINING_EXERCISE_TABLE;
+
+		$sql = $wpdb->prepare( "SELECT te.`exercise_id` AS 'exercise' FROM $rel_table te WHERE te.`training_id` = %d AND te.`exercise_id` = %d", $training_id, $exercise_id );
+
+		return $wpdb->get_var( $sql );
+	}
+
+	public static function get_last_training_exercise_data( $training_id, $exercise_id )
+	{
+		global $wpdb;
+
+		$rel_table = $wpdb->prefix . self::TRAINING_EXERCISE_TABLE;
+
+		$sql = $wpdb->prepare( "SELECT * FROM wp_epoint_personal_training_training_exercise WHERE `training_id` = %d AND `exercise_id` = %d ORDER BY `saved` DESC LIMIT 1", $training_id, $exercise_id );
+
+		return $wpdb->get_row( $sql );
+	}
+	
+	public static function update_training_exercise_data( $training_id, $exercise_id, $description, $repetitions, $series, $loads )
+	{
+		global $wpdb;
+
+		$rel_table = $wpdb->prefix . self::TRAINING_EXERCISE_TABLE;
+
+		$saved = date( 'Y-m-d H:i:s' );
+
+		$sql = $wpdb->prepare("INSERT INTO $rel_table (`training_id`, `exercise_id`,`saved`,`description`, `series`, `repetitions`, `loads` ) VALUES ( %d , %d , %s , %s , %s , %s , %s ) ON DUPLICATE KEY UPDATE `training_id` = VALUES(`training_id`), `exercise_id` = VALUES(`exercise_id`), `saved` = VALUES(`saved`), `description` = VALUES(`description`), `series` = VALUES(`series`), `repetitions` = VALUES(`repetitions`), `loads` = VALUES(`loads`)", $training_id, $exercise_id, $saved, $description, $series, $repetitions, $loads );
+
+		return $wpdb->query( $sql );
+	}
+	
+	//////////////////////////////////////
+	// TRAINERS
+	//////////////////////////////////////
+
+	public static function get_trainers_count()
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::TRAINERS_TABLE;
+
+		return $wpdb->get_var( "SELECT count(*) FROM $table_name");
+	}
+
+	public static function get_trainers_table( $results = null, $offset = null, $order_by = null, $order = null )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::TRAINERS_TABLE;
+		$users_table = $wpdb->users;
+
+		if( $order || $order_by || $results || $offset !== null )
+		{
+			if( $order !== 'desc' ) $order = 'asc';
+
+			if( !in_array( $order_by, array( 't.slug', 't.requested', 't.registered', 't.active' ), true ) )
+				$order_by = 't.ID';
+
+			if( !is_integer( $offset ) )
+				$offset = 0;
+
+			if( !is_integer( $results ) )
+				return $wpdb->get_results( "SELECT t.`ID` AS 'ID', u.`display_name` AS 'display_name', u.`user_email` AS 'email', t.`slug` AS 'slug', t.`requested` AS 'requested', t.`registered` AS 'registered', t.`active` AS 'active' FROM $table_name t INNER JOIN $users_table u ON t.`user` = u.`ID` ORDER BY $order_by $order" );
+			else
+				return $wpdb->get_results( "SELECT t.`ID` AS 'ID', u.`display_name` AS 'display_name', u.`user_email` AS 'email', t.`slug` AS 'slug', t.`requested` AS 'requested', t.`registered` AS 'registered', t.`active` AS 'active' FROM $table_name t INNER JOIN $users_table u ON t.`user` = u.`ID` ORDER BY $order_by $order LIMIT $results OFFSET $offset" );
+		}
+		else
+		{
+			return $wpdb->get_results( "SELECT t.`ID` AS 'ID', u.`display_name` AS 'display_name', u.`user_email` AS 'email', t.`slug` AS 'slug', t.`requested` AS 'requested', t.`registered` AS 'registered', t.`active` AS 'active' FROM $table_name t INNER JOIN $users_table u ON t.`user` = u.`ID` ORDER BY registered ASC");
+		}
+	}
+
+	public static function get_trainer( $id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::TRAINERS_TABLE;
+
+		$sql = $wpdb->prepare( "SELECT * FROM $table_name WHERE `ID` = %d", $id );
+
+		return $wpdb->get_row( $sql );
+	}
+
+	public static function get_trainer_by_slug( $slug )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::TRAINERS_TABLE;
+
+		$sql = $wpdb->prepare( "SELECT * FROM $table_name WHERE `slug` = %s", $slug );
+
+		return $wpdb->get_row( $sql );
+	}
+
+	public static function get_available_trainers()
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::TRAINERS_TABLE;
+
+		return $wpdb->get_results( "SELECT * FROM $table_name WHERE active = 1 AND registered IS NOT NULL");
+	}
+
+	public static function get_available_trainer_slugs()
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::TRAINERS_TABLE;
+
+		return $wpdb->get_col( "SELECT slug FROM $table_name WHERE active = 1 AND registered IS NOT NULL");
+	}
+
+	public static function insert_trainer( $user, $slug, $requested = null, $registered = null, $active = 0 )
+	{
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::TRAINERS_TABLE;
+
+		return $wpdb->insert(
+			$table_name,
+			array(
+				'requested' => !is_null( $requested ) ? $requested : date( 'Y-m-d H:i:s' ),
+				'registered' => $registered,
+				'user' => $user,
+				'slug' => $slug,
+				'active' => $active
+			),
+			array(
+				'%s', '%s', '%d', '%s', '%d'
+			)
+		);
+	}
+
+	public static function register_trainer( $trainer_id, $register_date = null )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::TRAINERS_TABLE;
+		$result = $wpdb->update(
+			$table_name,
+			array(
+				'registered' => is_string( $register_date ) ? $register_date :date( 'Y-m-d H:i:s' ),
+				'active' => 1
+			),
+			array(
+				'ID' => (int)$trainer_id
+			),
+			array( '%s', '%d' ),
+			array( '%d' )
+		);
+	}
+
+	public static function activate_trainer( $trainer_id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::TRAINERS_TABLE;
+		$result = $wpdb->update(
+			$table_name,
+			array(
+				'active' => 1
+			),
+			array(
+				'ID' => (int)$trainer_id
+			),
+			array( '%d' ),
+			array( '%d' )
+		);
+	}
+
+	public static function deactivate_trainer( $trainer_id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::TRAINERS_TABLE;
+		$result = $wpdb->update(
+			$table_name,
+			array(
+				'active' => 0
+			),
+			array(
+				'ID' => (int)$trainer_id
+			),
+			array( '%d' ),
+			array( '%d' )
+		);
+	}
+
+	//////////////////////////////////////
+	// PURCHASE
+	//////////////////////////////////////
+
+	public static function get_students_count()
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::STUDENTS_TABLE;
+
+		return $wpdb->get_var( "SELECT count(*) FROM $table_name");
+	}
+
+	public static function get_students_table( $results = null, $offset = null, $order_by = null, $order = null )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::STUDENTS_TABLE;
+		$users_table = $wpdb->users;
+
+		if( $order || $order_by || $results || $offset !== null )
+		{
+			if( $order !== 'desc' ) $order = 'asc';
+
+			if( !in_array( $order_by, array( 's.email', 's.registered', 's.renewed', 's.active' ), true ) )
+				$order_by = 's.ID';
+
+			if( !is_integer( $offset ) )
+				$offset = 0;
+
+			if( !is_integer( $results ) )
+				return $wpdb->get_results( "SELECT s.`ID` AS 'ID', u.`display_name` AS 'display_name', s.`email` AS 'email', s.`registered` AS 'registered', s.`renewed` AS 'renewed', s.`active` AS 'active' FROM $table_name s INNER JOIN $users_table u ON s.`email` = u.`user_email` ORDER BY $order_by $order" );
+			else
+				return $wpdb->get_results( "SELECT s.`ID` AS 'ID', u.`display_name` AS 'display_name', s.`email` AS 'email', s.`registered` AS 'registered', s.`renewed` AS 'renewed', s.`active` AS 'active' FROM $table_name s INNER JOIN $users_table u ON s.`email` = u.`user_email` ORDER BY $order_by $order LIMIT $results OFFSET $offset" );
+		}
+		else
+		{
+			return $wpdb->get_results( "SELECT s.`ID` AS 'ID', u.`display_name` AS 'display_name', s.`email` AS 'email', s.`registered` AS 'registered', s.`renewed` AS 'renewed', s.`active` AS 'active' FROM $table_name s INNER JOIN $users_table u ON s.`email` = u.`user_email` ORDER BY registered ASC");
+		}
+	}
+
+	public static function get_student( $id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::STUDENTS_TABLE;
+
+		$sql = $wpdb->prepare( "SELECT * FROM $table_name WHERE `ID` = %d", $id );
+
+		return $wpdb->get_row( $sql );
+	}
+
+	public static function is_order_registered( $order_id, $email )
+	{
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::STUDENTS_TABLE;
+
+		$row = $wpdb->get_row(
+			$wpdb->prepare(
+				"SELECT * FROM $table_name WHERE `order` = %d AND `email` = %s",
+				$order_id,
+				$email
+			)
+		);
+
+		return $row !== null;
+	}
+
+	public static function get_last_user_register( $email )
+	{
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::STUDENTS_TABLE;
+
+		$row = $wpdb->get_row(
+			$wpdb->prepare(
+				"SELECT * FROM $table_name WHERE `email` = %s ORDER BY `registered` DESC LIMIT 1",
+				$email
+			)
+		);
+
+		return $row;
+	}
+
+	public static function is_register_active( $student_id )
+	{
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::STUDENTS_TABLE;
+
+		$row = $wpdb->get_row(
+			$wpdb->prepare(
+				"SELECT * FROM $table_name WHERE `active` = 1 AND `ID` = %d",
+				(int)$student_id
+			)
+		);
+
+		return $row !== null;
+	}
+
+	public static function is_user_registered_and_active( $email )
+	{
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::STUDENTS_TABLE;
+
+		$row = $wpdb->get_row(
+			$wpdb->prepare(
+				"SELECT * FROM $table_name WHERE `active` = 1 AND `email` = %s ORDER BY `ID` DESC LIMIT 1",
+				$email
+			)
+		);
+
+		return $row !== null;
+	}
+
+	public static function insert_student( $email, $order_id, $product_id )
+	{
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::STUDENTS_TABLE;
+
+		return $wpdb->insert(
+			$table_name,
+			array(
+				'registered' => date( 'Y-m-d H:i:s' ),
+				'email' => $email,
+				'order' => $order_id,
+				'product' => $product_id,
+				'active' => 1
+			),
+			array(
+				'%s', '%s', '%d', '%s', '%d'
+			)
+		);
+	}
+
+	public static function activate_student( $student_id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::STUDENTS_TABLE;
+		$result = $wpdb->update(
+			$table_name,
+			array(
+				'active' => 1
+			),
+			array(
+				'ID' => (int)$student_id
+			),
+			array( '%d' ),
+			array( '%d' )
+		);
+	}
+
+	public static function deactivate_student( $student_id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::STUDENTS_TABLE;
+		$result = $wpdb->update(
+			$table_name,
+			array(
+				'active' => 0
+			),
+			array(
+				'ID' => (int)$student_id
+			),
+			array( '%d' ),
+			array( '%d' )
+		);
+	}
+
+	public static function get_no_training_users()
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::STUDENTS_TABLE;
+		$training_table_name = $wpdb->prefix . self::TRAINING_TABLE;
+		
+		return $wpdb->get_results( "SELECT * FROM $table_name WHERE `active` = 1 AND `ID` NOT IN (SELECT DISTINCT `user` FROM $training_table_name WHERE `start` <= NOW() AND `end` >= NOW() )" );
+	}
+
+	public static function get_no_diet_users()
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::STUDENTS_TABLE;
+		$diet_table_name = $wpdb->prefix . self::DIET_TABLE;
+		
+		return $wpdb->get_results( "SELECT * FROM $table_name WHERE `active` = 1 AND `ID` NOT IN (SELECT DISTINCT `user` FROM $diet_table_name WHERE `start` <= NOW() AND `end` >= NOW() )" );
+	}
+
+	public static function get_no_updated_tracking_users()
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::STUDENTS_TABLE;
+		$tracking_table = $wpdb->prefix . self::STUDENT_TRACKING_TABLE;
+
+		$days = self::USER_UPDATE_MAX_DAYS;
+		
+		return $wpdb->get_results( "SELECT * FROM $table_name WHERE `active` = 1 AND `ID` NOT IN (SELECT DISTINCT `student_id` FROM $tracking_table WHERE `saved` >= DATE_ADD(NOW(), INTERVAL -$days DAY) )" );
+	}
+
+	public static function get_no_updated_image_tracking_users()
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::STUDENTS_TABLE;
+		$users = $wpdb->get_results( "SELECT * FROM $table_name WHERE `active` = 1" );
+		if( empty( $users ) )
+			return array();
+
+		$days = self::USER_UPDATE_MAX_DAYS;
+
+		$upload_dir = wp_upload_dir();
+		if( empty( $upload_dir ) )
+			return $users;
+
+		$upload_base = $upload_dir['basedir'];
+		$target_dir_base = $upload_base . DIRECTORY_SEPARATOR . 'image-tracking' . DIRECTORY_SEPARATOR . 'u_';
+
+		$time = time();
+		$no_updated = array();
+
+		foreach( $users as $user )
+		{
+			$include = true;
+			$target_dir = $target_dir_base . $user->ID;
+			
+			if( is_readable( $target_dir ) )
+			{
+				$dir_files = scandir( $target_dir );
+
+				foreach( $dir_files as $dir_file )
+				{
+					if( ( $time - filemtime( $target_dir . DIRECTORY_SEPARATOR . $dir_file ) ) < ( $days * 86400 ) )
+					{
+						$include = false;
+						break;			
+					}
+				}
+			}
+
+			if( $include )
+				$no_updated[] = $user;
+		}
+		
+		return $no_updated;
+	}
+
+	// PERSONAL INFO
+
+	public static function has_personal_info( $register_id )
+	{
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::STUDENT_INFO_TABLE;
+
+		$row = $wpdb->get_row(
+			$wpdb->prepare(
+				"SELECT * FROM $table_name WHERE `student_id` = %d",
+				$register_id
+			)
+		);
+
+		return $row !== null;
+	}
+
+	public static function insert_personal_info(
+		$student_id,
+		$weight,
+		$male,
+		$birthday,
+		$obj_health,
+		$obj_remove_stress,
+		$obj_improve_physically,
+		$obj_strength,
+		$obj_injury_recover,
+		$obj_examination,
+		$obj_loss_fat,
+		$obj_improve_postural,
+		$obj_gain_mass,
+		$obj_loss_volume,
+		$obj_improve_resistance,
+		$obj_other,
+		$injuries,
+		$diseases,
+		$medications,
+		$blood_preasure,
+		$sport_currently,
+		$sport,
+		$sport_frequency,
+		$sport_days,
+		$training_days,
+		$work,
+		$active_work,
+		$sleep_hours,
+		$diet,
+		$meals
+	) {
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::STUDENT_INFO_TABLE;
+		$result = $wpdb->insert(
+			$table_name,
+			array(
+				'student_id' => $student_id,
+				'saved' => date( 'Y-m-d h:i:s' ),
+				'weight' => $weight,
+				'male' => $male,
+				'birthday' => $birthday,
+				'obj_health' => $obj_health,
+				'obj_remove_stress' => $obj_remove_stress,
+				'obj_improve_physically' => $obj_improve_physically,
+				'obj_strength' => $obj_strength,
+				'obj_injury_recover' => $obj_injury_recover,
+				'obj_examination' => $obj_examination,
+				'obj_loss_fat' => $obj_loss_fat,
+				'obj_improve_postural' => $obj_improve_postural,
+				'obj_gain_mass' => $obj_gain_mass,
+				'obj_loss_volume' => $obj_loss_volume,
+				'obj_improve_resistance' => $obj_improve_resistance,
+				'obj_other' => $obj_other,
+				'injuries' => $injuries,
+				'diseases' => $diseases,
+				'medications' => $medications,
+				'blood_preasure' => $blood_preasure,
+				'sport_currently' => $sport_currently,
+				'sport' => $sport,
+				'sport_frequency' => $sport_frequency,
+				'sport_days' => $sport_days,
+				'training_days' => $training_days,
+				'work' => $work,
+				'active_work' => $active_work,
+				'sleep_hours' => $sleep_hours,
+				'diet' => $diet,
+				'meals' => $meals
+			),
+			array(
+				'%d',
+				'%s',
+				'%f',
+				'%d',
+				'%s',
+				'%d',
+				'%d',
+				'%d',
+				'%d',
+				'%d',
+				'%d',
+				'%d',
+				'%d',
+				'%d',
+				'%d',
+				'%d',
+				'%d',
+				'%s',
+				'%s',
+				'%s',
+				'%d',
+				'%d',
+				'%s',
+				'%d',
+				'%d',
+				'%d',
+				'%d',
+				'%d',
+				'%d',
+				'%s',
+				'%d'
+			)
+		);
+
+		return $result;
+	}
+
+	public static function get_last_personal_info( $student_id )
+	{
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::STUDENT_INFO_TABLE;
+
+		$sql = $wpdb->prepare( "SELECT * FROM $table_name WHERE `student_id` = %d ORDER BY `saved` DESC LIMIT 1", $student_id );
+		return $wpdb->get_row( $sql );
+	}
+
+	public static function get_personal_info( $student_id )
+	{
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::STUDENT_INFO_TABLE;
+
+		$sql = $wpdb->prepare( "SELECT * FROM $table_name WHERE `student_id` = %d ORDER BY `saved` DESC", $student_id );
+		return $wpdb->get_results( $sql );
+	}
+
+	// STUDENT FOOD
+
+	public static function has_food_info( $register_id )
+	{
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::STUDENT_FOOD_TABLE;
+
+		$row = $wpdb->get_row(
+			$wpdb->prepare(
+				"SELECT * FROM $table_name WHERE `student_id` = %d LIMIT 1",
+				$register_id
+			)
+		);
+
+		return $row !== null;
+	}
+
+	public static function get_food_info_dates( $register_id )
+	{
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::STUDENT_FOOD_TABLE;
+
+		return $wpdb->get_results(
+			$wpdb->prepare(
+				"SELECT DISTINCT( `saved` ) FROM $table_name WHERE `student_id` = %d ORDER BY `saved` DESC",
+				$register_id
+			)
+		);
+	}
+
+	public static function get_food_info_last_date( $register_id )
+	{
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::STUDENT_FOOD_TABLE;
+
+		return $wpdb->get_row(
+			$wpdb->prepare(
+				"SELECT MAX( `saved` ) AS 'saved' FROM $table_name WHERE `student_id` = %d",
+				$register_id
+			)
+		);
+	}
+
+	public static function get_food_info( $register_id, $saved )
+	{
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::STUDENT_FOOD_TABLE;
+
+		return $wpdb->get_results(
+			$wpdb->prepare(
+				"SELECT * FROM $table_name WHERE `student_id` = %d AND `saved` = %s",
+				$register_id,
+				$saved
+			)
+		);
+	}
+
+	public static function insert_student_food_info( $student_id, $food_data )
+	{
+		if( !is_array( $food_data ) )
+			return false;
+
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::STUDENT_FOOD_TABLE;
+
+		$saved = date( 'Y-m-d h:i:s' );
+
+		foreach( $food_data as $food )
+			if( false === $wpdb->insert(
+				$table_name,
+				array(
+					'student_id' => $student_id,
+					'food_id' => $food['ID'],
+					'saved' => $saved,
+					'frequent' => $food['frequent'],
+					'valuation' => $food['valuation'],
+				),
+				array(
+					'%d', '%d', '%s', '%d', '%d'
+				)
+			) )
+			return false;
+
+		return true;
+	}
+
+	// MEAL HABITS
+
+	public static function has_meal_habits( $register_id )
+	{
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::STUDENT_MEALS_TABLE;
+
+		$row = $wpdb->get_row(
+			$wpdb->prepare(
+				"SELECT * FROM $table_name WHERE `student_id` = %d LIMIT 1",
+				$register_id
+			)
+		);
+
+		return $row !== null;
+	}
+
+	public static function get_meal_habits( $register_id )
+	{
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::STUDENT_MEALS_TABLE;
+
+		return $wpdb->get_results(
+			$wpdb->prepare(
+				"SELECT * FROM $table_name WHERE `student_id` = %d ORDER BY `saved` DESC",
+				$register_id
+			)
+		);
+	}
+
+	public static function get_meal_habit_intervals( $register_id, $saved )
+	{
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::STUDENT_MEAL_INTERVALS_TABLE;
+
+		return $wpdb->get_results(
+			$wpdb->prepare(
+				"SELECT * FROM $table_name WHERE `student_id` = %d AND `saved` = %s",
+				$register_id,
+				$saved
+			)
+		);
+	}
+
+	public static function get_last_meal_habit( $register_id )
+	{
+		global $wpdb;
+		$table_name = $wpdb->prefix . self::STUDENT_MEALS_TABLE;
+
+		return $wpdb->get_row(
+			$wpdb->prepare(
+				"SELECT * FROM $table_name WHERE `student_id` = %d ORDER BY `saved` DESC LIMIT 1",
+				$register_id
+			)
+		);
+	}
+
+	public static function insert_meal_habits( $student_id, $meals_data, $observations )
+	{
+		if( !is_array( $meals_data ) )
+			return false;
+
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::STUDENT_MEALS_TABLE;
+		$interval_table_name = $wpdb->prefix . self::STUDENT_MEAL_INTERVALS_TABLE;
+
+		$saved = date( 'Y-m-d h:i:s' );
+
+		if( false === $wpdb->insert(
+			$table_name,
+			array(
+				'student_id' => $student_id,
+				'saved' => $saved,
+				'observations' => $observations
+			),
+			array(
+				'%d', '%s', '%s'
+			)
+		) )
+			return false;
+
+		foreach( $meals_data as $interval => $tasks )
+			if( false === $wpdb->insert(
+				$interval_table_name,
+				array(
+					'student_id' => $student_id,
+					'saved' => $saved,
+					'interval' => $interval,
+					'tasks' => $tasks
+				),
+				array(
+					'%d', '%s', '%d', '%s'
+				)
+			) )
+				return false;
+
+		return true;
+	}
+
+	// TRACKING
+
+	public static function get_user_tracking_count( $student_id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::STUDENT_TRACKING_TABLE;
+
+		return $wpdb->get_var( $wpdb->prepare( "SELECT count(*) FROM $table_name WHERE `student_id` = %d", $student_id ) );
+	}
+
+	public static function get_user_tracking_items( $student_id, $results = null, $offset = null, $order_by = null, $order = null )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::STUDENT_TRACKING_TABLE;
+
+		if( $order || $order_by || $results || $offset !== null )
+		{
+			if( $order !== 'desc' ) $order = 'asc';
+
+			if( !in_array( $order_by, array( 'saved' ), true ) )
+				$order_by = 'saved';
+
+			if( !is_integer( $offset ) )
+				$offset = 0;
+
+			if( !is_integer( $results ) )
+				return $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $table_name WHERE `student_id` = %d ORDER BY $order_by $order", $student_id ) );
+			else
+				return $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $table_name WHERE `student_id` = %d ORDER BY $order_by $order LIMIT $results OFFSET $offset", $student_id) );
+		}
+		else
+		{
+			return $wpdb->get_results( $wpdb->prepare( "SELECT * FROM $table_name WHERE `student_id` = %d ORDER BY `saved` ASC", $student_id ) );
+		}
+	}
+
+	public static function get_last_user_tracking( $student_id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::STUDENT_TRACKING_TABLE;
+
+		$sql = $wpdb->prepare( "SELECT * FROM $table_name WHERE `student_id` = %d ORDER BY `saved` DESC LIMIT 1", $student_id );
+
+		return $wpdb->get_row( $sql );
+	}
+
+	public static function get_user_tracking( $student_id )
+	{
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::STUDENT_TRACKING_TABLE;
+
+		$sql = $wpdb->prepare( "SELECT * FROM $table_name WHERE `student_id` = %d ORDER BY `saved` DESC", $student_id );
+
+		return $wpdb->get_results( $sql );
+	}
+
+	public static function insert_user_tracking(
+		$student_id,
+		$weight,
+		$biceps,
+		$shoulder,
+		$chest,
+		$waist,
+		$hip,
+		$thigh,
+		$leg,
+		$calf,
+		$observations
+	) {
+		global $wpdb;
+
+		$table_name = $wpdb->prefix . self::STUDENT_TRACKING_TABLE;
+
+		$saved = date( 'Y-m-d h:i:s' );
+
+		if( false === $wpdb->insert(
+			$table_name,
+			array(
+				'student_id' => $student_id,
+				'saved' => $saved,
+				'weight' => $weight,
+				'biceps' => $biceps,
+				'shoulder' => $shoulder,
+				'chest' => $chest,
+				'waist' => $waist,
+				'hip' => $hip,
+				'thigh' => $thigh,
+				'leg' => $leg,
+				'calf' => $calf,
+				'observations' => $observations
+			),
+			array(
+				'%d', '%s', '%f', '%d', '%d', '%d', '%d', '%d', '%d', '%d', '%d', '%s'
+			)
+		) )
+			return false;
+
+		return true;
+	}
+
+}
+

@@ -1,0 +1,78 @@
+.jlc-custom-form-table-field-wrapper
+{
+	max-width:100%;
+	overflow:auto;
+}
+
+.jlc-custom-form-table-field
+{
+	max-width:100%;
+}
+.jlc-custom-form-table-field .regular-text
+{
+	width:auto;
+}
+
+.jlc-custom-form-table-field-sheet
+{
+	width:auto;
+}
+.jlc-custom-form-table-field-sheet .sheet-thead
+{
+}
+.jlc-custom-form-table-field-sheet .sheet-thead 
+{
+}
+.jlc-custom-form-table-field-sheet .sheet-tr
+{
+	display:flex;
+}
+.jlc-custom-form-table-field-sheet .sheet-tr .sheet-td,
+.jlc-custom-form-table-field-sheet .sheet-tr .sheet-th
+{
+	width:140px;
+	border:1px dotted #666;
+	display:flex;
+}
+.jlc-custom-form-table-field-sheet .sheet-tr .sheet-th .sheet-th-text
+{
+	font-size:12px;
+	line-height:22px;
+	font-weight:700;
+	padding-left:1px;
+	
+}
+.jlc-custom-form-table-field-sheet .sheet-tr .sheet-td > input,
+.jlc-custom-form-table-field-sheet .sheet-tr .sheet-td > select
+{
+	width:100%;
+	max-width:100%;
+	min-height:0;
+	height:22px;
+	font-size:12px;
+	line-height:22px;
+	margin:0;
+	padding:0 1px;
+	border:0;
+}
+.jlc-custom-form-table-field-sheet .sheet-tr .sheet-td > select
+{
+	padding-right:22px;
+}
+.jlc-custom-form-table-field-sheet .sheet-tr .sheet-td > fieldset
+{
+	padding:0 1px;
+}
+.jlc-custom-form-table-field-sheet .sheet-tr .sheet-td > fieldset > label
+{
+	margin:0 !important;
+	font-size:12px;
+	line-height:22px;
+	height:22px;
+	display:flex;
+	align-items:center;
+}
+.jlc-custom-form-table-field-sheet .sheet-tr .sheet-td > fieldset > label > input[type="checkbox"]
+{
+	margin:0;
+}

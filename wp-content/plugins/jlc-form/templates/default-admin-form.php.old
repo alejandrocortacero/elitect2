@@ -1,0 +1,198 @@
+<?php defined( 'ABSPATH' ) or die( 'Wrong Access' ); ?>
+<?php $this->print_admin_notices(); ?>
+<form
+	method="<?php echo !empty( $this->method ) ? $this->method : 'POST'; ?>"
+	<?php if( $this->wordpress_method ) : ?>
+		<?php if( !$this->ajax ) : ?>
+			action="<?php echo admin_url( 'admin-post.php' ); ?>"
+		<?php else : ?>
+			action="<?php echo admin_url( 'admin-ajax.php' ); ?>"
+		<?php endif; ?>
+	<?php else : ?>
+		action="<?php echo $this->action; ?>"
+	<?php endif; ?>
+	<?php if( !empty( $this->enctype ) ) : ?>enctype="<?php echo $this->enctype; ?>"<?php endif; ?>
+	<?php if( !empty( $this->id ) ) : ?>id="<?php echo $this->id; ?>"<?php endif; ?>
+	<?php if( !empty( $this->class ) ) : ?>class="<?php echo $this->class; ?>"<?php endif; ?>
+><table class="form-table"><tbody>
+	<input
+		type="hidden"
+		name="jlc_custom_form"
+		value="<?php echo $this->internal_id; ?>"
+	/>
+<?php if( $this->wordpress_method ) : ?>
+	<input type="hidden" name="action" value="<?php echo $this->action; ?>" />
+	<?php if( $this->return_url_changed || !empty( $this->return_url ) ) : ?>
+		<input type="hidden" name="return_url" value="<?php echo $this->return_url; ?>" />
+	<?php endif; ?>
+<?php endif; ?>
+<?php foreach( $this->fields as $key => $field ) : ?>
+	<?php switch( $field->type ) : ?><?php case 'hidden': ?>
+			<input
+				type="hidden"
+				value="<?php echo $field->value; ?>"
+				id="<?php echo $key; ?>"
+				name="<?php echo $key; ?>"
+				<?php if( $field->required ) : ?>required="required"<?php endif; ?>
+			/>
+		<?php break; ?>
+		<?php case 'text': ?>
+		<?php case 'number': ?>
+		<?php case 'email': ?>
+		<?php case 'date': ?>
+		<tr>
+			<th scope="row">
+				<label
+					for="<?php echo $key; ?>"
+				>
+					<?php echo $field->label; ?>
+				</label>
+			</th>
+			<td>
+				<input
+					type="<?php echo $field->type; ?>"
+					value="<?php echo $field->value; ?>"
+					class="regular-text"
+					id="<?php echo $key; ?>"
+					name="<?php echo $key; ?>"
+					<?php if( $readonly_form || $field->readonly ) : ?>readonly="readonly"<?php endif; ?>
+				/>
+				<?php if( !empty( $field->help ) ) : ?>
+					<p class="description"><?php echo $field->help; ?></p>
+				<?php endif; ?>
+			</td>
+		</tr>
+		<?php break; ?>
+		<?php case 'textarea': ?>
+		<tr>	
+			<th scope="row">
+				<label
+					for="<?php echo $key; ?>"
+				>
+					<?php echo $field->label; ?>
+				</label>
+			</th>
+			<td>
+				<textarea
+					id="<?php echo $key; ?>"
+					name="<?php echo $key; ?>"
+					rows="5"
+					<?php if( $readonly_form || $field->readonly ) : ?>readonly="readonly"<?php endif; ?>
+				><?php echo wp_kses_post( $field->value ); ?></textarea>
+				<?php if( !empty( $field->help ) ) : ?>
+					<p class="description"><?php echo $field->help; ?></p>
+				<?php endif; ?>
+			</td>
+		</tr>
+		<?php break; ?>
+		<?php case 'checkbox': ?>
+		<tr>	
+			<th scope="row"><?php echo $field->label; ?></th>
+			<td>
+				<fieldset>
+					<legend class="screen-reader-text">
+						<span><?php echo $field->label; ?></span>
+					</legend>
+					<label for="<?php echo $key; ?>">
+						<input
+							name="<?php echo $key; ?>"
+							id="<?php echo $key; ?>"
+							value="yes"
+							type="checkbox"
+							<?php if( $field->value ) : ?>checked="checked"<?php endif; ?>
+							<?php if( $readonly_form || $field->readonly ) : ?>readonly="readonly"<?php endif; ?>
+						/>
+						<?php echo $field->label; ?>
+					</label>
+				</fieldset>
+			</td>
+		</tr>
+		<?php break; ?>
+		<?php case 'radio_group': ?>
+		<tr>	
+			<th scope="row"><?php echo $field->label; ?></th>
+			<td>
+				<?php foreach( $field->options as $opt_id => $option ) : ?>	
+				<fieldset>
+					<legend class="screen-reader-text">
+						<span><?php echo $field->label; ?></span>
+					</legend>
+					<label for="<?php echo $key; ?>">
+						<input
+							name="<?php echo $key; ?>"
+							id="<?php echo $opt_id; ?>"
+							value="<?php echo $option->value; ?>"
+							type="radio"
+							<?php if( $field->value !== null && $field->value == $option->value ) : ?>checked="checked"<?php endif; ?>
+							<?php if( $readonly_form || $field->readonly ) : ?>readonly="readonly"<?php endif; ?>
+						/>
+						<?php echo $option->label; ?>
+					</label>
+				</fieldset>
+				<?php endforeach; ?>
+			</td>
+		</tr>
+		<?php break; ?>
+		<?php case 'checkbox_group': ?>
+		<tr>	
+			<th scope="row"><?php echo $field->label; ?></th>
+			<td>
+				<?php foreach( $field->options as $opt_id => $option ) : ?>	
+				<fieldset>
+					<legend class="screen-reader-text">
+						<span><?php echo $field->label; ?></span>
+					</legend>
+					<label for="<?php echo $key; ?>">
+						<input
+							name="<?php echo $key; ?>"
+							id="<?php echo $opt_id; ?>"
+							value="<?php echo $option->value; ?>"
+							type="checkbox"
+							<?php if( $option->checked ) : ?>checked="checked"<?php endif; ?>
+							<?php if( $readonly_form || $option->readonly ) : ?>readonly="readonly"<?php endif; ?>
+						/>
+						<?php echo $option->label; ?>
+					</label>
+				</fieldset>
+				<?php endforeach; ?>
+			</td>
+		</tr>
+		<?php break; ?>
+		<?php case 'submit_button': ?>
+			<?php if( !$readonly_form ) : ?>
+			<tr>
+				<td><button
+					type="submit"
+					class="button button-primary"
+					id="<?php echo $key; ?>"
+					name="<?php echo $key; ?>"
+					<?php if( $field->required ) : ?>required="required"<?php endif; ?>
+					<?php if( $field->disabled ) : ?>disabled="disabled"<?php endif; ?>
+				><?php echo $field->value; ?></button></td>
+				<td></td>
+			</tr>
+			<?php endif; ?>
+		<?php break; ?>
+		<?php case 'submit': ?>
+			<?php if( !$readonly_form ) : ?>
+			<tr>
+				<td><input
+					type="submit"
+					class="button button-primary"
+					id="<?php echo $key; ?>"
+					name="<?php echo $key; ?>"
+					value="<?php echo $field->value; ?>"
+					<?php if( $field->required ) : ?>required="required"<?php endif; ?>
+					<?php if( $field->disabled ) : ?>disabled="disabled"<?php endif; ?>
+				/></td>
+				<td></td>
+			</tr>
+			<?php endif; ?>
+		<?php break; ?>
+		<?php default: ?>
+		<tr><th></th><td><?php echo $field->type; ?></td></tr>
+	<?php endswitch; ?>
+<?php endforeach; ?>
+</tbody></table></form>
+
+

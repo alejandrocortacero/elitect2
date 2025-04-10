@@ -1,0 +1,770 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: JLC Custom Form\n"
+"POT-Creation-Date: 2018-10-15 10:45+0100\n"
+"PO-Revision-Date: 2018-10-15 10:59+0100\n"
+"Last-Translator: José Luis Contreras <joseluisc6m6@gmail.com>\n"
+"Language-Team: \n"
+"Language: pt_PT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: __;_e;_x\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../form.php:151
+msgid "JLC Custom Forms"
+msgstr "JLC - Formulários Personalizados"
+
+#: ../form.php:172 ../registered-forms-table.php:17
+msgid "Forms"
+msgstr "Formulários"
+
+#: ../form.php:194 ../form.php:206
+msgid "Reinstall the plugin"
+msgstr "Reinstale o plugin"
+
+#: ../form.php:221 ../form.php:950
+msgid "Form sent successfully."
+msgstr "Formulário enviado com sucesso."
+
+#: ../form.php:223
+msgid "Personal data sent successfully."
+msgstr "Dados pessoais enviados com sucesso."
+
+#: ../form.php:234
+msgid "Invalid form data"
+msgstr "Dados de formulário inválidos"
+
+#: ../form.php:236
+msgid "There was an error. Try again later please."
+msgstr "Havia um erro. Tente novamente mais tarde por favor."
+
+#: ../form.php:238
+msgid "Upload file size limit exceeded."
+msgstr "Carregar limite de tamanho de arquivo excedido."
+
+#: ../form.php:240
+msgid "Upload file format is invalid."
+msgstr "O upload do formulário de arquivo é inválido."
+
+#: ../form.php:952
+msgid "There was an error while processing the form. Try again later please."
+msgstr ""
+"Houve um erro ao processar o formulário. Tente novamente mais tarde por "
+"favor."
+
+#: ../registered-forms-table.php:16
+msgid "Form"
+msgstr "Formulário"
+
+#: ../registered-forms-table.php:26
+msgid "Internal ID"
+msgstr "ID interno"
+
+#: ../registered-forms-table.php:27
+msgid "Directory"
+msgstr "Diretório"
+
+#: ../registered-forms-table.php:28
+msgid "File"
+msgstr "Arquivo"
+
+#: ../registered-forms-table.php:29
+msgid "From"
+msgstr "De"
+
+#: ../registered-forms-table.php:30
+msgid "Arguments"
+msgstr "Argumentos"
+
+#: ../registered-forms-table.php:196
+msgid "No forms found."
+msgstr "Nenhum formulário encontrado."
+
+#: ../registered-forms-table.php:207
+msgid "Delete"
+msgstr "Excluir"
+
+#: ../help.php:3
+msgid "JLC Custom Form Help"
+msgstr "Ajuda do JLC - Formulário Personalizado"
+
+#: ../fields/multi-contact.php:103
+#: ../fields/templates/admin/multi-contact.php:26
+msgid "Contact"
+msgstr "Contato"
+
+#: ../fields/multi-contact.php:104
+#: ../fields/templates/admin/multi-contact.php:131
+msgid "Remove"
+msgstr "Remover"
+
+#: ../fields/multi-contact.php:127 ../fields/text.php:71
+#, php-format
+msgid "Field %s contains invalid data."
+msgstr "O campo %s contém dados inválidos."
+
+#: ../fields/post-select.php:52
+msgid "None"
+msgstr "Nenhum"
+
+#: ../fields/post-select.php:96
+#, php-format
+msgid "Selection in %s is not valid."
+msgstr "Seleção em %s não é válida."
+
+#: ../fields/select.php:116
+#, php-format
+msgid "The field %s must contain a valid selection."
+msgstr "O campo %s deve conter uma seleção válida."
+
+#: ../fields/checkbox.php:39
+#, php-format
+msgid "You must check the checkbox %s."
+msgstr "Você deve marcar a caixa de seleção %s."
+
+#: ../fields/radiobutton-group.php:71
+#, php-format
+msgid "An option in %s must be selected."
+msgstr "Uma opção em %s deve ser selecionada."
+
+#: ../fields/abstract-field.php:70
+#, php-format
+msgid "Field %s is required."
+msgstr "O campo %s é obrigatório."
+
+#: ../fields/email.php:56
+#, php-format
+msgid "Separate email addresses with %s"
+msgstr "Endereços de email separados com %s"
+
+#: ../fields/email.php:76 ../fields/email.php:87
+#, php-format
+msgid "Invalid email provied in field %s."
+msgstr "E-mail inválido fornecido em campo %s."
+
+#: ../fields/text.php:80
+#, php-format
+msgid "Field %s must be not greater than %d characters"
+msgstr "O campo% s não deve ser maior que %d caracteres"
+
+#: ../fields/templates/admin/multi-contact.php:29
+#: ../fields/templates/admin/multi-contact.php:144
+msgid "City"
+msgstr "Cidade"
+
+#: ../fields/templates/admin/multi-contact.php:39
+#: ../fields/templates/admin/multi-contact.php:155
+msgid "Post code"
+msgstr "Código postal"
+
+#: ../fields/templates/admin/multi-contact.php:51
+#: ../fields/templates/admin/multi-contact.php:168
+msgid "State / Province"
+msgstr "Estado / Província"
+
+#: ../fields/templates/admin/multi-contact.php:61
+#: ../fields/templates/admin/multi-contact.php:179
+msgid "Country"
+msgstr "País"
+
+#: ../fields/templates/admin/multi-contact.php:73
+#: ../fields/templates/admin/multi-contact.php:192
+msgid "Address"
+msgstr "Endereço"
+
+#: ../fields/templates/admin/multi-contact.php:85
+#: ../fields/templates/admin/multi-contact.php:205
+msgid "Longitude"
+msgstr "Longitude"
+
+#: ../fields/templates/admin/multi-contact.php:95
+#: ../fields/templates/admin/multi-contact.php:216
+msgid "Latidude"
+msgstr "Latitude"
+
+#: ../fields/templates/admin/multi-contact.php:107
+#: ../fields/templates/admin/multi-contact.php:229
+msgid "Email"
+msgstr "Email"
+
+#: ../fields/templates/admin/multi-contact.php:117
+#: ../fields/templates/admin/multi-contact.php:240
+msgid "Phone"
+msgstr "Telefone"
+
+#: ../fields/templates/admin/multi-contact.php:141
+#: ../fields/templates/admin/multi-contact.php:198
+msgid "New address"
+msgstr "Novo endereço"
+
+#: ../fields/templates/admin/multi-contact.php:150
+msgid "New city"
+msgstr "Nova cidade"
+
+#: ../fields/templates/admin/multi-contact.php:161
+msgid "New postcode"
+msgstr "Novo código postal"
+
+#: ../fields/templates/admin/multi-contact.php:173
+msgid "New state"
+msgstr "Novo estado"
+
+#: ../fields/templates/admin/multi-contact.php:185
+msgid "New country"
+msgstr "Novo país"
+
+#: ../fields/templates/admin/multi-contact.php:211
+msgid "In º (e.g. 4.567531)"
+msgstr "In º (por exemplo, 4.567531)"
+
+#: ../fields/templates/admin/multi-contact.php:222
+msgid "In º (e.g. 10.23145"
+msgstr "In º (por exemplo, 10.23145)"
+
+#: ../fields/templates/admin/multi-contact.php:235
+msgid "New email"
+msgstr "Novo Email"
+
+#: ../fields/templates/admin/multi-contact.php:246
+msgid "New phone"
+msgstr "Novo telefone"
+
+#: ../fields/templates/admin/multi-contact.php:255
+msgid "Add"
+msgstr "Adicionar"
+
+#: ../templates/admin/registered-forms.php:4
+msgid "Registered forms"
+msgstr "Formulários registrados"
+
+#: ../templates/admin/registered-forms.php:4
+msgid "Help"
+msgstr "Socorro"
+
+#~ msgid "Student: %s"
+#~ msgstr "Estudiante: %s"
+
+#~ msgid "Chakras course"
+#~ msgstr "Curso de Chakras"
+
+#~ msgid "Students"
+#~ msgstr "Estudiantes"
+
+#~ msgid "Subscribe"
+#~ msgstr "¡Suscribirme!"
+
+#~ msgid "Settings"
+#~ msgstr "Ajustes"
+
+#~ msgid "You must be registered in %s to gain access to this course."
+#~ msgstr "Debe estar registrado en %s para acceder a este curso."
+
+#~ msgid "Subscribe today and gain access to our course"
+#~ msgstr "Suscríbete hoy para poder acceder a nuestro curso"
+
+#~ msgid "Subscription is not currently available."
+#~ msgstr "La suscripción no esta disponible actualmente."
+
+#~ msgid "Register today and gain access to our course"
+#~ msgstr "Regístrate hoy para acceder a nuestro curso"
+
+#~ msgid "Order"
+#~ msgstr "Pedido"
+
+#~ msgid "Product"
+#~ msgstr "Producto"
+
+#~ msgid "Registered"
+#~ msgstr "Registrado"
+
+#~ msgid "Student"
+#~ msgstr "Estudiante"
+
+#~ msgid "View"
+#~ msgstr "Ver"
+
+#~ msgid "No students found."
+#~ msgstr "No se encontraron estudiantes."
+
+#~ msgid "Notification addresses"
+#~ msgstr "Direcciones de notificación"
+
+#~ msgid "JLC Course"
+#~ msgstr "Curso JLC"
+
+#~ msgid "Contact page"
+#~ msgstr "Página de contacto"
+
+#~ msgid "Landing page"
+#~ msgstr "Página de llegada"
+
+#~ msgid "Debug mode"
+#~ msgstr "Modo depuración"
+
+#~ msgid "Save"
+#~ msgstr "Guardar"
+
+#~ msgid "Subscription product"
+#~ msgstr "Producto de suscripción"
+
+#~ msgid "Your email"
+#~ msgstr "Tu email"
+
+#~ msgid "I want to register in this course"
+#~ msgstr "Quiero registrarme en este curso"
+
+#~ msgid "Register"
+#~ msgstr "Registrarse"
+
+#~ msgid "You have been successfuly registered."
+#~ msgstr "Ha sido registrado satisfactoriamente"
+
+#~ msgid "Send"
+#~ msgstr "Enviar"
+
+#~ msgid ""
+#~ "Thank you for do the exam. We will contact you to confirm the result."
+#~ msgstr ""
+#~ "¡Gracias por hacer el examen! Contactaremos contigo para confirmar el "
+#~ "resultado."
+
+#~ msgid "Go to course!"
+#~ msgstr "¡Ir al curso!"
+
+#~ msgid "Subscribe!"
+#~ msgstr "¡Suscribirme!"
+
+#~ msgid "Y/m/d"
+#~ msgstr "d/m/Y"
+
+#~ msgid "Y/m/d H:i:s"
+#~ msgstr "d/m/Y H:i:s"
+
+#~ msgid "Instance created successfully"
+#~ msgstr "Instancia creada satisfactoriamente"
+
+#~ msgid "Instance deleted successfully"
+#~ msgstr "Instancia eliminada correctamente"
+
+#~ msgid "Settings saved"
+#~ msgstr "Ajustes guardados"
+
+#~ msgid "Student deleted successfully"
+#~ msgstr "Estudiante eliminado correctamente"
+
+#~ msgid "There was an error. Reinstall the plugin please."
+#~ msgstr "Hubo un error. Reinstale el plugin, por favor."
+
+#~ msgid "Dates are not in range."
+#~ msgstr "Las fechas no tienen un orden válido."
+
+#~ msgid "Doubt is already ansered."
+#~ msgstr "La duda ya ha sido contestada."
+
+#~ msgid ""
+#~ "The course has already started and at leats one user has registered. "
+#~ "Therefor can not be updated or deleted."
+#~ msgstr ""
+#~ "El curso ya ha empezado y al menos tiene un usuario registrado. Por "
+#~ "tanto, no puede ser actualizado o eliminado."
+
+#~ msgid "Selected student does not exist."
+#~ msgstr "El estudiante seleccionado no existe."
+
+#~ msgid "Fill all the fields."
+#~ msgstr "Rellene todos los campos."
+
+#~ msgid "Waiting for subscription opening"
+#~ msgstr "Esperando la apertura del periodo de inscripción"
+
+#~ msgid "In process"
+#~ msgstr "En proceso"
+
+#~ msgid "Subscription closed"
+#~ msgstr "Suscripción cerrada"
+
+#~ msgid "Subscription opened"
+#~ msgstr "Suscripción abierta"
+
+#~ msgid "Fibromyalgia"
+#~ msgstr "Fibromialgia"
+
+#~ msgid "Instances"
+#~ msgstr "Instancias"
+
+#~ msgid "There are not course available now."
+#~ msgstr "No hay cursos disponibles ahora."
+
+#~ msgid "There course will start at %s."
+#~ msgstr "El curso empezará el %s."
+
+#~ msgid "%A %e of %B %Y"
+#~ msgstr "%A %e de %B de %Y"
+
+#~ msgid "Course info"
+#~ msgstr "Información del curso"
+
+#~ msgid "Course date"
+#~ msgstr "Fecha del curso"
+
+#~ msgid "There was an error in exercise form."
+#~ msgstr "Hubo un error en el formulario del ejercicio."
+
+#~ msgid "Few Fibromyalgia instances available"
+#~ msgstr "Pocas instancias del curso de fibromialgia disponibles"
+
+#~ msgid "Welcome to Fibromyalgia Course"
+#~ msgstr "Bienvenido al curso sobre Fibromialgia"
+
+#~ msgid "New user registered"
+#~ msgstr "Nuevo usuario registrado"
+
+#~ msgid "Registration error"
+#~ msgstr "Error de registro"
+
+#~ msgid "A doubt has been answered."
+#~ msgstr "Se ha respondido una duda."
+
+#~ msgid "Set date"
+#~ msgstr "Fijar fecha"
+
+#~ msgid "Left blank for current date"
+#~ msgstr "Dejar en blanco para la fecha actual"
+
+#~ msgid "When do you want to do the course?"
+#~ msgstr "¿Cuándo quieres hacer el curso?"
+
+#~ msgid "From %s to %s."
+#~ msgstr "Del %s al %s."
+
+#~ msgid "Fibromyalgia Course"
+#~ msgstr "Curso Fibromialgia"
+
+#~ msgid "The course is inactive."
+#~ msgstr "El curso no está activo."
+
+#~ msgid "Log in"
+#~ msgstr "Iniciar sesión"
+
+#~ msgid "Password"
+#~ msgstr "Contraseña"
+
+#~ msgid "Remember me"
+#~ msgstr "Recuérdame"
+
+#~ msgid "Click here to register."
+#~ msgstr "Clic aquí para registrarse."
+
+#~ msgid "You have finished the course."
+#~ msgstr "Has acabado el curso."
+
+#~ msgid "The course has not started yet. We will write you when it starts."
+#~ msgstr "El curso no ha empezado aun. Te escribiremos cuando empiece."
+
+#~ msgid "New Fibromyalgia instance"
+#~ msgstr "Nueva instancia de Fibromialgia"
+
+#~ msgid "Label"
+#~ msgstr "Etiqueta"
+
+#~ msgid "Name this instance to differ it from others."
+#~ msgstr "Ponga un nombre a esta instancia para diferenciarla del resto."
+
+#~ msgid "Subscription end date"
+#~ msgstr "Fecha de finalización de suscripción"
+
+#~ msgid "Left blank to limit the subscription until the course starts."
+#~ msgstr ""
+#~ "Dejar en blanco para limitar el periodo de inscripción al día en que "
+#~ "empieza el curso"
+
+#~ msgid "Course start date"
+#~ msgstr "Fecha de inicio del curso"
+
+#~ msgid "Save new instance"
+#~ msgstr "Guardar nueva instancia"
+
+#~ msgid "Fibromyalgia course students"
+#~ msgstr "Estudiantes del curso Fibromialgia"
+
+#~ msgid "The course instance for this register was deleted"
+#~ msgstr "La instancia del curso para este registro fue eliminada."
+
+#~ msgid "First name"
+#~ msgstr "Nombre"
+
+#~ msgid "Last name"
+#~ msgstr "Apellidos"
+
+#~ msgid "Excercises"
+#~ msgstr "Ejercicios"
+
+#~ msgid "Exercise %d"
+#~ msgstr "Ejercicio %d"
+
+#~ msgid "(%d of %d doubts answered)"
+#~ msgstr "(%d de %d dudas respondidas)"
+
+#~ msgid "Waiting for response"
+#~ msgstr "Esperando respuesta"
+
+#~ msgid "Not available yet"
+#~ msgstr "Aun no disponible."
+
+#~ msgid "Not answered"
+#~ msgstr "Sin responder."
+
+#~ msgid "Not info available."
+#~ msgstr "No hay información disponible."
+
+#~ msgid "No registered user"
+#~ msgstr "Usuario sin registrar"
+
+#~ msgid "Fibromyalgia instances"
+#~ msgstr "Instancias de fibromialgia"
+
+#~ msgid "Add new instance"
+#~ msgstr "Añadir nueva instancia"
+
+#~ msgid "Subscription start"
+#~ msgstr "Inicio de suscripción"
+
+#~ msgid "Subscription end"
+#~ msgstr "Fin de suscripción"
+
+#~ msgid "Course start"
+#~ msgstr "Inicio del curso"
+
+#~ msgid "Status"
+#~ msgstr "Estado"
+
+#~ msgid "Actions"
+#~ msgstr "Acciones"
+
+#~ msgid "Are you sure?"
+#~ msgstr "¿Está seguro?"
+
+#~ msgid "No instances found"
+#~ msgstr "No se encontraron instancias"
+
+#~ msgid "Separate with commas"
+#~ msgstr "Separar con comas"
+
+#~ msgid "This course page used to promotionate this course."
+#~ msgstr "Esta página de curso se utiliza para promocionar este curso."
+
+#~ msgid ""
+#~ "Enable this option allows administrators to simulate dates for the courses"
+#~ msgstr ""
+#~ "Activar esta opción permite a los administradores simular distintas "
+#~ "fechas para los cursos."
+
+#~ msgid "Edit Fibromyalgia instance"
+#~ msgstr "Editar instancia de Fibromialgia"
+
+#~ msgid "Save instance"
+#~ msgstr "Guardar instancia"
+
+#~ msgid "In progress"
+#~ msgstr "En proceso"
+
+#~ msgid "No instances in progress"
+#~ msgstr "No hay instancias en proceso."
+
+#~ msgid "Started"
+#~ msgstr "Emepezado"
+
+#~ msgid "View instance"
+#~ msgstr "Ver instancia"
+
+#~ msgid "Edit instance"
+#~ msgstr "Editar instancia"
+
+#~ msgid "View students"
+#~ msgstr "Ver estudiantes"
+
+#~ msgid "Register available"
+#~ msgstr "Registro disponible"
+
+#~ msgid "No instances available"
+#~ msgstr "No hay instancias disponibles"
+
+#~ msgid "Start date"
+#~ msgstr "Fecha de inicio"
+
+#~ msgid "Doubts"
+#~ msgstr "Dudas"
+
+#~ msgid "There are not pending doubts."
+#~ msgstr "No hay dudas pendientes."
+
+#~ msgid "Question"
+#~ msgstr "Pregunta"
+
+#~ msgid "Asked"
+#~ msgstr "Preguntado"
+
+#~ msgid "Answer doubt"
+#~ msgstr "Responder duda"
+
+#~ msgid "Filtered by instance:"
+#~ msgstr "Filtrado por instancia"
+
+#~ msgid "Y/m/d H:i"
+#~ msgstr "d/m/Y H:i"
+
+#~ msgid "Your doubts"
+#~ msgstr "Tus dudas"
+
+#~ msgid "Not answered yet"
+#~ msgstr "Sin responder aun"
+
+#~ msgid "Have you any doubt?"
+#~ msgstr "¿Tiene alguna duda?"
+
+#~ msgid "You can make three questions the first day of the week."
+#~ msgstr "Puedes hacer tres preguntas el primer día de cada semana."
+
+#~ msgid "Have you more doubts?"
+#~ msgstr "¿Tiene más dudas?"
+
+#~ msgid "You can make %d question(s) more today."
+#~ msgstr "Puedes hacer %d pregunta(s) más hoy."
+
+#~ msgid "You have reached the doubts limit for this exercise."
+#~ msgstr "Has alcanzado el límite de dudas para este ejercicio."
+
+#~ msgid "Doubts (answered %d of %d)"
+#~ msgstr "Dudas (respondidas %d de %d)"
+
+#~ msgid "· Doubt %d - At %s"
+#~ msgstr "· Duda %d - el %s"
+
+#~ msgid "Answer here"
+#~ msgstr "Responder aquí"
+
+#~ msgid "Send answer"
+#~ msgstr "Enviar respuesta"
+
+#~ msgid "Answered at %s:"
+#~ msgstr "Respondido el %s:"
+
+#~ msgid "Your question:"
+#~ msgstr "Su pregunta:"
+
+#~ msgid "Your doubt:"
+#~ msgstr "Su duda:"
+
+#~ msgid "Answer:"
+#~ msgstr "Respuesta:"
+
+#~ msgid "There was an error in excersise form."
+#~ msgstr "Hubo un error en el formulario del ejercicio."
+
+#~ msgid ""
+#~ "Registered user can not access the course in which is registered. Contact "
+#~ "the developer."
+#~ msgstr ""
+#~ "Un usuario registrado no puede acceder a un curso en el que se ha "
+#~ "registrado. Contacte con el administrador del sitio."
+
+#~ msgid "There was an error in a registration process."
+#~ msgstr "Hubo un error en el proceso de registro."
+
+#~ msgid "Client email:"
+#~ msgstr "Email del cliente:"
+
+#~ msgid "Order ID:"
+#~ msgstr "ID pedido:"
+
+#~ msgid "Date:"
+#~ msgstr "Fecha:"
+
+#~ msgid "%s has been registered in Fibromyalgia Course."
+#~ msgstr "%s ha sido registrado en el curso Fibromialgia"
+
+#~ msgid "student"
+#~ msgstr "estudiante"
+
+#~ msgid "Fibromyalgia - Excersise %d"
+#~ msgstr "Fibromialgia - Ejercicio %d"
+
+#~ msgid "A response has been sent."
+#~ msgstr "Se ha enviado una respuesta."
+
+#~ msgid "A doubt has been sent."
+#~ msgstr "Se ha enviado una duda."
+
+#~ msgid "Superar la fibromialgia a través de una vida sana - Exercise %d"
+#~ msgstr "Superar la fibromialgia a través de una vida sana - Ejercicio %d"
+
+#~ msgid "You can access this exercise and make questions in our site:"
+#~ msgstr ""
+#~ "Puede acceder a este ejercicio y hacer sus propias preguntas en nuestro "
+#~ "sitio:"
+
+#~ msgid "Go to exercise"
+#~ msgstr "Ir al ejercicio"
+
+#~ msgid "Go to site"
+#~ msgstr "Ir al sitio"
+
+#~ msgid "%s has sent an exercise response"
+#~ msgstr "%s ha enviado la respuesta de un ejercicio"
+
+#~ msgid "View response here"
+#~ msgstr "Vea la respuesta aquí"
+
+#~ msgid ""
+#~ "You already have sent this form. The next exercise will be available soon."
+#~ msgstr ""
+#~ "Ya has enviado este formulario. El siguiente ejercicio estará disponible "
+#~ "el primer día de la siguiente semana."
+
+#~ msgid "Access our site to answer the questions of the last exercise."
+#~ msgstr ""
+#~ "Accede a nuestro sitio para responder las cuestiones del último ejercicio."
+
+#~ msgid "%s has sent a doubt"
+#~ msgstr "%s ha enviado una duda"
+
+#~ msgid "Answer doubt here"
+#~ msgstr "Responder duda aquí"
+
+#~ msgid "Mindfulness"
+#~ msgstr "Mindfulness"
+
+#~ msgid "Welcome to Mindfulness"
+#~ msgstr "¡Bienvenido a Mindfulness!"
+
+#~ msgid "Mindfulness students"
+#~ msgstr "Estudiantes de Mindfulness"
+
+#~ msgid "Mindfulness instances"
+#~ msgstr "Instancias de Mindfulness"
+
+#~ msgid "Edit Mindfulness instance"
+#~ msgstr "Editar instancia de Mindfulness"
+
+#~ msgid "Dear %s"
+#~ msgstr "Estimad@ %s"
+
+#~ msgid "Mindfulness - Exercise %d"
+#~ msgstr "Mindfulness - Ejercicio %d"
+
+#~ msgid "Comment your experience in 250 characters."
+#~ msgstr "Comenta tu experiencia en 250 caracteres."
+
+#~ msgid "Comenta tu experiencia de la semana y del curso."
+#~ msgstr "Comenta tu experiencia de la semana y del curso."
+
+#~ msgid "Comment your experience."
+#~ msgstr "Comenta tu experiencia."
+
+#~ msgid "l jS \\of F Y"
+#~ msgstr "l j \\d\\e F \\d\\e Y"

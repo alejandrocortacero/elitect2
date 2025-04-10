@@ -1,0 +1,5 @@
+.jlc-custom-form-calendar-combo.error-required-field .error-required-field-message
+{
+	display:block !important;
+	color:red;
+}
